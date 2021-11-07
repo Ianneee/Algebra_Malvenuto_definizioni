@@ -1,0 +1,184 @@
+\section{Congruenze}
+
+\subsection{Congruenza modulo n}
+La congruenza modulo n (n fissato) è una relazione di equivalenza definita su \(\mathbb{Z}\).
+
+\(x\equiv y(mod\; n)\Leftrightarrow x-y\) multiplo di \textit{n} \(\Leftrightarrow n|x-y\)
+
+\subsection{Proposizione}
+La congruenza \textit{(mod n)} è una relazione di equivalenza.
+\\
+\textbf{Dimostrazione}:
+\\\\
+\textit{(R)} \[\forall x\in\mathbb{Z}: x\equiv x(mod\; n)\Leftrightarrow n|(x-x)\]
+Vera perché \(0=0\cdot n\).
+\\\\
+\textit{(S)}
+\[\forall x,y\in\mathbb{Z}: x\equiv y(mod\; n)\Rightarrow y\equiv x(mod\; n)\]
+So che \(n|x-y\Leftrightarrow x-y=nh\) per qualche \(h\in\mathbb{Z}\).
+\\\\
+Moltiplicando per \textit{-1}: \(y-x=-nh=n(-h)\) quindi \(n|y-x\Rightarrow y\equiv x(mod\;n)\)
+\\\\
+\textit{(T)}
+\[x\equiv y(mod\;n)\land y\equiv z(mod\;n)\Rightarrow x\equiv z(mod\;n)\]
+\((x-y)=nh_1 \land (y-z)=nh_2\)
+\\
+\((x-z)=(x-y)-(y-z)=nh_1-nh_2=n(h_1-h_2)\) quindi \(n|x-z\Rightarrow x\equiv z(mod\;n)\)
+
+\subsection{Quoziente}
+Il quoziente della congruenza \textit{(mod n)} si denota come \(\mathbb{Z}_{/ \equiv (mod\;n)}=\{[x]_n:x\in\mathbb{Z}\}\).
+\\
+Il quoziente \(\mathbb{Z}_n\) si chiama anche \textbf{interi modulo n}.
+
+\subsection{Proposizione}
+Dati \(x,y\in\mathbb{Z}\) si ha: \(x\equiv y(mod\;n)\Leftrightarrow\) il resto delle divisioni di \textit{x} e di \textit{y} per \textit{n} è lo stesso.
+\\
+\textbf{Dimostrazione \(\Rightarrow\)(se \(x\equiv _n y\) hanno lo stesso resto}
+\(x-y=nh\) (per qualche h)\\
+\(x=nh+y\)\\
+Dividendo \textit{y} per \textit{n}: \(\exists !q,r\in\mathbb{Z} : y=nq+r,\; 0\leq r<n\).
+\\
+Scambiando in \textit{x}: \(x=nh+nq+r=n(h+q)+r\), \textit{x} ed \textit{y} hanno quindi lo stesso resto.
+
+\subsection{Osservazione}
+Sia \(x=nq+r,\;0\leq r<n\) la divisione con resto di \textit{x} per \textit{n}.\\
+Allora \[[x]_n=[r]_n\Leftrightarrow x\equiv r(mod\;n)\Leftrightarrow x-r=nq\]
+Quindi \[n|x-r\]
+
+\subsection{Proposizione somma}
+La somma classi resto in \(\mathbb{Z}_n\), definita da: \(\overline{x}+\overline{y}:= \overline{x+y}\), è ben posta, ovvero non dipende dalla scelta dei rappresentanti.
+\\
+\textbf{Dimostrazione}
+Siano \(x'\in\overline{x}\), cioè \(\overline{x'}=\overline{x}\) e \(y'\in\overline{y}\) cioè \(\overline{y'}=\overline{y}\), allora\\
+\[x'\equiv x(mod\;n)\Leftrightarrow x'=x+kn\]
+\[y'\equiv y(mod\;n)\Leftrightarrow y'=y+hn\]
+Da verificare: \(\overline{x'+y'}=\overline{x+y}\Leftrightarrow x'+y'=x+y+tn\)
+\\Quindi:
+\[x'+y'=x+kn+y+hn\]
+\[=x+y+kn+hn\]
+\[=x+y+(k+h)n\;\;[(k+h)=t]\]
+
+\subsection{Dimostrazione prodotto}
+\[x'\cdot y'= (x+kn)(y+hn)\]
+\[=xy+xhn+kny+khn^2\]
+\[xy+n(xh+ky+khn),\;\;\;[(xh+ky+khn)=t]\]
+
+\subsection{Campo}
+Un campo è una terna \((K,+,\cdot)\) con \textit{K} insieme non vuoto e 2 operazioni.
+\begin{itemize}
+    \item \((K,+,\cdot)\) anello commutativo unitario
+    \item Detto \(0_k\) l'elemento neutro della somma e denotato con \(K^*=K\setminus\{0_k\}\), deve valere che \(\forall x\in K^*:x\cdot x^{-1}=1_k\)
+\end{itemize}
+Quindi campo\(\Leftrightarrow\) anello commutativo unitario con in più \(K\setminus\{0_k\}=(K^*,\cdot)\) gruppo.
+
+\subsection{Proposizione}
+\(a\in\mathbb{Z}, \overline{a}\) invertibile in \(\mathbb{Z}_n\Leftrightarrow MCD(a,n)=1\)
+\\
+\textbf{Dim \(\Rightarrow\)}
+\\Ipotesi: \(\overline{a}\in\mathbb{Z}\) invertibile
+\\\\Tesi: \textit{(a,n)=1}
+\\\\Esiste \(b\in\mathbb{Z}: \overline{a}\cdot\overline{b}=1\) 
+\[\Leftrightarrow ab\equiv 1(mod\;n)\]
+\[\Leftrightarrow n|1-ab\]
+\[\Leftrightarrow  1-ab=nk\]
+\[\Leftrightarrow 1=ab+nk\]
+\[\Rightarrow MCD(a,n)=1 \]
+\\
+\textbf{Dim \(\Leftarrow\)} 
+\\Ipotesi: \(MCD(a,n)=1\)
+\\\\Tesi: \(\overline{a}\) è invertibile
+\\\\Se \(MCD(a,n)=1\) allora esistono \(h,k\in\mathbb{Z}:\)
+\[1=ah+nk\;\;\in\mathbb{Z}\]
+\[\overline{1}=\overline{ah+nk}\]
+\[\overline{1}=\overline{a}\overline{h}+\overline{n}\overline{k}\;\;\in\mathbb{Z}\]
+\[\overline{n}\overline{k}=\overline{0}\overline{k}\]
+\[\overline{1}=\overline{a}\overline{h}\Rightarrow\overline{h}=(\overline{a})^{-1}\]
+
+\subsection{Classi resto invertibili}
+\[\cup (\mathbb{Z}_n):=\{a\in\mathbb{Z}_n:\overline{a}\;invertibile\}\subseteq\mathbb{Z}_n\]
+\[\cup (\mathbb{Z}_n)=\{\overline{a}: MCD(a,n)=1\}\]
+
+\subsection{Teorema Uguaglianza sbagliata}
+Se p è primo allora \(\forall x,y\in\mathbb{Z}\) vale:
+\[(x+y)^p\equiv x^p+y^p(mod\;p)\]
+\[(\overline{x}+\overline{y})^p=\overline{x}^p+\overline{y}^p(mod\;p)\]
+\textbf{Dimostrazione:}\((x+y)^p=\sum ^p_{i=0}\binom{p}{i}x^iy^{p-i}\)
+\[\binom{p}{0}=1=\binom{p}{p}\]
+\[\binom{p}{0}x^0y^p=1y^p\]
+\[\binom{p}{p}x^py^0=1x^p\]
+\\
+Considerare con \(0<i<p\) il coefficiente binomiale è:
+\[\binom{p}{i}=\frac{p(p-1)...(p-i+1)}{i(i-1)...2\cdot 1}\in\mathbb{N}\]
+\[p(\frac{(p-1)...(p-i+1)}{i!})\Rightarrow p|\binom{p}{i}\forall i=2,...,p-1\]
+\[\Rightarrow\binom{p}{i}\equiv 0(mod\;p)\]
+
+\subsubsection{Grande teorema di Fermat}
+\(x^n+y^n=z^n, n\geq 3\) non ha soluzioni intere.
+
+\subsubsection{Piccolo teorema di Fermat}
+\(\forall a\in\mathbb{Z}, \forall p(mod)\) primo si ha che: \(a^p\equiv a(mod\;p)\) in \(\mathbb{Z_p}\), \textit{p} primo vale \(\overline{a}^p=\overline{a}\).
+\\\\
+\textbf{Dimostrazione per \(a\in\mathbb{N}\)}
+\\Per induzione su \textit{a}
+\\\\\textbf{Base}: \[a=0\]
+\[0^p\equiv ^? 0(mod\;p)\]
+\[0^p=0\in\mathbb{Z}\Rightarrow 0^p\equiv (mod\;p)\]
+\\\\
+\textbf{Ipotesi induttiva:} supponiamo vera per \textit{a} l'affermazione \(a^p\equiv a(mod\;p)\)
+\\\\
+\textbf{Passo induttivo:} verifichiamo per \((a+1)\).
+\[(a+1)^p\equiv a^p+1^p \equiv a+1\]
+\(a^p\rightarrow a\) e \(1^p\rightarrow 1\) per ipotesi induttiva.
+\\\\
+Se \(a<0\) è ancora vero?
+\\ Se \(a<0\) allora \(-a>0\), cioè \((-a)^p\equiv -a(mod\;p)\). 
+Ora:
+\[0=a-a\]
+\[0^p=(a-a)^p\]
+\[0^p\equiv (a-a)^p\equiv a^p+(-a)^p\]
+\[\equiv a^p-a\equiv 0\cdot (mod\;p)\Leftrightarrow a^p\equiv a(mod\;p)\]
+
+\subsection{Teorema Eulero-Fermat}
+Se \((a,p)=1\) cioè se \(\overline{a}\neq \overline{0}\) in \(\mathbb{Z}_p\) allora
+\[a^{p-1}\equiv 1(mod\;p)\]
+\\\\
+\textbf{Dimostrazione:} se \((a,p)=1\) allora esiste l'inverso moltiplicativo di \(\overline{a}\) in \(\mathbb{Z}_p\).
+\\
+So che \[a^p\equiv a(mod\;p)\]
+\[(\overline{a}^p)\equiv \overline{a}(mod\;p)\]
+\[\Rightarrow moltiplicando\;per\;l'inverso \Rightarrow \overline{a}^{p-1}=\overline{1}\;in\;\mathbb{Z}_p\]
+\[\Leftrightarrow a^{p-1}\equiv 1(mod\;p)\]
+
+\subsection{Corollario}
+Se \((a,p)=1\) e se \textit{p} primo allora \(\overline{a}^{p-2}\) è l'inverso moltiplicativo di \(\overline{a}\) in \(\mathbb{Z}_p\)
+\\\\
+\textbf{Dimostrazione:} l'inverso di \(\overline{a}\) è \(\overline{x}\) con \(\overline{a}\cdot\overline{x}=\overline{1}\), 
+ma \[\overline{a}\cdot\overline{a}^{p-2}=\overline{a}^{p-1}=\overline{1}\]
+per il \textit{teorema di Eulero-Fermat}.
+
+\subsection{Semigruppo}
+Sia X un insieme non vuoto. 
+\\\textit{*}:
+\[X\;*\;X\rightarrow Z\]
+\[(a.b)\mapsto a * b\]
+una operazione binaria associativa: \(\forall a,b,c\in X: a+(b+c)=(a+b)+c\)
+\\
+Un insieme \textit{X}, munito di una operazione associativa si chiama \textbf{semigruppo}.
+
+\subsection{Monoide}
+Se \((X,+)\) è un semigruppo e inoltre esiste un elemento \(1_X\) tale che \(a+1_X=1_X*a=a\) (\(1_X\) elemento neutro dell'operazione \textit{*}), allora \((X,+)\) si chiama \textbf{monoide}.
+
+\subsection{Elenco gruppi}
+\\\textbf{\((A^*, \cdot )\)} è un monoide non commutativo.
+\\\textbf{\((\mathbb{N}, +) \)} (commutativo) monoide (0 el. neutro) ma non è un gruppo.
+\\\textbf{\( (\mathbb{Z}, +)\)} gruppo commutativo (0 el. neutro).
+\\\textbf{\((\mathbb{Q}, +) \)} gruppo commutativo (0 el. neutro); \(\frac{p}{a}\rightarrow\;opposto\;-\frac{p}{q}\).
+\\\textbf{\((\mathbb{N}^*, \cdot)\)} monoide, non è un gruppo.
+\\\textbf{\((\mathbb{Z}^*, \cdot)\)} monoide, non è un gruppo.
+\\\textbf{\((\mathbb{Q}, \cdot)\)} non è un gruppo, 0 non ha inverso.
+\\\textbf{\((\mathbb{Q}^*,\cdot)\)} gruppo.
+\\\textbf{\((\mathbb{R}, +)\)} gruppo.
+\\\textbf{\((\mathbb{R}^*, \cdot)\)} monoide, gruppo.
+\\\textbf{\((\mathbb{Z}_n, +)\)} gruppo finito commutativo; el. neutro \(\overline{0}\).
+\\\textbf{\((\mathbb{Z}_n,\cdot)\)} monoide, semigruppo (non è un gruppo \(\overline{0}\) non è invertibile.
+\\\textbf{\((\cup (\mathbb{Z}_n),\cdot) \)} gruppo, el. neutro \(\overline{1}=\{\overline{a}: (a,n)=1\}\) (el. invertibili).
