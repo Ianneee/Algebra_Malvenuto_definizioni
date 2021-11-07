@@ -1,0 +1,38 @@
+\section{Gruppo simmetrico}
+
+\subsection{Permutazione}
+\(f:[n]\rightarrow [n]\) si chiama permutazione di \textit{n elementi} se \textit{f} è biiettiva.
+
+\subsection{\(S_n\)}
+\[S_n:=\{\sigma : [n]\rightarrow[n] : \sigma\;è\;biiettiva\}\]
+\[=\{\sigma : \sigma\;è\;una\;biiezione\}\]
+
+\subsection{Proposizione}
+\[|S_n|=n!\]
+
+\subsection{Proposizione}
+\((S_n,\cdot)\) l'insieme delle permutazioni di \textit{n} elementi con il prodotto di composizione funzionale è un gruppo di cardinalità \textit{n!} non commutativo.
+\\
+\textbf{Dimostrazione}
+\begin{itemize}
+    \item \(S_n\) non vuoto, \(n\geq 1\)
+    
+    \item Esiste un elemento neutro rispetto al prodotto \(\cdot\), la permutazione identica: \(\sigma\circ id=id\circ\sigma=\sigma\).
+    
+    \item Prodotto associativo \(\forall\sigma ,\tau ,\rho\in S_n\) \((\sigma\circ \tau )\circ\rho (i)=\sigma\circ (\tau\circ\rho )(i)=\sigma ( \tau (\rho (i)))\)
+    
+    \item \(\forall\sigma\in S_n\) esiste un elemento \(\sigma ^{-1}\) tale che \(\sigma\circ\sigma ^{-1}=id\).
+\end{itemize}
+
+\subsection{\(3^a\) notazione: Permutazione come prodotto di cicli disgiunti}
+\(S_n\): Definire una relazione di equivalenza su \([n]\) associata a \(\sigma \in S_n\).
+\[x,y\in [n]\]
+\[x\equiv _\sigma y\Leftrightarrow \exists i : y=\sigma ^i(x)\]
+Si osservi che \(\sigma\in S_n\), allora la potenza \textit{i-esima} di \(\sigma\), con \(i\in\mathbb{N}\) è la permutazione \(\sigma ^i =\sigma\circ ...\circ\sigma\) per \textit{i} volte.
+
+\subsection{Orbita}
+L'orbita di \(x\in [n]\) è la classe di equivalenza di \textit{x} nella relazione \(\equiv _\sigma\).
+\[O_\sigma (x) =\{y\in [n]\;\exists i\;con\;y=\sigma ^i(x)\}\]
+
+\subsection{Proposizione}
+Se \(\tau _1\) e \(\tau _2\) hanno cicli disgiunti \(\tau _1\circ\tau _2 = \tau _2\circ\tau _1\)
