@@ -1,5 +1,0 @@
-
-ciao
-test.txt
-
-exit
