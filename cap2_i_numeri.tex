@@ -244,7 +244,7 @@ Con principio di induzione in forma forte.
 \\
 Per \textbf{oss1} \(2=2^1\) è la fattorizzazione in primi in irriducibili di 2
 \\
-\textbf{Ipotesi induttiva}: ogni \(2\leq a<n\;\;(2\leq a\leq n-1)\) è fattorizzabile in irriducibili: \(\exists\; \alpha _1...\alpha _t \alpha _i\leq 1\) e \(q_1,...q_t\) irriducibili con \(a=q_1^{\alpha _1}...q_t^\alpha _t\)
+\textbf{Ipotesi induttiva}: ogni \(2\leq a<n\;\;(2\leq a\leq n-1)\) è fattorizzabile in irriducibili: \(\exists\; \alpha _1...\alpha _t \alpha _i\leq 1\) e \(q_1,...q_t\) irriducibili con \(a=q^{\alpha _1}_1...q_t^{\alpha _t}\)
 \\
 \textbf{Passo induttivo}: provare che \textit{n} sia prodotto di irriducibili
 \\\\
@@ -253,8 +253,8 @@ Per \textbf{oss1} \(2=2^1\) è la fattorizzazione in primi in irriducibili di 2
 \textbf{Secondo caso}: \textit{n} riducibile: \(\exists\;b,c\in\mathbb{Z}, 1\neq b, c\neq n\) (divisori propri) con \(n=bc\Rightarrow 2\leq b,c<n\).
 \\
 Allora per \textit{b} e \textit{c} vale l'ipotesi induttiva e quindi
-\[b=q_1^{\alpha _1}...q_t^\alpha _t\;\; c= x_1^{\beta _1}...x_s^{\beta _s}\]
-\[n=bc=q_1^{\alpha _1}...q_t^\alpha _t x_1^{\beta _1}...x_s^{\beta _s}\]
+\[b=q_1^{\alpha _1}...q_t^{\alpha _t}\;\; c= x_1^{\beta _1}...x_s^{\beta _s}\]
+\[n=bc=q_1^{\alpha _1}...q_t^{\alpha _t} x_1^{\beta _1}...x_s^{\beta _s}\]
 
 \subsection{Dimostrazione unicità}
 Per induzione su \textit{m}, con \textit{m} è la lunghezza minima di una fattorizzazione per \textit{n}.
