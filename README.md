@@ -5,10 +5,10 @@ I testi potrebbero **SICURAMENTE** contenere errori ed imprecisioni: sono stati 
 \
 Per eventuali errori contattare l'autore della repo o fate un pull; eventuali modifiche saranno aggiunte a mano per evitare la "distruzione(!)" del documento.
 \
-##Documento "comprensibile"
+## Documento "comprensibile"
 Nella repo è disponibile il compilato del codice... ovvero il pdf.\
 Lo trovate come _main.pdf_.
 
-##P.S. 
+## P.S. 
 Non proponete modifiche perchè **"pensiate"** che non sia corretto ma perchè **SAPETE** che non è corretto!
 
