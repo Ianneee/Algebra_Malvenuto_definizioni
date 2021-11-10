@@ -1,25 +1,26 @@
 \section{I numeri}
-\subsection{Costruzione di \(\mathbb{Z}\) (interi)} a partire da \(\mathbb{N}\): prendiamo su \(\mathbb{N}\times\mathbb{N}\) la relazione \(\rho\) definita sulle coppie \((n, m)\in \mathbb{N}\times\mathbb{N}\) tale che \((n, m)\rho (n',m') \Leftrightarrow n+m'=m+n'\)
+\subsection{Costruzione di \(\mathbb{Z}\) (interi)} 
+Partendo da \(\mathbb{N}\): prendiamo su \(\mathbb{N}\times\mathbb{N}\) la relazione \(\rho\) definita sulle coppie \((n, m)\in \mathbb{N}\times\mathbb{N}\) tale che \((n, m)\rho (n',m') \Leftrightarrow n+m'=m+n'\)
 
-\subsection{Definizione di \(\mathbb{Z}\):} \[\mathbb{Z}=\mathbb{N}\times\mathbb{N}/_{\rho}\]
+\subsection{Definizione di \(\mathbb{Z}\)} 
+\[\mathbb{Z}=\mathbb{N}\times\mathbb{N}/_{\rho}\]
 
-\subsection{Classi su \(\mathbb{Z}\):} 
-
+\subsection{Classi su \(\mathbb{Z}\)} 
 \(\overline{(0,0)}\) zero
+\\\(\overline{(m, 0)}, m>0\) positivi
+\\\(\overline{(0, n)}, n>0\) negativi
 
-\(\overline{(m, 0)}, m>0\) positivi
+\subsection{Sottoinsiemi di \(\mathbb{Z}\)} 
+\[\mathbb{Z}=\mathbb{Z}^{>0}\cup\{0,0\}\cup\mathbb{Z}^{<0}\]
 
-\(\overline{(0, n)}, n>0\) negativi
-
-\subsection{Sottoinsiemi di \(\mathbb{Z}\):} \[\mathbb{Z}=\mathbb{Z}^{>0}\cup\{0,0\}\cup\mathbb{Z}^{<0}\]
-
-\subsection{Somma su \(\mathbb{Z}\):}
+\subsection{Somma su \(\mathbb{Z}\)}
 \[\overline{(n,m)}+\overline{(n',m')}=\overline{(n+n',m+m')}\]
 
 \subsection{Prodotto su \(\mathbb{Z}\):}
 \[\overline{(n,m)}\cdot\overline{n',m'}=\overline{(nn'+mm', nm'+mn')}\]
 
-\subsection{Proprietà operazioni su \(\mathbb{Z}\):} \(\forall a,b,c\in\mathbb{Z}\) (coppie \(\overline{(n,m)}\)) valgono le seguenti:
+\subsection{Proprietà operazioni su \(\mathbb{Z}\)} 
+\(\forall a,b,c\in\mathbb{Z}\) (\(a,b,c\) coppie \(\overline{(n,m)}\)) valgono le seguenti:
 \begin{enumerate}
     \item Associatività: \((a+b)+c=a+(b+c)\)
     \item Commutatività: \(a+b=b+a\)
@@ -33,62 +34,72 @@
     \item Commutatività prodotto: \(a\cdot b=b\cdot a\)
     \item Esiste un \textit{elemento neutro} per il prodotto, "1", cioè un numero in \(\mathbb{Z}\) tale che:
     \[a\cdot 1=1\cdot a=a\]
-    \[\overline{(n,m)}\cdot\overline{(1,0}=\overline{(n,m)}\]
+    \[\overline{(n,m)}\cdot\overline{(1,0)}=\overline{(n,m)}\]
     \item Distributività del prodotto sulla somma:
     \[a\cdot (b+c)=a\cdot b+a\cdot c\]
 \end{enumerate}
 
-\subsection{Gruppo:} Un insieme S non vuoto, munito di una operazione \[m:S\times S\rightarrow S\]
+\subsection{Gruppo} 
+Un insieme S non vuoto, munito di una operazione \[m:S\times S\rightarrow S\]
 \[(a,b)\mapsto m(a,b)=a\ast b\;\; (notazione\; infissa)\]
 che verifica i punti 1, 3, 4 si chiama \(gruppo(S,\ast)\).
-L'operazione su S è:
+\\L'operazione su S è dunque:
 \begin{itemize}
     \item associativa
-    \item con elemento neutro \textit{e}, \(\forall x, x\ast e=e\ast x=x\)
+    \item con elemento neutro \textit{e}: \(\forall x, x\ast e=e\ast x=x\)
     \item per ogni elemento \textit{x} esiste un inverso rispetto al prodotto \(\ast\) cioè un elemento \textit{y} tale che \(x\ast y=y\ast x=e\), che si denota \(x^{-1}\)
 \end{itemize}
 
-\subsection{Gruppo commutativo (abeliano):} Se il gruppo \((S, \ast)\) soddisfa anche la proprietà 2 (quindi associatività, commutatività, elemento neutro, opposto).
+\subsection{Gruppo commutativo (abeliano)} 
+Se il gruppo \((S, \ast)\) soddisfa anche la proprietà 2 (quindi associatività,  elemento neutro, opposto, +commutatività).
 
-\subsection{Anello:} Un anello è una terna \((A,+,\cdot)\) con:
+\subsection{Anello} 
+Un anello è una terna \((A,+,\cdot)\) con:
 \begin{itemize}
     \item A insieme non vuoto
     \item \(+ \; \cdot\) due operazioni binarie, associative
     \item \((A,+)\) è un gruppo abeliano
     \item Distributività: \(\forall a, b, c \in A, \; a\cdot (b+c)=a\cdot b+a\cdot c\)
 \end{itemize}
-\textbf{Anello commutativo:} Se un anello \((A,+,\cdot)\) il prodotto è commutativo, cioè se \(\forall a,b\in A,\;a\cdot b=b\cdot a\).
 
-\subsection{Anello unitario:} Se esiste un elemento di A, che si denota con \(1_A\), tale che \(a\cdot 1_A=1_A\cdot a=a\).
+\subsection{Anello commutativo} 
+Se un anello \((A,+,\cdot)\) il prodotto è commutativo, cioè se \(\forall a,b\in A,\;a\cdot b=b\cdot a\).
 
-\subsection{Divisore dello zero:} Un elemento \(a\in A,\; a\neq0_A\) di un anello di dice divisore dello zero se esiste \(b\in A,b\neq 0\) con \(a\cdot b=0_A\).
+\subsection{Anello unitario} 
+Se esiste un elemento di A, che si denota con \(1_A\), tale che \(a\cdot 1_A=1_A\cdot a=a\).
 
-\subsection{Dominio di integrità:} se \((A,+,\cdot)\) è privo di divisori dello zero.
+\subsection{Divisore dello zero} 
+Un elemento \(a\in A,\; a\neq0_A\) di un anello di dice divisore dello zero se esiste \(b\in A,b\neq 0\) con \(a\cdot b=0_A\).
 
-\subsection{Legge di annullamento del prodotto:} se in un dominio di integrità \(a\cdot b=0_A\) allora \(a=0_A\) oppure \(b=0_A\).
+\subsection{Dominio di integrità} 
+Se \((A,+,\cdot)\) è privo di divisori dello zero.
 
-\subsection{Divisibilità:} dati \(a,b\in\mathbb{Z}\) si dice che a divide b, e si indica \(a|b\), se e solo se \(\exists c\in\mathbb{Z}\) tale che \(b=a\cdot c\).
-La divisibilità è una relazione sugli interi:
-\[a|b\Leftrightarrow\exists c\in\mathbb{Z}: b=a\cdot c\]
+\subsection{Legge di annullamento del prodotto} 
+Se in un dominio di integrità \(a\cdot b=0_A\) allora \(a=0_A\) oppure \(b=0_A\).
 
-\subsection{Multiplo:} se \(a|b\) diremo che \textit{b} è un multiplo di \textit{a}.
+\subsection{Divisibilità} 
+Dati \(a,b\in\mathbb{Z}\) si dice che a divide b, e si indica \(a|b\), se e solo se \(\exists c\in\mathbb{Z}\) tale che \(b=a\cdot c\) (ovvero \(a|b\Leftrightarrow\exists c\in\mathbb{Z}: b=a\cdot c\)).
+\\La divisibilità è una relazione sugli interi:
+
+\subsection{Multiplo} 
+Se \(a|b\) diremo che \textit{b} è un multiplo di \textit{a}.
 
 \subsection{Associati}
 \textit{a,b} sono associate se \(a|b\) e \(b|a\)
 \newline\textit{Oss1:} in \(\mathbb{N^*}\) sono associati \(\Leftrightarrow a=b\).
 \newline\textit{Oss2:} in generale, in \(\mathbb{Z}\Leftrightarrow a=b\) oppure \(a=-b\).
 
-\subsection{Unità:}
+\subsection{Unità}
 In \(\mathbb{Z}\) sono +1 e -1.
 
 \subsection{Irriducibile}
 Un elemento \(a\in\mathbb{Z}, \; a\neq 0\) è irriducibile se \(a=b\cdot c\Rightarrow\) \textit{b} oppure \textit{c} sono unità.
 
-\subsection{Primo:}
+\subsection{Primo}
 Un elemento \(a\in\mathbb{Z}\) si dice primo se:
 \[a|b\cdot c\Rightarrow a|b \;oppure\; b|c\]
 
-\subsubsection{Proposizione: in \(\mathbb{Z}\; a\) è primo \(\Rightarrow\;a\) irriducibile}
+\subsubsection{Proposizione: in \(\mathbb{Z},\; a\) è primo \(\Rightarrow\;a\) irriducibile}
 Sia \(a=b\cdot c\): usando l'ipotesi che a è primo allora \(a|b\) oppure \(a|c\).
 \\
 Se \(a|b \Rightarrow\exists\; h : b=a\cdot h \Rightarrow a = a\cdot h\cdot c \Rightarrow h\cdot c=1\Rightarrow c=\pm 1\)
@@ -96,21 +107,22 @@ Se \(a|b \Rightarrow\exists\; h : b=a\cdot h \Rightarrow a = a\cdot h\cdot c \Ri
 Allora \(a=b\cdot (+1)\) oppure \(a=b\cdot (-1)\), \textit{a} è irriducibile.
 
 \subsubsection{Proposizione: in \(\mathbb{Z}\) a irriducibile\(\Rightarrow\)a primo}
-Ipotesi: a irriducibile
+Ipotesi: \(a\) irriducibile
 \\
-Tesi: a primo
+Tesi: \(a\) primo
 Supponiamo che \(a|bc\Leftrightarrow\exists h\in\mathbb{Z}:bc=ah\),
 \\
 voglio mostrare che \(a|b\) oppure \(a|c\) ovvero che se \(a\nmid b\) allora \(a|c\).
 \\
-Ora a irriducibile, i suoi divisori sono \(a,-a,1,-1\). \(a\nmid b\) allora anche \(-a\nmid b\Rightarrow\)i divisori comuni tra \textit{a} e \textit{b} sono \(1,-1\rightarrow MCD(a,b)=1\).
+Ora \(a\) irriducibile, i suoi divisori sono \(a,-a,1,-1\). \(a\nmid b\) allora anche \(-a\nmid b\Rightarrow\)i divisori comuni tra \textit{a} e \textit{b} sono \(1,-1\rightarrow MCD(a,b)=1\).
 \\\\
 \centerline{\(\exists\)(id. Bézout)\(\exists\; h,k\in\mathbb{Z}\)}
 \[1=ah+bk\]
+moltiplicando per \(c\)
 \[c=cah+cbk=a(ck+k)\;\;\;[cb=a]\]
 quindi \(a|c\).
 
-\subsection{Massimo comune divisore:}
+\subsection{Massimo comune divisore}
 Dati \textit{a,b} non entrambi nulli, un elemento \(d\in\mathbb{Z}\) si chiama massimo comune divisore tra \textit{a} e \textit{b} un numero tale che:
 \begin{itemize}
     \item \(d|a \land d|b\)

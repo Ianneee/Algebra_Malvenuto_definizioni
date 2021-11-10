@@ -4,13 +4,15 @@ Relazione e corrispondenza sono interscambiabili.
 \subsection{Corrispondenza}
 Una corrispondenza \(\rho\) di X in Y è una terna ( \(\rho, X, Y\)) dove \(\rho \subseteq X\times Y\).
 
-\subsection{Relazione}
+\subsection{Relazione in se}
 Una Relazione di \(X\) in sè, è una corrispondenza \(\rho\) di X in X.
 Se \((x, y) \in\rho\) si scrive anche \(x\rho y\)(notazione infissa), cioè x è in relazione \(\rho\) con y.
 
-\subsection{Relazione/Corrispondenza inversa:} di \(\rho\) di X in Y è la relazione di Y in X denotata con \(\rho ^{-1}\) data dalla seguente:
+\subsection{Relazione/Corrispondenza inversa} 
+Una corrispondenza \(\rho\) di X in Y è la relazione di Y in X denotata con \(\rho ^{-1}\) data dalla seguente:
 \[y\rho^{-1}x \Leftrightarrow x\rho y\]
-\subsection{Relazione di equivalenza:} una relazione su A (cioè un sottoinsieme \(\rho\) di AxA) si dice di equivalenza se verifica le tre seguenti proprietà:
+
+\subsection{Relazione di equivalenza} una relazione su A (cioè un sottoinsieme \(\rho\) di AxA) si dice di equivalenza se verifica le tre seguenti proprietà:
 
 \textit{Riflessiva:} \(\forall a \in A, a\rho a\).
 
@@ -18,20 +20,25 @@ Se \((x, y) \in\rho\) si scrive anche \(x\rho y\)(notazione infissa), cioè x è
 
 \textit{Transitiva:} \(\forall a, b, c \in A\) se \((a\rho b \wedge b\rho c) \Rightarrow a\rho c\)
 
-\subsection{Relazione banale (di uguaglianza):} su A \(x, y \in A\) \(x\rho y \Leftrightarrow x=y\)
+\subsection{Relazione banale (di uguaglianza)} 
+Su A \(x, y \in A\) \(x\rho y \Leftrightarrow x=y\)
 
-\subsection{Relazione caotica:} su A \(x\rho y\; \forall x,y \in A\)
+\subsection{Relazione caotica} 
+Su A \(x\rho y\; \forall x,y \in A\)
 
-\subsection{Classe di equivalenza:} data la relazione \(\rho\) in A, si definisce classe di equivalenza modulo \(\rho\) di un elemento \(a \in A\) l'insieme di tutti gli elementi che sono equivalenti ad \(a\); si denota con \([a]_\rho\).
+\subsection{Classe di equivalenza} 
+Data la relazione \(\rho\) in A, si definisce classe di equivalenza modulo \(\rho\) di un elemento \(a \in A\) l'insieme di tutti gli elementi che sono equivalenti ad \(a\); si denota con \([a]_\rho\).
 
 \[[x]_\rho :=\{y\in A : y\rho x\} \]
 
-\subsection{Insieme quoziente:} data la relazione di equivalenza \(\rho\) su A, si definisce insieme quoziente l'insieme delle classi di equivalenza di \(\rho\) dato \(x\in A\) si denota con \(A/_\rho\).
+\subsection{Insieme quoziente} 
+Data la relazione di equivalenza \(\rho\) su A, si definisce insieme quoziente l'insieme delle classi di equivalenza di \(\rho\) dato \(x\in A\) si denota con \(A/_\rho\).
 \[A/_\rho = \{[x]_\rho : x \in A \} \]
 \newline
 Nota: Relazione di equivalenza e partizioni insiemistiche sono sostanzialmente la stessa cosa.
 
-\subsection{Partizione insiemistica} di A è una famiglia di sottoinsiemi di A non vuoti, tali che ad ogni elemento di A corrisponde un solo sottoinsieme.
+\subsection{Partizione insiemistica} 
+Una partizione insiemeistica di A è una famiglia di sottoinsiemi di A non vuoti, tali che ad ogni elemento di A corrisponde un solo sottoinsieme.
 \[H = \{A_i : i \in I \} \] con \[A_i \subseteq A\; \forall i \in I\]
 con
 \[i \neq j,\;\; i,j \in I \Leftrightarrow A_i \cap A_j=\emptyset \]
@@ -39,11 +46,10 @@ che equivale a dire:
 \[\cup_{i\in I} \; A_i = A\]
 cioè la famiglia H ricopre A.
 
-\subsection{Funzione/Applicazione:} \(f:S\rightarrow T\) è un'applicazione di S in T se (f, S, T) è una corrispondenza di S in T, ovvero \(f\subseteq S\times T\) che soddisfa la seguente proprietà:
-
-\(\forall x \in S \; \exists !\) y in T denotato con \(y=f(x)\)
-
-\noindent f è una legge univoca (ben definita)
+\subsection{Funzione/Applicazione} 
+\(f:S\rightarrow T\) è un'applicazione di S in T se (f, S, T) è una corrispondenza di S in T, ovvero \(f\subseteq S\times T\) che soddisfa la seguente proprietà:
+\\
+\(\forall x \in S \; \exists !\) y in T denotato con \(y=f(x)\), f è una legge univoca (ben definita).
 \\\\
 L'elemento f(x) si chiama \textbf{immagine dell'elemento}.
 \\\\
@@ -53,30 +59,34 @@ L'elemento f(x) si chiama \textbf{immagine dell'elemento}.
 \textbf{Controimmagine di y} è il sottoinsieme di S del dominio definito da:
 \[f^{-1}(y):=\{x\in S:f(x)=y\}\subseteq S\]
 
-\subsection{Iniettiva:} f è iniettiva \(\Leftrightarrow \forall x, x' \in S :[f(x)=f(x')\Rightarrow x=x']\).
+\subsection{Iniettiva} 
+f è iniettiva \(\Leftrightarrow \forall x, x' \in S :[f(x)=f(x')\Rightarrow x=x']\).
 \\\textit{Definizione alternativa:} f è iniettiva \(\Leftrightarrow \forall x,x' \in S : [f(x)\neq f(x') \Rightarrow x\neq x']\).
 \\
 f è iniettiva \(\Leftrightarrow \forall y \in T \; |f^{-1}|\leq 1\), ovvero per ogni elemento y in T esiste al più un'immagine.
 
-\subsection{Suriettiva:} f è suriettiva se \(\Rightarrow \forall y\in T \;\;\exists\; x \in S : f(x)=y\)
+\subsection{Suriettiva} 
+f è suriettiva se \(\Rightarrow \forall y\in T \;\;\exists\; x \in S : f(x)=y\)
 \\
 \textit{Definizione alternativa:} f è suriettiva \(\Leftrightarrow f(S) = Im(S) = T\).
 \\
 f è suriettiva \(\Leftrightarrow \forall y \in T \; |f^{-1}(y)|\geq 1\), ovvero per ogni elemento y in T esiste almeno un'immagine.
 
-\subsection{Biunivoca (biiettiva):} se f è sia iniettiva che suriettiva.
+\subsection{Biunivoca (biiettiva)} se f è sia iniettiva che suriettiva.
 \\
 f è biiettiva \(\Leftrightarrow \forall y \in T \; |f^{-1}(y)|=1\), ovvero per ogni elemento y in T esiste una sola immagine.
 
-\subsection{Funzione caratteristica:} è la funzione che vale 1 se \(x \in S\), 0 se \(x \notin S\).
+\subsection{Funzione caratteristica} 
+E' la funzione che vale 1 se \(x \in S\), 0 se \(x \notin S\).
 
-\subsection{Operazione binaria:} su S, è un'applicazione \(m:S\times S \rightarrow S\); notazione funzionale \((s, s') \mapsto m(s, s')\); notazione infissa \(sms'\) o \(s*s\).
+\subsection{Operazione binaria} 
+Un'operazione binaria su S, è un'applicazione \(m:S\times S \rightarrow S\); notazione funzionale \((s, s') \mapsto m(s, s')\); notazione infissa \(sms'\) o \(s*s\).
 
 \subsection{Assiomi di Peano} per la costruzione dei naturali \(\mathbb{N}\)
 \begin{enumerate}
     \item I numeri formano una classe
     \item Lo "zero" è un numero
-    \item Se a è un numero allora il successore a' è un numero
+    \item Se \(a\) è un numero allora il successore \(a'\) è un numero
     \item Se \(a\neq b\) sono due numeri allora \(a'\neq b'\)
     \item Lo "zero" non è successore di nessun numero (\(\nexists \; a\) numero tale che \(zero=a'\))
     \item Assioma di induzione:
@@ -93,27 +103,37 @@ I naturali sono la più piccola classe che
     \item Chiusa rispetto a contenere i successori
 \end{itemize}
 
-\subsection{Principio del buon ordinamento di \(\mathbb{N}\):} Se \(S\subseteq \mathbb{N}, S\neq\emptyset\), allora esiste un minimo in S, cioè esiste \(m\in S\) tale che se \(h\in\mathbb{N}, h<m\) allora \(h\notin S\).
+\subsection{Principio del buon ordinamento di \(\mathbb{N}\)} 
+Se \(S\subseteq \mathbb{N}, S\neq\emptyset\), allora esiste un minimo in S, cioè esiste \(m\in S\) tale che se \(h\in\mathbb{N}, h<m\) allora \(h\notin S\).
 
-\subsection{Teor: Divisione con resto su \(\mathbb{N}\)}: Siano \(a,b\in\mathbb{N}, b\neq 0\); allora esistono \(q, r\in\mathbb{N}\) tali che
+\subsection{Teor: Divisione con resto su \(\mathbb{N}\)} 
+Siano \(a,b\in\mathbb{N}, b\neq 0\); allora esistono \(q, r\in\mathbb{N}\) tali che
 \begin{itemize}
     \item \(a=bq+r\)
     \item \(0\leq r<b\)
 \end{itemize}
 \(\forall a,b\in\mathbb{Z}, b\neq 0; \exists\) unici \(q, r\in\mathbb{Z}\) con \(a=bq+r \land 0\leq r<b\)
+%dimostrazione
+TODO: Dimostrazione
 
 \section{Calcolo combinatorio}
 
-\subsection{Notazione funzionale:} Insieme delle applicazioni da A verso B
+\subsection{Notazione funzionale} 
+Insieme delle applicazioni da A verso B
 \[B^A=\{f:A\rightarrow B\}\]
 
-\subsection{Fattoriale crescente:} \(n^{(m)}:= n\ast (n+1)\ast ... \ast (n+m-1)\)
+\subsection{Fattoriale crescente} 
+\[n^{(m)}:= n\ast (n+1)\ast ... \ast (n+m-1)\]
 
-\subsection{Fattoriale decrescente:} \(n_{(m)}:= n\ast (n-1)\ast ... \ast (n-m+1)\)
+\subsection{Fattoriale decrescente} 
+\[n_{(m)}:= n\ast (n-1)\ast ... \ast (n-m+1)\]
 
-\subsection{Pigenhole principle (principio dei cassetti):} Se ho \textit{n} oggetti e \textit{m} cassetti, se \(n>m\) e devo disporre tutti gli oggetti nei cassetti allora esiste un cassetto che contiene almeno due oggetti.
+\subsection{Pigenhole principle (principio dei cassetti)} 
+Se ho \textit{n} oggetti e \textit{m} cassetti, se \(n>m\) e devo disporre tutti gli oggetti nei cassetti allora esiste un cassetto che contiene almeno due oggetti.
 
-\subsection{Permutazione:} Sia A un insieme. Una biiezione \(f:A\rightarrow A\) si chiama anche \textit{permutazione} di A.
+\subsection{Permutazione} 
+Sia A un insieme. Una biiezione \(f:A\rightarrow A\) si chiama anche \textit{permutazione} di A.
+
 \subsection{Coefficiente binomiale}
 \textbf{Prima interpretazione combinatoria:} \(\binom{n}{i}\) è il coefficiente di \(x^i y^{n-i}\) nello sviluppo \((x+y)^n=\sum _{z_i\in \{x,y\}} z_1 ...z_n\), ovvero il numero di stringhe binarie (su {x, y})
 \begin{itemize}
@@ -122,25 +142,28 @@ I naturali sono la più piccola classe che
     \item con n-i occorrenze di y
     \item \((x+y)^n =\sum _{i=0} ^n\binom{n}{i} x^iy^{n-i}\)
 \end{itemize}
-\noindent\textbf{Seconda interpretazione combinatoria:} numero di sottoinsiemi di cardinalità \textit{i} su un insieme \textit{[n]} di cardinalità n.
+\noindent\textbf{Seconda interpretazione combinatoria:} numero di sottoinsiemi di cardinalità \textit{i} su un insieme \([n]\) di cardinalità \textit{n}.
 
-\subsection{Formula:} \[\binom{n}{i}=\frac{n(n-1)\ast ... \ast (n-i+1)}{i!} = \frac{n!}{i!(n-i)!}\]
+\subsection{Formula} 
+\[\binom{n}{i}=\frac{n(n-1)\ast ... \ast (n-i+1)}{i!} = \frac{n!}{i!(n-i)!}\]
 
-\subsection{Relazione ricorsiva:}\[\binom{n}{i}=\binom{n-1}{i-1}+\binom{n-1}{i}\]
+\subsection{Relazione ricorsiva}
+\[\binom{n}{i}=\binom{n-1}{i-1}+\binom{n-1}{i}\]
 Dimostrazioni algebrica e combinatoria.
 
-\subsection{Simmetria:}\[\binom{n}{i}=\binom{n}{n-i}\]
+\subsection{Simmetria}
+\[\binom{n}{i}=\binom{n}{n-i}\]
 Il coefficiente binomiale è simmetrico rispetto al centro della riga n-esima \(\lfloor\frac{n}{2}\rfloor\) del triangolo rappresentante tutti i coefficienti del coefficiente binomiale.
 
 Dimostrazioni algebrica e combinatoria.
 
-\subsection{Relazione d'ordine:}
-Una relazione \(\rho\) su \textit{X} è una relazione d'ordine (o un ordine, un ordinamento) se valgono per \(\rho\) le proprietà:
+\subsection{Relazione d'ordine}
+Una relazione \(\rho\) su \textit{X} è una relazione d'ordine (o un ordine, o un ordinamento) se valgono per \(\rho\) le proprietà:
 \begin{itemize}
     \item (R) \(\forall x, x\rho x\)
     \item (AS) \(\forall x,y\; (x\rho y\land y\rho x)\Rightarrow x=y\)
     \item (T) \(\forall x,y,z\; (x\rho y\land y\rho z)\Rightarrow x\rho z\)
 \end{itemize}
 
-\subsection{POSET (Partial order set):}
+\subsection{POSET (Partial order set)}
 Un insieme munito di una relazione d'ordine si dice parzialmente ordinato.
