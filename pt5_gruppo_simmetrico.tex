@@ -29,10 +29,36 @@
 \[x,y\in [n]\]
 \[x\equiv _\sigma y\Leftrightarrow \exists i : y=\sigma ^i(x)\]
 Si osservi che \(\sigma\in S_n\), allora la potenza \textit{i-esima} di \(\sigma\), con \(i\in\mathbb{N}\) è la permutazione \(\sigma ^i =\sigma\circ ...\circ\sigma\) per \textit{i} volte.
-
-\subsection{Orbita}
-L'orbita di \(x\in [n]\) è la classe di equivalenza di \textit{x} nella relazione \(\equiv _\sigma\).
-\[O_\sigma (x) =\{y\in [n]\;\exists i\;con\;y=\sigma ^i(x)\}\]
-
+ \subsection{Orbita} L'orbita di \(x\in [n]\) è la classe di equivalenza di \textit{x} nella relazione \(\equiv _\sigma\). \[O_\sigma (x) =\{y\in [n]\;\exists i\;con\;y=\sigma ^i(x)\}\]
 \subsection{Proposizione}
 Se \(\tau _1\) e \(\tau _2\) hanno cicli disgiunti \(\tau _1\circ\tau _2 = \tau _2\circ\tau _1\)
+
+\subsection{Permutazione ciclica}
+Chiamo ciclica una permutazione di \(S_n)\) in cui nella rappresentazione in cicli disgiunti ha al più un solo ciclo di lunghezza\(>1\)
+
+\subsection{Teorema prodotto di scambi}
+Ogni permutazione si può scrivere come prodotto di scambi
+\\\\
+\textbf{Dimostrazione 1}: Se la permutazione ha un solo ciclo \(\sigma =(a_1, a_2, ... , a_k)=\) un k-ciclo = \((a_1,a_k)(a_1,a_{k-1})...(a_1,a_3)(a_1,a_2)=(a_1,a_2,a_3,...,a_k)\)
+\\
+\textbf{Dimostrazione 2}: Se ho un \(\sigma\) qualunque, allora
+\[\sigma=C_1\cdot C_2\cdot ... \cdot C_k\]
+dove \(C_i\) è un ciclo (nella decomposizione in cicli disgiunti)
+\[C_1=(a_1,...,a_r)=(a_1,a_r)(a_1,a_{r-1})...(a_1,a_2)\]
+\[C_2=(b_1,...,b_j)=(b_1,b_j)(b_1,b_{j-1})...(b_1,b_2)\]
+\[. . .\]
+\[\sigma =(a_1,a_r)(a_1,a_{r-1})...(a_1,a_2)\;(b_1,b_j)(b_1,b_{j-1})...(b_1,b_2) \]
+
+\subsection{Teorema parità}
+Il numero di scambi usati in diverse fattorizzazioni di una permutazione ha sempre la stessa parità.
+
+\subsubsection{Pari, dispari}
+Una permutazione è pari se il numero di scambi (in una sua fattorizzazione in scambi) è pari, dispari altrimenti.
+
+\subsection{Gruppo alterno}
+
+Le premutazioni pari si chiamano \textit{gruppo alterno}.
+
+\subsection{Segno}
+
+Data \(\sigma\) in \(S_n\), il segno di \(\sigma\) è \(\varepsilon (\sigma)=(-1)^{parita'\;di\;(\sigma)}\)
