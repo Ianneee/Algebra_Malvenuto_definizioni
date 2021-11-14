@@ -1,0 +1,168 @@
+\section{Strutture algebriche}
+
+\subsection{Gruppo} 
+Un insieme S non vuoto, munito di una operazione \[m:S\times S\rightarrow S\]
+\[(a,b)\mapsto m(a,b)=a\ast b\;\; (notazione\; infissa)\]
+che verifica i punti 1, 3, 4 si chiama \(gruppo(S,\ast)\).
+\\L'operazione su S è dunque:
+\begin{itemize}
+    \item associativa
+    \item con elemento neutro \textit{e}: \(\forall x, x\ast e=e\ast x=x\)
+    \item per ogni elemento \textit{x} esiste un inverso rispetto al prodotto \(\ast\) cioè un elemento \textit{y} tale che \(x\ast y=y\ast x=e\), che si denota \(x^{-1}\)
+\end{itemize}
+
+\subsection{Gruppo commutativo (abeliano)} 
+Se il gruppo \((S, \ast)\) soddisfa anche la proprietà 2 (quindi associatività,  elemento neutro, opposto, +commutatività).
+
+\subsection{Anello} 
+Un anello è una terna \((A,+,\cdot)\) con:
+\begin{itemize}
+    \item A insieme non vuoto
+    \item \(+ \; \cdot\) due operazioni binarie, associative
+    \item \((A,+)\) è un gruppo abeliano
+    \item Distributività: \(\forall a, b, c \in A, \; a\cdot (b+c)=a\cdot b+a\cdot c\)
+\end{itemize}
+
+\subsubsection{Anello commutativo} 
+Se un anello \((A,+,\cdot)\) il prodotto è commutativo, cioè se \(\forall a,b\in A,\;a\cdot b=b\cdot a\).
+
+\subsubsection{Anello unitario} 
+Se esiste un elemento di A, che si denota con \(1_A\), tale che \(a\cdot 1_A=1_A\cdot a=a\).
+
+\subsubsection{Divisore dello zero} 
+Un elemento \(a\in A,\; a\neq0_A\) di un anello di dice divisore dello zero se esiste \(b\in A,b\neq 0\) con \(a\cdot b=0_A\).
+
+\subsubsection{Dominio di integrità} 
+Se \((A,+,\cdot)\) è privo di divisori dello zero.
+
+\subsubsection{Legge di annullamento del prodotto} 
+Se in un dominio di integrità \(a\cdot b=0_A\) allora \(a=0_A\) oppure \(b=0_A\).
+
+\subsection{Campo}
+Un campo è una terna \((K,+,\cdot)\) con \textit{K} insieme non vuoto e 2 operazioni.
+\begin{itemize}
+    \item \((K,+,\cdot)\) anello commutativo unitario
+    \item Detto \(0_k\) l'elemento neutro della somma e denotato con \(K^*=K\setminus\{0_k\}\), deve valere che \(\forall x\in K^*:x\cdot x^{-1}=1_k\)
+\end{itemize}
+Quindi campo \(\Leftrightarrow\) anello commutativo unitario con in più \(K\setminus\{0_k\}=(K^*,\cdot)\) gruppo.
+
+\subsection{Semigruppo}
+Sia X un insieme non vuoto. 
+\\\textit{*}:
+\[X\;*\;X\rightarrow Z\]
+\[(a.b)\mapsto a * b\]
+una operazione binaria associativa: \(\forall a,b,c\in X: a+(b+c)=(a+b)+c\)
+\\
+Un insieme \textit{X}, munito di una operazione associativa si chiama \textbf{semigruppo}.
+
+\subsubsection{Monoide}
+Se \((X,+)\) è un semigruppo ed inoltre esiste un elemento \(1_X\) tale che \(a+1_X=1_X*a=a\) (\(1_X\) elemento neutro dell'operazione \textit{*}), allora \((X,+)\) si chiama \textbf{monoide}.
+
+\subsection{Elenco gruppi}
+\textbf{\((A^*, \cdot )\)} è un monoide non commutativo.
+\\\textbf{\((\mathbb{N}, +) \)} (commutativo) monoide (0 el. neutro) ma non è un gruppo.
+\\\textbf{\( (\mathbb{Z}, +)\)} gruppo commutativo (0 el. neutro).
+\\\textbf{\((\mathbb{Q}, +) \)} gruppo commutativo (0 el. neutro); \(\frac{p}{a}\rightarrow\;opposto\;-\frac{p}{q}\).
+\\\textbf{\((\mathbb{N}^*, \cdot)\)} monoide, non è un gruppo.
+\\\textbf{\((\mathbb{Z}^*, \cdot)\)} monoide, non è un gruppo.
+\\\textbf{\((\mathbb{Q}, \cdot)\)} non è un gruppo, 0 non ha inverso.
+\\\textbf{\((\mathbb{Q}^*,\cdot)\)} gruppo.
+\\\textbf{\((\mathbb{R}, +)\)} gruppo.
+\\\textbf{\((\mathbb{R}^*, \cdot)\)} monoide, gruppo.
+\\\textbf{\((\mathbb{Z}_n, +)\)} gruppo finito commutativo; el. neutro \(\overline{0}\).
+\\\textbf{\((\mathbb{Z}_n,\cdot)\)} monoide, semigruppo (non è un gruppo \(\overline{0}\) non è invertibile).
+\\\textbf{\((\cup (\mathbb{Z}_n),\cdot) \)} gruppo, el. neutro \(\overline{1}=\{\overline{a}: (a,n)=1\}\) (el. invertibili).
+
+\subsection{Gruppo simmetrico}
+
+\subsubsection{Permutazione}
+\(f:[n]\rightarrow [n]\) si chiama permutazione di \textit{n elementi} se \textit{f} è biiettiva.
+
+\subsubsection{\(S_n\)}
+\[S_n:=\{\sigma : [n]\rightarrow[n] : \sigma\;è\;biiettiva\}\]
+\[=\{\sigma : \sigma\;è\;una\;biiezione\}\]
+
+\subsubsection{Proposizione}
+\[|S_n|=n!\]
+
+\subsubsection{Proposizione}
+\((S_n,\cdot)\) l'insieme delle permutazioni di \textit{n} elementi con il prodotto di composizione funzionale è un gruppo di cardinalità \textit{n!} non commutativo.
+\\
+\textbf{Dimostrazione}
+\begin{itemize}
+    \item \(S_n\) non vuoto, \(n\geq 1\)
+    
+    \item Esiste un elemento neutro rispetto al prodotto \(\cdot\), la permutazione identica: \(\sigma\circ id=id\circ\sigma=\sigma\).
+    
+    \item Prodotto associativo \(\forall\sigma ,\tau ,\rho\in S_n\) \((\sigma\circ \tau )\circ\rho (i)=\sigma\circ (\tau\circ\rho )(i)=\sigma ( \tau (\rho (i)))\)
+    
+    \item \(\forall\sigma\in S_n\) esiste un elemento \(\sigma ^{-1}\) tale che \(\sigma\circ\sigma ^{-1}=id\).
+\end{itemize}
+
+\subsubsection{\(3^a\) notazione: Permutazione come prodotto di cicli disgiunti}
+\(S_n\): Definire una relazione di equivalenza su \([n]\) associata a \(\sigma \in S_n\).
+\[x,y\in [n]\]
+\[x\equiv _\sigma y\Leftrightarrow \exists i : y=\sigma ^i(x)\]
+Si osservi che \(\sigma\in S_n\), allora la potenza \textit{i-esima} di \(\sigma\), con \(i\in\mathbb{N}\) è la permutazione \(\sigma ^i =\sigma\circ ...\circ\sigma\) per \textit{i} volte.
+
+ \subsubsection{Orbita} L'orbita di \(x\in [n]\) è la classe di equivalenza di \textit{x} nella relazione \(\equiv _\sigma\). \[O_\sigma (x) =\{y\in [n]\;\exists i\;con\;y=\sigma ^i(x)\}\]
+
+
+\subsubsection{Proposizione}
+Se \(\tau _1\) e \(\tau _2\) hanno cicli disgiunti \(\tau _1\circ\tau _2 = \tau _2\circ\tau _1\)
+
+\subsubsection{Permutazione ciclica}
+Chiamo ciclica una permutazione di \(S_n)\) in cui nella rappresentazione in cicli disgiunti ha al più un solo ciclo di lunghezza\(>1\)
+
+\subsubsection{Teorema prodotto di scambi}
+Ogni permutazione si può scrivere come prodotto di scambi
+\\\\
+\textbf{Dimostrazione 1}: Se la permutazione ha un solo ciclo \(\sigma =(a_1, a_2, ... , a_k)=\) un k-ciclo = \((a_1,a_k)(a_1,a_{k-1})...(a_1,a_3)(a_1,a_2)=(a_1,a_2,a_3,...,a_k)\)
+\\
+\textbf{Dimostrazione 2}: Se ho un \(\sigma\) qualunque, allora
+\[\sigma=C_1\cdot C_2\cdot ... \cdot C_k\]
+dove \(C_i\) è un ciclo (nella decomposizione in cicli disgiunti)
+\[C_1=(a_1,...,a_r)=(a_1,a_r)(a_1,a_{r-1})...(a_1,a_2)\]
+\[C_2=(b_1,...,b_j)=(b_1,b_j)(b_1,b_{j-1})...(b_1,b_2)\]
+\[. . .\]
+\[\sigma =(a_1,a_r)(a_1,a_{r-1})...(a_1,a_2)\;(b_1,b_j)(b_1,b_{j-1})...(b_1,b_2) \]
+
+\subsubsection{Teorema parità}
+Il numero di scambi usati in diverse fattorizzazioni di una permutazione ha sempre la stessa parità.
+
+\subsubsection{Pari, dispari}
+Una permutazione è pari se il numero di scambi (in una sua fattorizzazione in scambi) è pari, dispari altrimenti.
+
+\subsubsection{Gruppo alterno}
+
+Le premutazioni pari si chiamano \textit{gruppo alterno}.
+
+\subsubsection{Segno}
+
+Data \(\sigma\) in \(S_n\), il segno di \(\sigma\) è \(\varepsilon (\sigma)=(-1)^{parita'\;di\;(\sigma)}\)
+
+\subsection{Gruppi finiti}
+
+\subsubsection{Proprietà 1}
+
+Dato \((G,\cdot)\) gruppo e \(x,y\in G\) allora \((x\cdot y)^{-1}=y^{-1}\cdot x^{-1}\) (l'inverso del prodotto è il prodotto degli inversi in ordine inverso).
+\\\\
+\textbf{Dimostrazione:} \((xy)^{-1}=^? e_G\) (el. neutro del gruppo).
+\\Ora 
+\[(x\cdot y)^{-1}\cdot (y^{-1}\cdot x^{-1})=\]
+\[x\cdot (y\cdot y^{-1})\cdot x^{-1}=\]
+\[x\cdot e_G\cdot x^{-1}=\]
+\[x\cdot x^{-1}=\]
+\[e_G\]
+
+\subsubsection{Proprietà 2}
+In un gruppo vale sempre la cancellazione:
+\[ax=bx\Leftrightarrow a=b\]
+\\\\
+\textbf{Dimostrazione:} \(\exists x^{-1}:\) Se \(ax=bx\) e moltiplico per \(x^{-1}\)
+\[axx^{-1}=bxx^{-1}\]
+\[a\cdot e=b\cdot e\]
+\[a=b\]
+\\\\\textit{Conseguenza:} Su una riga (qualunque) della tavola moltiplicativa del gruppo ci sono una e una sola volta tutti gli elementi del gruppo.
+
+\subsection{Sottogruppi}
