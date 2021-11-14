@@ -166,3 +166,98 @@ In un gruppo vale sempre la cancellazione:
 \\\\\textit{Conseguenza:} Su una riga (qualunque) della tavola moltiplicativa del gruppo ci sono una e una sola volta tutti gli elementi del gruppo.
 
 \subsection{Sottogruppi}
+
+\subsubsection{Definizione}
+Un sottogruppo \(S\) di \((G,\cdot)\) è:
+\begin{itemize}
+	\item Un sottoinsieme non vuoto di \(S\subseteq G\)
+	\item \(S\), con la stessa operazione di \(G\) è un gruppo
+\end{itemize}
+
+\subsubsection{Criteri di verifica}
+Per verificare che \(S\) sia un sottogruppo di \(G\);
+\begin{itemize}
+	\item Associatività: \textit{"gratis"} : \(S\subseteq G\) e il prodotto in \(G\) è associativo.
+\end{itemize}
+
+\begin{enumerate}
+
+	\item \(\forall a,b \in S:a\cdot b\in S\) ovvero \(S\times S\rightarrow S\)
+
+	\item \(e_G\in S\)
+
+	\item \(\forall a\in S\subseteq G\),  \(a^{-1}\in S\)
+\end{enumerate}
+
+\subsubsection{Notazione}
+\[(S,\cdot)\leq (G,\cdot )\]
+altrimenti
+\[S\leq G\]
+
+\subsubsection{Proposizione}
+\(S\) non vuoto e \(S\subseteq (G,\cdot)\) è un sottogruppo di \(G\) se e solo se
+\[\forall\;a,b \in S: a\cdot b^{-1}\in S\;\;(*)\]
+\textbf{Dimostrazione}
+\\\textit{Ipotesi:} \(\forall a,b: a\cdot b^{-1}\in S\)
+\\\textit{Tesi:} valgono 1, 2, 3 dei criteri di verifica.
+\\\\
+Dimostrazione 2:
+\\
+\(S\neq\emptyset :\exists a_0\in S\) applico \((*)\) ad \(a_0, a_0\):
+\[a_0\cdot a_0^{-1}=e_G\;\in S\]
+è quindi l'elemento neutro.
+\\\\
+Dimostrazione 3:
+\\
+\(\forall a\in S:a^{-1}\in S\)?
+Per 2. \(e_G\in S, a\in S\), applico \((*)\)
+\[e_G\cdot a^{-1}=a^{-1}\;\in S\]
+\\
+Dimostrazione 1:
+\\
+Dati \(a, b\in S\), \(a\cdot b\in S\)? Per la 3 \(b^{-1}\in S\).
+\\
+Dati \(a,b^{-1}\) per \((*)\)
+\[a\cdot (b^{-1})^{-1}=a\cdot b\;\in S\]
+
+\subsection{Proposizione: intersezione di sottogruppi}
+Sia \((G,\cdot)\) un gruppo e \(H\leq G, K\leq G\) due sottogruppi. Allora:
+\[H\cap K\leq G\]
+L'intersezione di sottogruppi di \(G\) è un sottogruppo di \(G\)
+\\
+\\\textbf{Dimostrazione:}
+\\
+\begin{enumerate}
+	\item \(1_G\in H\cap K\)?
+	\\Poiche \(H\) e \(K\) sono sottogruppi \(1_G\in H,K\) e quindi \(1_G\in H\cap K\)
+
+	\item Siano \(x, y\in H\cap K\): verifico che \(x\cdot y\in H\cap K\).
+	\\\(x\in H\;e\;x\in K\); \(y\in H\;e\;y\in K\) allora:
+	\[xy\in H;\;xy\in K\Rightarrow xy\in H\cap K\]
+
+	\item Se \(x\in H\cap K\Rightarrow x^{-1}\in H\cap K\)?
+	\\\textit{La dimostrazione è simila a quella del punto precendente}
+
+\end{enumerate}
+
+\subsection{Proposizione 1}
+\[H_1, H_2,...H_t\leq G\Rightarrow H_1\cap H_2\cap ...\cap H_t\leq G\]
+
+\subsection{Proposizione 2}
+Siano \(S, T\leq G\):
+\[S\cup T\leq G \Leftrightarrow S\cup T = T \lor S\cup T= S\]
+
+\section{Sottogruppo generato}
+
+\subsection{Definizione}
+Siano \(G\) un gruppo e \(X\subseteq G\), si definisce sotto gruppo generato di \(X\) il più piccolo sottogruppo di \(G\) che contenga \(X\)
+
+\subsection{Notazione}
+\[\langle X \rangle\ := \bigcap _{X\subseteq H\leq G} H\]
+
+\subsection{Proposizione}
+Se \(X=\{x_,x_2...\}\subseteq G \neq 0\) allora:
+\[\langle X\rangle=\{t_1,t_2,...,t_r:t_i\in X\;oppure\; t_i^{-1}\in X\}\]
+L'insieme che contiene i prodotti finiti di elementi di \(X\) oppure i cui inversi sono in \(X\)
+\\
+\\\textbf{Dimostrazione:}

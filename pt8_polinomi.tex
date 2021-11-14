@@ -1,0 +1,77 @@
+\section{Polinomi a coefficienti reali in 1 indeterminata}
+
+\subsection{Descrizione}
+\[\mathbb{R}[x]:=\{p(x)=a_0+a_1x+a_2x^2+...+a_kx^k: a_i\in\mathbb{R}, i=0,...,k, k\in\mathbb{N}\}\]
+
+\subsection{Somma di polinomi}
+Dati
+\[p(x)=a_0+a_1x+a_2x^2+...+a_kx^k\]
+\[q(x)=b_0+b_1x+b_2x^2+...+b_kx^k\]
+con \(k\leq h\)
+\[p(x)+q(x)=(a_0+b_0)+(a_1+b_1)x+...+(a_k+b_k)x^k+b_{k+1}x^{k+1}+...+b_hx^h\]
+
+\subsection{Rappresentazione come successioni}
+Con esempio:
+\[p(x)=1+3x-4x^3 \leftrightarrow (1,3,0,-4,0,0,...)\]
+
+\subsubsection{Somma di polinomi}
+\[p(x)=(a_0,a_1,a_2,...)\]
+\[q(x)=(b_0,b_1,b_2,...)\]
+\[p(x)+q(x)=(a_0+b_0,a_1+b_1,...,a_n+b_n,...)\]
+\(a_i,b_i\) sono i coefficienti di \(x^i\) nel polinomio che rappresentano.
+
+\subsection{Teorema: \((\mathbb{R}[x],+)\) è un gruppo (commutativo)}
+\textbf{Dimostrazione:}
+\begin{itemize}
+	\item \(\mathbb{R}[x]\) è non vuoto
+
+	\item La somma è associativa
+	\[(\underline{a}+\underline{b})+\underline{c} = (...(a_n+b_n)+c_n...)=(...a_n+(b_n+c_n)...)=\underline{a}+(\underline{b}+\underline{c})\]
+
+	\item \(0\in\mathbb{R}\) è l'elemento neturo di \(\mathbb{R}[x]\)
+	\[0=0+0x+0x^2+...\rightarrow(0,0,0,...)\]
+
+	\item Ogni polinomio ha il suo opposto: se \[p(x)=a_0+a_1x+...+a_kx^k\] allora l'opposto di \(p(x)\) è \[-p(x)=-a_0-a_1x-...-a_kx^k\]
+
+\end{itemize}
+
+\subsection{Prodotto di polinomi}
+\[p(x)=a_0+a_1x+...+a_kx^k\leftrightarrow (a_0,a_1,...)\]
+\[q(x)=b_0+b_1x+...+b_kx^k\leftrightarrow (b_0,b_1,...)\]
+\[p(x)\cdot q(x)=c_0+c_1x+...c_rx^r\leftrightarrow (c_0,c_1,...)\]
+\\
+\[c_0+c_1x+...c_rx^r= a_0b_0+(a_0b_1+a_1b_0)x+(a_0b_2+a_1b_1+a_2b_0)x^2+\]
+\[+(a_0b_3+a_1b_2+a_2b_1+a_3b_0)x^3+...\]
+La successione dei coefficienti di \(p(x)\cdot q(x)\) è data da:
+\[c_n= \sum^n_{i=0}a_ib_{n-i}=\sum_{i+j=n}a_ib_j\]
+
+%teorema lezione 19 da chiedere
+
+\subsection{Teorema \((\mathbb{R},+,\cdot)\) è un anello}
+\((\mathbb{R},+,\cdot)\) è un anello commutativo, unitario con unità del prodotto uguale a \(1\) ed è un dominio di integrità.
+\textit{non dimostrato}
+
+\subsection{Grado del prodotto}
+Se il grado di \(p(x)=k\) èd il grado di \(q(x)=h\) il grado del prodotto \(p(x)q(x)=k+h\)
+
+\subsection{Fatti importanti}
+\begin{itemize}
+
+	\item in \(\mathbb{R}[x]\) si può fare la "divisione col resto":
+	\[\forall a(x),b(x)\in\mathbb{R},\; b(x)\neq 0\]
+	\[\exists !\; q(x),r(x)\in\mathbb{R}:\]
+
+	\begin{enumerate}
+		\item \(\;a(x)=b(x)\cdot q(x)+r(x)\)
+		\item il grado di \(r(x)<\) grado \(b(x)\)
+	\end{enumerate}
+
+	\item Conseguenza della divisione col resto:
+	\[MCD(m(x),n(x))\]
+	\[m(x)=n(x)\cdot q_1(x)+r_1(x)\]
+	\[n(x)=r_1(x)\cdot q_2(x)+r_2(x)\]
+	\[...\]
+	Termina quando il resto è un polinomio di grado \(0\).
+
+\end{itemize}
+
