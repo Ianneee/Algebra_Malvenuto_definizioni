@@ -258,6 +258,108 @@ Siano \(G\) un gruppo e \(X\subseteq G\), si definisce sotto gruppo generato di 
 \subsection{Proposizione}
 Se \(X=\{x_,x_2...\}\subseteq G \neq 0\) allora:
 \[\langle X\rangle=\{t_1,t_2,...,t_r:t_i\in X\;oppure\; t_i^{-1}\in X\}\]
-L'insieme che contiene i prodotti finiti di elementi di \(X\) oppure i cui inversi sono in \(X\)
+L'insieme che contiene i prodotti finiti di elementi di \(X\) oppure i cui inversi sono in \(X\).
 \\
 \\\textbf{Dimostrazione:}
+\begin{enumerate}
+	\item \(\langle X \rangle\) contiene \(X\), \(r=1, t_i\in X\)
+
+	\item \(\langle X\rangle\leq G\) 
+
+	\begin{itemize}
+
+		\item contiene \(1_G\): sia \(\overline{x}\in X\) qualunque \(\Rightarrow\overline{x}\in\langle X\rangle ,\overline{x}^{-1}\in\langle X\rangle\) e \(\overline{x}\cdot\overline{x}^{-1}=1_G\in\langle X\rangle\)
+
+		\item \(\langle X\rangle\) è chiuso rispetto al prodotto di \(G\)
+
+		\item Se \(t_1,t_2,...,t_r\in\langle X\rangle\), e \(t_1\)
+		%ricontrollare questa parte di appunti
+
+	\end{itemize}
+
+
+\end{enumerate}
+
+TODO:CONTROLLARE APPUNTI
+
+\subsection{\(\langle X\rangle\) è il più piccolo sottogruppo che contiene \(X\)}
+Da dimostrare in proprio, lo ha dato come esercizio
+
+\subsection{Defizione: ordine (periodo)}
+Se un elemento di \(G\) ha periodo finito, allora si chiama \textit{ordine} (o periodo) di \(g\) il più piuccolo positivo tale che \(g^m=1_G\)
+
+\subsection{Definizione: gruppo ciclico}
+Un gruppo \(G\) si dice ciclico se esiste \(g_0\in G\) tale che \(G=\langle g_0\rangle\) \textit{(gruppo che viene generato da un solo elemento)}.
+
+\subsection{Proposizione}
+Il sottogruppo generato da un elemento (in un gruppo ciclico) è commutativo.
+\\
+\textbf{Dimostrazione:}
+\[\langle g\rangle =\{g^h:h\in\mathbb{Z}\}\]
+\[x=g^h,\;y=g^k\;\;\;h,k\in\mathbb{Z}\]
+\[x\cdot y=g^hg^k=g^{h+k}=g^kg^h=y\cdot x\]
+
+\subsection{Proposizione}
+Sia \(G\) gruppo:
+\begin{enumerate}
+
+	\item Se \(g\in G\) ha periodo infinito \((\nexists \;h>0:g^h=e)\) allora \(\exists\; h,k\in\mathbb{Z}, h\neq k,\;g^h\neq g^k\): il gruppo ciclico generato da \(G\), \(\langle g\rangle \cong\mathbb{Z}\).
+
+	\item \(g\) ha periodo finito.
+	\\Se \(n\)=periodo di \(g=o(g)=ord_G(g)\) %non ho la o piccola in corsivo!%
+	ovvero \(n=min\{k>0: g^k=e\}\) allora \(\langle g\rangle=\{e,g,g^2,...,g^{n-1}\}\) dove queste potenze sono tutte distinte.
+
+\end{enumerate}
+\textbf{Dimostrazione pt.1:} Dimostro che se:
+\[g^h=g^k\Rightarrow h=k\]
+infatti moltiplico per \(g^{-k}\) ed ho:
+\[g^{h-k}=g^{k-k}\Rightarrow g^{h-k}=g^0=e\]
+ma \(g\) è aperiodico 
+\[\Rightarrow h-k=0\Rightarrow h=k\]
+\textbf{Dimostrazione pt.2:} so che \(\langle g\rangle =\{g^h:h\in\mathbb{Z}\}\) devo dimostrare che ogni elemento \(g^h\) sta già in \(\{e,g,g^2,...g^{n-1}\}\).
+
+Divido \(h\) per \(n\):
+\[h=nq+r,\;\;0\leq r<n\]
+\[\Rightarrow g^h=g^{nq+r}=g^{nq}g^r=(g^n)^qg^r=e^qg^r=eg^r=g^r\]
+ed \(r\) è un numero \(0\leq r<n\) e quindi è una potenza dell'insieme.
+
+\subsection{Proposizione: sottogruppi di un gruppo ciclico}
+\begin{enumerate}
+	
+	\item[0.] Sottogruppi di \((\mathbb{Z},+)\): sono tutti e soli della forma \[H=m\mathbb{Z}=\{mh:h\in\mathbb{Z}=\langle m\rangle\},\;\;m\in\mathbb{N}\].
+	\\\textit{Non dimostrato.}
+
+	\item I sottogruppi di \(\langle g\rangle\) con \(g\in (G,\cdot)\), \(g\) aperiodico, sono tutti e soli della forma:
+	\[H=\langle g^m\rangle\]
+	per qualche \(m\in\mathbb{Z}\).
+	\\\textit{Non dimostrato.}
+
+	\item I sottogruppi di un gruppo ciclico generato da un elemento di ordine \(n\) (\(g^n=e\), \(n\) più piccolo positivo con \(g^n=e\)) sono anch'essi ciclici e generati da \(\langle g^h\rangle,\; h|n\).
+
+\end{enumerate}
+
+\subsection{Osservazione}
+I sottogruppi di un gruppo ciclico finito verificano la seguente condizione:
+\[H\leq\langle g\rangle\Rightarrow\vert H|\:| o(g)=|\langle g\rangle|\]
+L'ordine di un sottogruppo \(H\leq\langle g\rangle\) divide l'ordine dell'elemento \(g\), che è anche l'ordine del gruppo.
+
+\subsection{Proposizione}
+In \(S_n\), sia \(\sigma (C_1)(C_2)...(C_k)\) la fattorizzazione di \(\sigma\) come prodotto dei suoi cicli disgiunti. Allora se \(m_i=\)lunghezza di \(C_i\)
+\[ordine(\sigma)=mcm(m_1,m_2,...,m_k)\]
+
+\subsection{Teorema di Lagrange}
+Se \(G\) è un gruppo finito, allora l'ordine di un sottogruppo divide l'ordine del gruppo:
+\[H\leq G\Rightarrow |H|\,|\, |G|\]
+TODO: DIMOSTRAZIONE
+
+\subsubsection{Corollario 1}
+Se \(|G|=p\) primo, allora gli unici sottogruppi di \(G\) sono \(H=\{e\}\) oppure \(H=G\) (non ci sono sottogruppi intermedi).
+
+\subsubsection{Corollario 2}
+Se \(|G|=primo\), allora \(G\) è ciclico (in particolare è abeliano).
+\\
+\textbf{Dimostrazione:} Se \(|G|=p\) primo\(>1\).
+\\Sia \(x_0\in G, x_0\neq e\). Sia \(H=\langle x_0\rangle\neq \{e\}\) (\(H=\{e,x_0,x_0^2...\})\), per il \textit{corollario 1}: 
+\[H=G\Rightarrow G=\langle x_0\rangle\]
+
+\section{Classi laterali di un sottogruppo}
