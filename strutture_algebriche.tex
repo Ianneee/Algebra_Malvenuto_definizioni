@@ -79,8 +79,8 @@ Se \((X,+)\) è un semigruppo ed inoltre esiste un elemento \(1_X\) tale che \(a
 \(f:[n]\rightarrow [n]\) si chiama permutazione di \textit{n elementi} se \textit{f} è biiettiva.
 
 \subsubsection{\(S_n\)}
-\[S_n:=\{\sigma : [n]\rightarrow[n] : \sigma\;è\;biiettiva\}\]
-\[=\{\sigma : \sigma\;è\;una\;biiezione\}\]
+\[S_n:=\{\sigma : [n]\rightarrow[n] : \sigma\;e'\;biiettiva\}\]
+\[=\{\sigma : \sigma\;e'\;una\;biiezione\}\]
 
 \subsubsection{Proposizione}
 \[|S_n|=n!\]
@@ -349,8 +349,11 @@ In \(S_n\), sia \(\sigma (C_1)(C_2)...(C_k)\) la fattorizzazione di \(\sigma\) c
 
 \subsection{Teorema di Lagrange}
 Se \(G\) è un gruppo finito, allora l'ordine di un sottogruppo divide l'ordine del gruppo:
-\[H\leq G\Rightarrow |H|\,|\, |G|\]
-TODO: DIMOSTRAZIONE
+\[H\leq G\Rightarrow |H|\,|\, |G| = o(H)|o(G)\] 
+\\\textit{Oss: non vale sempre il viceversa.}
+\\Se \(d|o(G)\Rightarrow\exists H\leq G,\; o(H)=d\)
+\\\\\textbf{Dimostrazione:} Siano \(n=o(G)\) e \(m=o(H)\)
+%completare
 
 \subsubsection{Corollario 1}
 Se \(|G|=p\) primo, allora gli unici sottogruppi di \(G\) sono \(H=\{e\}\) oppure \(H=G\) (non ci sono sottogruppi intermedi).
@@ -363,3 +366,66 @@ Se \(|G|=primo\), allora \(G\) è ciclico (in particolare è abeliano).
 \[H=G\Rightarrow G=\langle x_0\rangle\]
 
 \section{Classi laterali di un sottogruppo}
+\subsection{Definizione: congruenza destra modulo}
+Sia \((G,\cdot)\) un gruppo, sia \(H\leq G\) sottogruppo.
+
+Definiamo congruenza destra modulo \(H\) la relazione così definita:
+\[\forall\; a,b\in G: a\sim _d b\Leftrightarrow a\cdot b^{-1}\in H\]
+
+\subsection{Proposizione}
+\(\sim _d(mod\;H)\) è una relazione di equivalenza.
+\\\textbf{Dimostrazione:}
+\begin{itemize}
+
+	\item (R) \(a\sim _d a\)?
+	\[a\cdot a^{-1}=e\;\in H\]
+
+	\item (S) \(a\sim _d b\Rightarrow b\sim _d a\;?\)
+	\[ab^{-1}\in H\]
+	\(H\) sottogruppo:
+	\[(ab^{-1})^{-1}\;\in H\]
+	\[\Rightarrow (b^{-1})^{-1}\cdot a^{-1}=b^{-1}\cdot a\Rightarrow b\sim _d a\]
+
+	\item (T) \(a\sim _d b\) e \(b\sim _d c\Rightarrow a\sim _d c\;?\)
+	\[ab^{-1}\in H\;e\;bc^{-1}\in H\] 
+	\[(ab^{-1})(bc^{-1})\in H\]
+	\(H\) è chiuso rispetto al prodotto
+	\[(ab^{-1})(bc^{-1})=ac^{-1}\Rightarrow a\sim _d c\]
+
+\end{itemize}
+
+\subsection{Insieme quoziente}
+Dato \(a\in G\): \([a]_{\sim _d} = H\cdot a\) dove \(Ha=\{ha:h\in H\}\), \(H=\{e,h_1,h_2...\}\), \(Ha=\{e\cdot a,h_1\cdot a,...\}\).
+\\
+\\\textbf{Dimostrazione:} devo provare 1.\(Ha\subseteq [a]_{\sim _d}\) e 2.\([a]_{\sim _d}\subseteq Ha\).
+\begin{enumerate}
+
+	\item \[b\in Ha\]
+	\[\Leftrightarrow \exists h:b=ha\]
+	\center moltiplicando per \(a^{-1}\)
+	\[\Leftrightarrow h=ba^{-1}\]
+	\[\Leftrightarrow ba^{-1}\in G\]
+	\[\Leftrightarrow b\sim _d a\Leftrightarrow b\in [a]_{\sim _d}\]
+
+	\item è la stessa di sopra ma partendo dalla fine verso l'inizio.
+
+\end{enumerate}
+
+\subsection{Proposizione}
+Tutte le classi laterali destre hanno la stessa cardinalità.
+\\
+\\\textbf{Dimostrazione:} dimostro che \(|Ha|=|H|\;\forall a\in A\) \((|Ha|=[a]_{\sim _d}\), per transitività \(|Ha|=|Hb|\).
+\\Sia \[\varphi :H\rightarrow Ha\]
+\[h\rightarrow ha\]
+
+\begin{itemize}
+
+	\item Suriettiva: ogni elemento di \(Ha\) è del tipo \(ha\) per qualche \(h\in H\).
+
+	\item Iniettiva: \(\varphi (a)=\varphi (h')\Rightarrow ha=h'a\Rightarrow\) per la cancellatività nel gruppo \(\Rightarrow h=h'\)
+
+\end{itemize}
+
+\subsection{Definizione: congruenza sinistra modulo}
+\[\forall \;a,b\in G,\;\;a\sim _s b\Leftrightarrow b^{-1}a\in H\]
+La classe laterale sinistra : \([a]_{\sim _s}=aH=\{ah: h\in H\}\)
