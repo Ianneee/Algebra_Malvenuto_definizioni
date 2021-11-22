@@ -10,7 +10,8 @@ Dati \((G,*)\) e \((H,\cdot)\) due gruppi, un isomorfismo di \(G\) in \(H\) è
 Si dice che \(G\) è isomorfo ad \(H\) e si scrive \(G\cong H\).
 
 \subsection{Omomorfismo}
-Se \(\varphi :G\rightarrow H\) conserva le operazioni di \(G\) e \(H\), \(\varphi\) si chiama omomorfismo.
+Se \(\varphi :G\rightarrow H\) conserva le operazioni di \(G\) e \(H\), \(\varphi\) si chiama omomorfismo, ovvero un omomorfismo è un'applicazione tale che:
+\[\forall\;a,b\in G:\varphi(a*b)=\varphi (a)\cdot\varphi (b)\]
 
 \subsection{Epimorfismo}
 Se \(\varphi\) è suriettiva, \(\varphi\) si chiama epimorfismo.
@@ -23,3 +24,92 @@ Se \(\varphi\) è biunivoca, allora \(\varphi\) si chiama isomorfismo.
 
 \subsection{Proposizione}
 L'isomorfismo tra gruppi è una relazione di equivalenza.
+
+\subsection{Kernel/Nucleo}
+Se l'applicazione \(\varphi\) è un omomorfismo, allora viene definito \textit{nucleo} di \(\varphi\subseteq G\)
+\[Ker(\varphi):\{x\in G:\varphi(x)=e'\}\]
+dove:
+\\\(e=\) l'elemento neutro di \(G\)
+\\\(e'=\) l'elemento neutro di \(G'\)
+
+\subsection{Proposizione}
+Dato \(\varphi :G\rightarrow G'\) omomorfismo, allora:
+\begin{enumerate}
+
+	\item \(\varphi (e)=e'\)
+
+	\item \(\varphi (g^{-1})=(y(g))^{-1}\)
+
+	\item \(Ker(\varphi) \leq G\)
+
+	\item \(Im\varphi\leq G'\)
+
+\end{enumerate}
+
+\textbf{Dimostrazione 1:} Per dimostrare che \(\varphi (e)\) è l'elemento neutro di \(e'\) devo mostrare che \(\forall y\in G'\): \(\varphi (e)\cdot y=y\); moltiplicando per \(y^{-1}\) (la cancellazione in \(G'\)) di ottiene:
+\[\varphi (e)\varphi\varphi ^{-1}=\varphi\varphi ^{-1}\]
+\[\Rightarrow \varphi (e)=e'\]
+\\
+\textbf{Dimostrazione 2:} lasciata per esercizio
+\\\\
+\textbf{Dimostrazione 3:} \(Ker\varphi\leq G\)?
+\begin{itemize}
+
+	\item contiene \(e\): è il punto 1: infatti \(\varphi (e)=e'\)
+
+	\item è chiuso rispetto al prodotto: siano \(a,b\in Ker\varphi\) e verifichiamo che \(a*b\in Ker\varphi\):
+	\[a\in Ker\varphi\Rightarrow\varphi(a)=e'\]
+	\[b\in Ker\varphi\Rightarrow\varphi(b)=e'\]
+	\[a*b:\;\varphi(a*b)=\varphi (a)\varphi(b)=e'\cdot e'=e'\]
+	\[\Rightarrow a*b\in Ker\varphi\]
+
+	\item è chiuso rispetto agli inversi: sia \(a\in Ker\varphi\) (cioè \(\varphi (a)=e'\)) devo provare che \(a^{-1}\in Ker\varphi\):
+	\[\varphi (a^{-1})=(\varphi (a))^{-1} =(e')^{-1}=e'\]
+	quindi \(a^{-1}\in Ker\varphi\)
+
+\end{itemize}
+\textbf{Dimostrazione 4}
+TODO: Ricontrollare appunti
+
+\subsection{Omomorfismo di anelli}
+Se \((A,+,\cdot)\) è \((A',+,\cdot)\) sono anelli \(0_A, 0_{A'}\) i corrispettivi elementi neutri, un omomorfismo di anelli è un'applicazione:
+\[\varphi: A\rightarrow A'\]
+tale che:
+\begin{itemize}
+
+	\item \(\varphi (x_1+x_2)=\varphi (x_1)+\varphi (x_2)\;\;\;\forall x_1,x_2\in A\)
+
+	\item \(\varphi (x_1\cdot x_2)=\varphi (x_1)\cdot \varphi (x_2)\)
+
+\end{itemize}
+
+\[Ker\varphi =\{x\in A:\varphi (x)=0_A'\}\subseteq A\;sottoanello\]
+TODO: *qui c'è un insieme che non ho capito 
+
+\subsection{Proposizione}
+\(\varphi :(G,*)\rightarrow (G',\cdot)\) omomorfismo di gruppi, allora:
+\[\varphi\;iniettiva\Leftrightarrow Ker\varphi=\{e\}\]
+\[\varphi\;iniettiva \leftrightarrow |\varphi^{-1}(y)|\leq 1\;\forall\;y\]
+\[\varphi\;iniettiva+omomorfismo\Leftrightarrow\varphi ^{-1}(e^{-1})=e\]
+\\
+\\\textbf{Dimostrazione:} \(Ker=Ker\varphi\leq G'\)
+\\Consideriamo la congurenza modulo il segno (?) \(k\)
+\[a\sim _db\Leftrightarrow ab^{-1}\in K (=Ker\varphi)\Leftrightarrow\varphi (a*b^{-1})=e'\]
+\(\varphi\) è un morfismo:
+\[\Leftrightarrow\varphi (a)\varphi (b^{-1})=e\]
+\[\Leftrightarrow\varphi(a)(\varphi (b))^{-1}=e'\]
+moltiplicando per \(\varphi (b)\)
+\[\Leftrightarrow\varphi(a)=\varphi (b)\]
+\[\Leftrightarrow\varphi\; iniettiva\]
+
+\subsection{Proposizione}
+\(G,G'\;\;\varphi :G\rightarrow G'\) omomorfismo, allora:
+\begin{enumerate}
+
+	\item Se \(G\) finito, allora l'ordine \(Im\varphi\) divide l'ordine di \(G\) (ed anhe di \(G'\), se \(G'\) è finito).
+
+	\item Se \(G\) è ciclico, allora \(Im\varphi\) è un sottogruppo ciclico di \(G'\)
+
+	\item Se \(g\in G\) ha periodo finito, allora il perodo di \(\varphi (g)\) divide l'ordine di \(g\)
+
+\end{enumerate}

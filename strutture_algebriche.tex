@@ -347,13 +347,34 @@ L'ordine di un sottogruppo \(H\leq\langle g\rangle\) divide l'ordine dell'elemen
 In \(S_n\), sia \(\sigma (C_1)(C_2)...(C_k)\) la fattorizzazione di \(\sigma\) come prodotto dei suoi cicli disgiunti. Allora se \(m_i=\)lunghezza di \(C_i\)
 \[ordine(\sigma)=mcm(m_1,m_2,...,m_k)\]
 
+\subsection{Proposizione}
+\(G=C_n=\langle g\rangle\) gruppo ciclico generato da un elemento di ordine \(n=\{id,g,g^2,...,g^n\}\). 
+\\Tutti e soli i generatori di \(C_n\) sono le potenze di \(g\) con esponente coprimo con \(n\).
+\\Generatori: \(g^t,\;(t,n)=1\)
+
 \subsection{Teorema di Lagrange}
 Se \(G\) è un gruppo finito, allora l'ordine di un sottogruppo divide l'ordine del gruppo:
 \[H\leq G\Rightarrow |H|\,|\, |G| = o(H)|o(G)\] 
 \\\textit{Oss: non vale sempre il viceversa.}
-\\Se \(d|o(G)\Rightarrow\exists H\leq G,\; o(H)=d\)
-\\\\\textbf{Dimostrazione:} Siano \(n=o(G)\) e \(m=o(H)\)
-%completare
+
+Se \(d|o(G)\Rightarrow\exists H\leq G,\; o(H)=d\)
+\\\\\textbf{Dimostrazione:} Siano \(n=o(G)\) e \(m=o(H)\), \(i\) il numero di calssi laterali destre modulo \(H\).
+\\\(Ci_d=\) indice del sottogruppo \(H\) nel gruppo \(G\).
+\\\(i=|G_{/_\sim d}|=\) numero di classi laterali.
+Esistono \(a_1,a_2,...,a_i\) rappresentanti distinti delle classi laterali.
+\[G=Ha_1\dot\cup Ha_2\dot\cup...\dot\cup Ha_i\Rightarrow |G|=o(G)=\]
+\[=\sum ^i_{j=1} |Ha_j|=\sum ^i_{j=1} |H|=i\cdot |H|=i\cdot m\]
+cioè ho \(n=i\cdot m\). \(ord(G)=\)numero classi laterali destre\(\cdot ord(H)\).
+\\Da questa relazione deduco che:
+\begin{enumerate}
+
+	\item \(ord(H)|ord(G)\)
+
+	\item \(i|o(G)\)
+
+\end{enumerate}
+
+\textit{Oss:} ripeto tutto per le classi laterali sinistre \(i_s\cdot m=n\).
 
 \subsubsection{Corollario 1}
 Se \(|G|=p\) primo, allora gli unici sottogruppi di \(G\) sono \(H=\{e\}\) oppure \(H=G\) (non ci sono sottogruppi intermedi).
@@ -364,6 +385,12 @@ Se \(|G|=primo\), allora \(G\) è ciclico (in particolare è abeliano).
 \textbf{Dimostrazione:} Se \(|G|=p\) primo\(>1\).
 \\Sia \(x_0\in G, x_0\neq e\). Sia \(H=\langle x_0\rangle\neq \{e\}\) (\(H=\{e,x_0,x_0^2...\})\), per il \textit{corollario 1}: 
 \[H=G\Rightarrow G=\langle x_0\rangle\]
+
+\subsection{Definizione: indice di un sottogruppo}
+L'indice di un sottogruppo \(H\) in un gruppo \(G\) è:
+\[i=i_s=i_d\]
+e si denota:
+\[i=[G:H]\]
 
 \section{Classi laterali di un sottogruppo}
 \subsection{Definizione: congruenza destra modulo}
