@@ -41,3 +41,155 @@ Uno spazio vettoriale \(V\) su un campo \(K\) è
 
 \subsection{Scalare}
 E' un elemento del campo.
+
+\subsection{Sottospazio vettoriale}
+Un sottospazio vettoriale di uno spazio vettorialo \(V\) su \(R\) è un sottoinsieme \(W\subseteq V\) non vuoto tale che: \(W\) rispetto le stesse operazioni di \(V\) sia esso stesso uno spazio vettoriale.
+\\
+\begin{itemize}
+
+	\item Equivalentemente si deve avere:
+
+	\begin{enumerate}
+
+		\item \((W,+)\) è un sotto gruppo di \((V,+)\)
+
+		\item chiuso rispetto alla moltiplicazione per uno scalare
+
+	\end{enumerate}
+
+	\item Equivalentemente:
+
+	\begin{enumerate}
+
+		\item \(\forall\;u,v\in W\): \(u-v\in W\)  [\(a\cdot b^{-1}\in G\)]
+
+		\item \(\forall\;\alpha\in\mathbb{R},v\in W\): \(\alpha\cdot v\in W\)
+
+	\end{enumerate}	
+
+	\item Equivalentemente:
+
+	\begin{enumerate}
+
+		\item \(\forall\; u,v\in W: u-v\in W\)
+
+		\item \(\forall\alpha\in\mathbb{R},\forall v\in W: \alpha v\in W\)
+		\\(Se \(\alpha= -1,v\in W\) allora \(-v\in W\)
+		\\\(u\in W\) allora \(u-(-v)=u+v\))
+		
+	\end{enumerate}
+
+	\item Equivalentemente \(W\subseteq V\) è un sottospazio vettoriale \(\Leftrightarrow\)
+
+	\begin{enumerate}
+
+		\item [1*] \(\forall\;u,v\in W: u+v\in W\)
+
+		\item [2*] \(\forall\;\alpha\in\mathbb{R},\forall v\in W: \alpha v\in W\)
+		
+	\end{enumerate}
+	
+\end{itemize}
+
+\subsection{Proposizione}
+
+\(W\subseteq V,W\neq\emptyset\) è un sottospazio vettoriale \(\Leftrightarrow\):
+\[\forall\;\alpha\beta\in\mathbb{R},\forall\; u,v\in W:\; \alpha u+\beta v\in W\]
+\(\alpha u+\beta v\) si chiama \textbf{combinazione lineare} di \(u\) e \(v\).
+\\
+\\\textbf{Dimostrazione:} la combinazione lineare è equivalente a \(1*\) e \(2*\).
+Supponiamo che \(\alpha u+\beta v\in W\) \(\forall\;\alpha\beta\in\mathbb{R},\forall\; u,v\in W\)
+\\\(2*\rightarrow\) in particolare è vero se prendo \(\alpha =\alpha, \beta=0\): \(\alpha u+\beta v=\alpha u\in W\).
+\\\(1*\rightarrow\) in particolare, se prendo \(\alpha =1,\beta =-1\): so che \(1\cdot u+(-1)\cdot v= u-v\in W\).
+
+\subsection{Definizione: traccia}
+Data una matrice quadrata \(A=[a_{i,j}]\) si chiama traccia della matrice il valore (scalare in \(\mathbb{R}\)) definito da:
+\[tr(A)=a_{11},a_{22},a_{33}+...+a_{nn}\]
+(è la somma degli elementi della diagonale).
+
+\subsection{Definizione: combinazione lineare}
+
+Dati \(v_1,...v_t\in V\) vettori di uno spazio vettoriale \(V\) su \(\mathbb{R}\) dati \(t\) scalari \(c_1,c_2,...,c_t\in\mathbb{R}\), il vettore \(v=c_1v_1+c_2v_2+...+c_tv_t\) si chiama combinazione lineare di vettori \(v_1,...,v_t\) tramite gli scalari \(c_1,...,c_t\).
+
+\subsection{Proprietà di calcolo negli spazi vettoriali}
+\(V\) spazio vettoriale su \(K\), \(0\) è lo zero del campo, \(0_V=\underline{0}\) è l'elemento neutro del gruppo \((V,t)\)
+
+\begin{itemize}
+
+	\item \(0v=\underline{0}\) vettore nullo \(\forall v\in V\)
+
+	\item \((-c)v=-(cv)\) \(\forall\;v\in V,\forall c\in\mathbb{R}\)
+
+	\item \(c\underline{0}=\underline{0}\)
+
+	\item Se \(cv=\underline{0}\) allora \(c=0\) oppure \(v=\underline{0}\)
+
+\end{itemize}
+
+\subsection{Definizione}
+
+\(w\) è combinazione lineare di \(v_1,v_2,...,v_t\) se esistono degli scalari \(c_1,c_2,...,c_t\in\mathbb{R}\) tali che:
+\[w=c_1v_1+...+c_tv_t\]
+
+\subsection{Osservazione: combinazione lineare banale}
+Lo "zero" vettoriale è sempre combinazione lineare di un insieme \(\{v_1,...,v_t\}\) di vettori qualunque:
+\[\underline{0}=0v_1+0v_2+...+0v_t\]
+
+\subsection{Definzione: linearmente dipendente}
+Un insieme di vettori \(\{v_1,...,v_n\}\) è linearmente dipendente (sul campo di \(V)\Leftrightarrow\) esistono coefficienti \(c_1,...,c_n\in K\) non tutti nulli, tali che:
+\[c_1v_1+c_2v_2+...+c_nv_n=\underline{0}\]
+
+\subsection{Osservazione}
+Se almeno uno dei coefficienti \(\{c_1,...,c_n\}\) è non nullo (sia \(C_j\neq 0\)), allora si può scrivere (partendo dalla precedente \textit{linearmente dipendente}):
+\[c_jv_j=-c_1v_1-c_2v_2-...-c_{j-1}v_{j-1}-c_{j+1}v_{j+1}-....-c_nv_n\]
+e \(C_j\neq 0\Rightarrow \exists c_j^{-1}\) allora:
+\[v_j=-\frac{c_1v_1}{c_j}-\frac{c_2v_2}{c_j}-...-\frac{c_nv_n}{c_j}\]
+
+\subsection{Osservazione}
+\(\{v_1,...v_n\}\) è un insieme linearmente \textbf{indipendente} \(\Leftrightarrow\) \(\underline{0}=c_1v_1+...+c_nv_n\Leftrightarrow c_1=c_2=...=c_n=0\).
+
+Ovvero: \(\{v_1,...,v_n\}\) sono vettori linearmente indipendenti \(\Leftrightarrow\) l'unica combinazione lineare di \(v_1,...,v_n\) è la combinazione lineare banale.
+
+\subsection{Osservazione}
+
+Il vettore nullo \(\underline{0}\) di \(V\) è sempre linearmente dipendente da qualunque insieme finito di vettori.
+
+Infatti sia \(\{u_1,...u_z\}\subseteq V\) allora:
+\[\underline{0}=1\cdot\underline{0}=0u_1+0u_2+...+0u_t\]
+(un modo equivalente: \(0u_1+0u_2+...+0u_t-1\cdot\underline{0}=\underline{0}\))
+
+\subsection{Osservazione}
+Se \(S\subseteq V\) con \(\underline{0}\in S\), \(S=\{\underline{0},v_1,...,v_k\}\) allora \(S\) è un insieme di vettori dipendenti: infatti c'è la dipendenza
+\[1\cdot\underline{0}=0v_1+0v_2+...+0v_k\]
+
+\subsection{Osservazione}
+
+La proprietà di essere indipendente di \(S\subseteq V,\) \(S=\{v_1,...,v_t\}\) si eredita ai sottoinsiemi, cioè:
+\[\forall\; T\subseteq S,\;S\;indipendente\Rightarrow T\;indipendente\]
+\(\{v_1\}\) è un insieme indipendente \(\Leftrightarrow v_1\neq 0\); \(\{\underline{0}\}\) è indipendente.
+
+\subsection{Sottospazio generato da: span}
+Dati \(v_1,v_2,...,v_t\) vettore di \(V\) (spazio vettoriale su un campo) lo \textit{span} dei vettori \(v_1,...,v_t\) è il più piccolo sottospazio vettoriale di \(V\) che contiene \(v_1,...v_t\)
+\[Span(v_1,...,v_t)=\bigcap _{W\leq V\;\{v_1...v_t\}\in W} W\]
+\textit{Altra notazione Span}: \(<v_1,...v_t>\)
+
+\subsection{Proposizione}
+\[Span(v_1,...v_t)=\{\sum _{i=1} ^t\alpha _iv_i:\alpha _i,...,\alpha _t\in K\}\]
+Dimostrazione data per esercizio
+
+\subsection{Sistema di generatori}
+Dato \(V\) su \(K\) (es. \(K=\mathbb{R})\), i vettori \(\{v_1,...v_t\}\) sono un sistema di generatori (o insieme di generatori) per \(V\) se 
+\[V=Span(v_1,...,v_t)\]
+\\
+\\Se \(W\subseteq V\) è un sottospazio, allora \(\{u_1,...,u_k\}\) sono generatori (sistema di generatori) per \(W\) se
+\[W=Span(u_1,...,u_k)\]
+
+\subsection{Base di \(V\)}
+Dato \(V\) su \(K\), un insieme \(B=\{v_1,...,v_n\}\subseteq V\) si chiama base di \(V\) se:
+\begin{itemize}
+
+	\item \(V=Span(v_1,...,v_n)\) cioè \(B\) sono generatori per \(V\).
+
+	\item \(\{v_1,...,v_n\}\) sono indipendenti.
+
+\end{itemize}
