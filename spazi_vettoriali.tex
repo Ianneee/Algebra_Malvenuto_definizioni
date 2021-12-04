@@ -193,3 +193,108 @@ Dato \(V\) su \(K\), un insieme \(B=\{v_1,...,v_n\}\subseteq V\) si chiama base 
 	\item \(\{v_1,...,v_n\}\) sono indipendenti.
 
 \end{itemize}
+
+\subsection{Sistemi di equazioni lineari}
+
+\subsubsection{Scrittura}
+Ogni sistema di equazioni lineari si può scrivere nella forma:
+\[AX=K\]
+\(X\) è la colonna delle incognite, \(K\) la colonna dei termini noti del sistema
+
+\subsubsection{Risolvere sistema di equazioni}
+Una soluzione del sistema è una n-upla di reali i cui valori \(s_1,...,s_n\) sostituiti alle incognite le rendano tutte vere. cioè:
+\begin{equation*}
+	S = 
+		\begin{bmatrix}
+		s_1 \\
+		...\\
+		s_n
+		\end{bmatrix}
+\end{equation*}
+
+con 
+\[A\cdot S=K\]
+
+\subsubsection{Sistemi equivalenti}
+Due sistemi \(AX=K\) e \(BX=K\) sono equivalentei se hanno esattamente le stesse soluzioni.
+
+\subsubsection{Operazioni elementari di riga}
+\begin{itemize}
+
+	\item \(L=L_{ij}\) scambio riga \(i\) e riga \(j\)
+	\item \(L=L_i(c)\) moltiplico la riga \(i\) per la costante \(c\)
+	\item \(L=L_{ij}(c)\) sostituisco alla riga \(i\) la riga ottenuta sommando ad \(i\) \(c\) volte la riga \(j\), \(c\neq 0\)
+
+\end{itemize}
+
+\subsubsection{Equivalenza per riga}
+Due matrici \(A\) e \(B\) dello stesso ordine \(n\times m\) sono equivalenti per riga se \(B\) si ottiene da \(A\) per applicazione successiva di un numero finito di \textit{operazioni elementari} di riga, cioè se:
+\[B=L_k...L_2L_1(A)\]
+e si scrive:
+\[A\sim B\]
+
+\subsubsection{Proposizione}
+L'equivalenza per riga è una relazione di equivalenza.
+\textit{Dimostrazione sulle note della prof.}
+
+\subsection{Proposizione}
+Siano \(A, B\) matrici \(m\times n\), se una successione di operazioni elementari di riga trasforma \(A\) in \(B\), allora le stesse operazioni trasformano la matrice identica in una matrice \(P\) tale che \(B=P\cdot A\).
+\\In altre parole
+\[[A|I]\sim [B|P]\]
+
+\subsection{Matrice identica}
+\begin{equation*}
+I = 
+\begin{bmatrix}
+1 & 0 & 0 & ... &0 & 0\\
+0 & 1 & 0 & ... &0 & 0\\
+0 & 0 & 1 & ... &0 & 0\\
+& &&...\\
+& &&...\\
+0&0&0&... &0&1
+\end{bmatrix}
+\end{equation*}
+%non si capisce niente... falla tu!
+
+\subsubsection{Corollario}
+Se \(A\in M_n(\mathbb{R})\) ed è invertibile, allora l'inversa si trova applicando la riduzione per righe alla matrice \(A\) aumentata della matrice \(I\), cioè:
+\[[A|I]\sim [I|A^{-1}]\]
+
+\subsubsection{Teorema}
+Per ogni matrice \(A\;m\times n\) esiste una matrice \(R\;m\times n\):
+\begin{itemize}
+	\item ridotta a scala
+	\item \(A\sim R\) (riga equivalente ad \(A\))
+\end{itemize}
+
+\subsubsection{Rango}
+Si chiama rango di una matrice \(A\) il numero di pivot di una ridotta scala \(R\) riga-equivalente ad \(A\)
+
+\subsubsection{Pivot}
+Primo elemento non nullo in una riga della matrice.
+
+\subsection{Rango pieno}
+Una matrice \(A\) è di rango pieno se \(rg(A)=m\) (\(m\)=massimo possibile cioè il numero di righe).
+
+\subsubsection{Proposizione: proprietà del rango}
+Il rango di \(A\) ha le seguenti proprietà:
+
+\begin{enumerate}
+	\item Se \(A\sim B\) allora \(rg(A)=rg(B)\) (\(A\sim R\Rightarrow B\sim R\))
+	\item Se \(A\) è di ordine \(m\times n\), allora \(rg(A)\leq min\{m,n\}\)
+	\item \(rg(A\cdot B)\leq min\{rg(A),rg(B)\}\)
+	\item \(rg(A^t)=rg(A)\), dove \(A^t\) è la matrice trasoposta di \(A\) definita: \((A^t)_{ij}=a_{ij}\) \textit{(scambia le righe con le colonne)}.
+\end{enumerate} 
+
+\subsubsection{Teorema: Rouchè-Capelli}
+Dato un sistema \(AX=K\), allora:
+\begin{enumerate}
+	\item Se \(rg([A|K])>rg(A)\), allora il sistema è incompatibile: non ci sono soluzioni.
+	\item Se \(rg([A|K])=rg(A)\), allora ho due casi:
+
+	\begin{enumerate}
+		\item Se \(n=r=rg(A)\): rango massimo, c'è una sola soluzione.
+		\item Se \(r=rg(A)<n\): ho infinite soluzioni che saranno paramentriche, con tanti parametri quante le colonne non pivot (tanti parametri quanto \(n-rg(A)\)).
+	\end{enumerate}	
+	
+\end{enumerate}
