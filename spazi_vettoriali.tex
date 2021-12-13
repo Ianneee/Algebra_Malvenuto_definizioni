@@ -184,7 +184,7 @@ Dato \(V\) su \(K\) (es. \(K=\mathbb{R})\), i vettori \(\{v_1,...v_t\}\) sono un
 \\Se \(W\subseteq V\) è un sottospazio, allora \(\{u_1,...,u_k\}\) sono generatori (sistema di generatori) per \(W\) se
 \[W=Span(u_1,...,u_k)\]
 
-\subsection{Base di \(V\)}
+\subsection{Basi di spazi vettoriali}
 Dato \(V\) su \(K\), un insieme \(B=\{v_1,...,v_n\}\subseteq V\) si chiama base di \(V\) se:
 \begin{itemize}
 
@@ -194,107 +194,104 @@ Dato \(V\) su \(K\), un insieme \(B=\{v_1,...,v_n\}\subseteq V\) si chiama base 
 
 \end{itemize}
 
-\subsection{Sistemi di equazioni lineari}
-
-\subsubsection{Scrittura}
-Ogni sistema di equazioni lineari si può scrivere nella forma:
-\[AX=K\]
-\(X\) è la colonna delle incognite, \(K\) la colonna dei termini noti del sistema
-
-\subsubsection{Risolvere sistema di equazioni}
-Una soluzione del sistema è una n-upla di reali i cui valori \(s_1,...,s_n\) sostituiti alle incognite le rendano tutte vere. cioè:
-\begin{equation*}
-	S = 
-		\begin{bmatrix}
-		s_1 \\
-		...\\
-		s_n
-		\end{bmatrix}
-\end{equation*}
-
-con 
-\[A\cdot S=K\]
-
-\subsubsection{Sistemi equivalenti}
-Due sistemi \(AX=K\) e \(BX=K\) sono equivalentei se hanno esattamente le stesse soluzioni.
-
-\subsubsection{Operazioni elementari di riga}
-\begin{itemize}
-
-	\item \(L=L_{ij}\) scambio riga \(i\) e riga \(j\)
-	\item \(L=L_i(c)\) moltiplico la riga \(i\) per la costante \(c\)
-	\item \(L=L_{ij}(c)\) sostituisco alla riga \(i\) la riga ottenuta sommando ad \(i\) \(c\) volte la riga \(j\), \(c\neq 0\)
-
-\end{itemize}
-
-\subsubsection{Equivalenza per riga}
-Due matrici \(A\) e \(B\) dello stesso ordine \(n\times m\) sono equivalenti per riga se \(B\) si ottiene da \(A\) per applicazione successiva di un numero finito di \textit{operazioni elementari} di riga, cioè se:
-\[B=L_k...L_2L_1(A)\]
-e si scrive:
-\[A\sim B\]
-
-\subsubsection{Proposizione}
-L'equivalenza per riga è una relazione di equivalenza.
-\textit{Dimostrazione sulle note della prof.}
+\subsection{Spazio finitamente generato}
+Uno spazio vettoriale $V$(su $K$), si dice finitamente generato se ammette un insieme finito di generatori.
 
 \subsection{Proposizione}
-Siano \(A, B\) matrici \(m\times n\), se una successione di operazioni elementari di riga trasforma \(A\) in \(B\), allora le stesse operazioni trasformano la matrice identica in una matrice \(P\) tale che \(B=P\cdot A\).
-\\In altre parole
-\[[A|I]\sim [B|P]\]
+$B=\{v_1,...,v_n\}$ é una base di $V\Leftrightarrow \forall v\in V\exists !\;(c_1,...,c_n),c_i\in\mathbb{R}$ con \\$v=c_1v_1+c_2v_2+...+c_nv_n$
+\\
+\\\textbf{Dimostrazione$\Rightarrow$}
+\begin{enumerate}
+	\item Ipotesi: $B=\{v_1,...,v_n\}$ é una base di $V$
+	\item Tesi: $v=c_1v_1+c_2v_2+...+c_nv_n$
+\end{enumerate}
+ Sia $v\in V$. Siccome $B$ è una base, allora è un insieme di generatori di $V\Rightarrow v\in Span(v_1,...,v_n)\Rightarrow \exists c_1,...,c_n$ con $v=c_1v_1+...+c_nv_n$
+ \\Perchè sono unici? Siano $(d_1,...,d_n)$ con 
+ \[v=d_1v_1+...+d_nv_n\]
+ \[v=c_1v_1+...+c_nv_n\]
+ \[\Rightarrow v-v=0=d_1v_1+...+d_nv_n-(c_1v_1+...+c_nv_n)=\]
+ \[=(d_1-c_1)v_1+...+(d_n-c_n)v_n\]
+ ma $v_1,...,v_n$ sono indipendenti $\Rightarrow$ i coefficienti $(d_kv_k)$ sono tutti nulli.
+ \\
+ \\\textit{Dimostrazione $\Leftarrow$ fare per esercizio}
 
-\subsection{Matrice identica}
-\begin{equation*}
-I = 
-\begin{bmatrix}
-1 & 0 & 0 & ... &0 & 0\\
-0 & 1 & 0 & ... &0 & 0\\
-0 & 0 & 1 & ... &0 & 0\\
-& &&...\\
-& &&...\\
-0&0&0&... &0&1
-\end{bmatrix}
-\end{equation*}
-%non si capisce niente... falla tu!
+ \subsection{N-upla delle coordinate di $v$ in base $B$}
+ Data $B=\{v_1,...,v_n\}$ una base ordinata di V, se $v=c_1v_1+...+c_nv_n$ allora il vettore colonna $[c_1\;...\;c_n]\in\mathbb{R}^n$ si chiama vettore delle coordinate di $v$ in base $B$.
 
-\subsubsection{Corollario}
-Se \(A\in M_n(\mathbb{R})\) ed è invertibile, allora l'inversa si trova applicando la riduzione per righe alla matrice \(A\) aumentata della matrice \(I\), cioè:
-\[[A|I]\sim [I|A^{-1}]\]
+ \subsection{Corollario}
+ Fissata una base $B=\{v_1,...,v_n\}$ di $V$ l'applicazione $\varphi : V\rightarrow K^n$ ($K$ è il campo di $V$) che manda $v$ in $\varphi (v)=[c_1\;...\;c_n]$ (cioè il vettore nelle sue coordinate in base $B$) è una biiezione.
 
-\subsubsection{Teorema}
-Per ogni matrice \(A\;m\times n\) esiste una matrice \(R\;m\times n\):
+ \subsection{Teorema: esistenza di una base}
+ Se $V$ è uno spazio vettoriale finitamente generato (cioè se $V=Span(v_1,...,v_h)$) allora esiste una base $\{w_1,...,w_n\}$ di $V$.
+ \\\textit{Non dimostrato.}
+
+ \subsection{Proposizione}
+ Date due basi $B=\{v_1,...,v_n\}$ e $B=\{w_1,...,w_m\}$ di $V$ allora $n=m$.
+
+ \subsection{Dimensione di $V$}
+ Se $V$ è finitamente generato, allora si chiama dimensione di $V$ la cardinalità di una qualunque base di $V$.
+
+ \subsection{Osservazione (notazione)}
+ Se la dimensione di $V$ è $n$, allora $\varphi :V\rightarrow K^n$ si scrive $dim_kV=n$ se $|B|=n$.
+
+ \subsection{Teorema del completamento di una base}
+ Sia $B=\{v_1,...,v_n\}$ una base di $V$, e sia $\{w_1,...,w_p\}$ con $\{p\leq n\}$ un insieme di vettori indipendenti. Allora posso completare $\{w_1,...,w_p\}$ con $(n-p)$ vettori di $B$ a formare una base (ovvero posso sostituire $p$ vettori di $B$ un altro insieme di $p$ vettori indipendenti).
+ \\\textit{Dimostrazione fatta parzialmente da vedere per lode.}
+
+ \subsection{Teorema}
+ Le seguenti condizioni sono equivalenti tra loro per un insieme $B=\{v_1,...,v_n\}\subseteq V$ di $n$ vettori:
+ \begin{enumerate}
+ 	\item $B$ è una base.
+ 	\item $B$ è un insieme di generatori minimale (cioè ogni sottoinsieme $S$ proprio di $V$ genera un sottospazio $Span(S)\not\leq V$)
+ 	\item $B$ è un insieme di vettori linearmente indipendenti massimale (cioè ogni $T\not\geq B$ insieme di vettori che contiene $B$ non è più indipendente).
+ \end{enumerate}
+
+ \subsection{Corollario}
+ Se $V$ è finitamente generato e $B=\{v_1,...,v_n\}\;\;B'=\{v'_1,...,v_m\}$ sono basi di $V$ allora $|B|=|B'|$ $(n=m)$.
+ \\
+ \\\textbf{Dimostrazione:} per assurdo $m<n$, allora con il teorema del completamento costruisco $B''=B'\cup\{n-m\;vettori\}$. $B'$ è una base ma per il pt.3 (teorema precedente) $B'$ è un insieme massimale $\Rightarrow$ contraddizione.
+
+\subsection{Osservazioni}
 \begin{itemize}
-	\item ridotta a scala
-	\item \(A\sim R\) (riga equivalente ad \(A\))
+	\item Se $dim_KV=n$ allora ogni sottoinsieme di $n$ vettori indipendenti è anche un insieme di generatori.
+	\item Se $dim_KV=n$ allora ogni insieme di $n$ che generano $V$ è anche un insieme indipendente (cioè una base).
+	\item Se $W\leq V$, sottospazio di $V$ con $dim_KV=n$ allora:
+	\begin{itemize}
+		\item $dim_KW\leq dim_KV$
+		\item $dim_KW=dim_RV\Leftrightarrow W=V$
+		\item $W\neq\{0_V\}\Leftrightarrow dim_KW>0$
+	\end{itemize}
 \end{itemize}
 
-\subsubsection{Rango}
-Si chiama rango di una matrice \(A\) il numero di pivot di una ridotta scala \(R\) riga-equivalente ad \(A\)
-
-\subsubsection{Pivot}
-Primo elemento non nullo in una riga della matrice.
-
-\subsection{Rango pieno}
-Una matrice \(A\) è di rango pieno se \(rg(A)=m\) (\(m\)=massimo possibile cioè il numero di righe).
-
-\subsubsection{Proposizione: proprietà del rango}
-Il rango di \(A\) ha le seguenti proprietà:
-
+\subsection{Somma di sottospazi}
+Dati $U,W\leq V$ ($V$ spazio vettoriale su $R$):
 \begin{enumerate}
-	\item Se \(A\sim B\) allora \(rg(A)=rg(B)\) (\(A\sim R\Rightarrow B\sim R\))
-	\item Se \(A\) è di ordine \(m\times n\), allora \(rg(A)\leq min\{m,n\}\)
-	\item \(rg(A\cdot B)\leq min\{rg(A),rg(B)\}\)
-	\item \(rg(A^t)=rg(A)\), dove \(A^t\) è la matrice trasoposta di \(A\) definita: \((A^t)_{ij}=a_{ij}\) \textit{(scambia le righe con le colonne)}.
-\end{enumerate} 
-
-\subsubsection{Teorema: Rouchè-Capelli}
-Dato un sistema \(AX=K\), allora:
-\begin{enumerate}
-	\item Se \(rg([A|K])>rg(A)\), allora il sistema è incompatibile: non ci sono soluzioni.
-	\item Se \(rg([A|K])=rg(A)\), allora ho due casi:
-
-	\begin{enumerate}
-		\item Se \(n=r=rg(A)\): rango massimo, c'è una sola soluzione.
-		\item Se \(r=rg(A)<n\): ho infinite soluzioni che saranno paramentriche, con tanti parametri quante le colonne non pivot (tanti parametri quanto \(n-rg(A)\)).
-	\end{enumerate}	
-	
+	\item L'intersezione $U\cap W$ è anche un sottospazio di $V$
+	\[U\cap W\{v\in V: v\in U\land v\in W\}\]
+	\textit{Dimostrazione per esercizio}
+	\item (L'unione di due sottospazi non è, in generale, un sottospazio (a meno che non siano uno contenuto nell'altro)).
+	Il più piccolo sottospazio di $V$ che contiene sia $V$ che $W$ si chiama la \textbf{somma} di $U$ e $W$ e si denota:
+	\[U+W=Span(U\cup W)\]
 \end{enumerate}
+
+\subsection{Proposizione}
+\[U+W=\{u+w: u\in U,w\in W\}\]
+\textit{Per esercizio verificare che u+w è un sottospazio che contiene $U\cup W\;e\;Span(U+W)$}
+
+\subsection{Teorema di Grossman}
+$dim_K(U+V)=dim_KU+dim_KW-dim_K(U\cap W)$
+
+\subsection{Somma diretta di sottospazi}
+Quando $U\cap V=\{0_V\}$, cioè ha dimensione $0$, allora si parla di somma diretta di sottospazi e si scrive:
+\[U\oplus W\]
+
+\subsection{Proposizione}
+Se $U\cap V=\{0_V\}$ allora ogni vettore di $U\oplus W$ si scrive come somma di un elemento di $U$ più un elemento di $W$ in modo unico.
+\\
+\\\textbf{Dimostrazione:} supponiamo che $v_0\in U+W$ si scriva in due modi diversi:
+\[v_0=u+w=u'+w'\;\;(con\;u,u'\in U;\;w,w'\in W)\]
+\[\Rightarrow v_0-v_0=0=u+w-(u'-w')=\]
+\[(u+u')+(w-w')=0\]
+\[\Rightarrow \in U\cap W=\{0_V\}\]
+\[\Rightarrow u-u'=0\Rightarrow u=u'\]
+\[\Rightarrow w-w'=0\Rightarrow w=w'\]
