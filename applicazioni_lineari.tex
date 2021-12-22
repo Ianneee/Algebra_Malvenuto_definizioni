@@ -1,0 +1,70 @@
+\section{Applicazioni lineari}
+\subsection{Definizione: applicazione lineare (trasformazione lineare o homomorfism of vector space)}
+Un'applicazione lineare è un'applicazione $T:V\rightarrow W$ di spazi vettoriali su $K$ taòe che $\forall v,v_1,v_2\in V$, $\forall\lambda\in K$ si ha:
+\begin{enumerate}
+	\item $T(v_1+v_2)=T(v_1)+T(v_2)$ ($T$ è additiva)
+	\item $T(\lambda\cdot v)=\lambda\cdot T(v)$ ($T$ è omogenea)
+\end{enumerate}
+(additiva+omogenea = è lineare).
+\\In altre parole $T$ conserva le operazioni di spazio vettoriale.
+
+\subsection{Proposizione}
+Punti $1+2\Leftrightarrow 3:\; \forall\lambda\mu\in K,\forall v_1,v_2\in V$
+\[T(\lambda v_1+\mu v_2)=\lambda T(v_1)+\mu T(v_2)\]
+$T$ manda combinazioni lineari in combinazioni lineari (con gli stessi scalari) dei trasformati.
+
+\subsection{Definizione}
+Fissata $A\in \mathcal{M}_{mn}(\mathbb{R}):$ 
+$A=\begin{pmatrix}a_{11}&...&a_{1_n}\\&...&\\a_{n1}&...&a_{mn}\end{pmatrix}$, sia $L_A:\mathbb{R}^n\rightarrow\mathbb{R}^m$ definita da:
+\[X\begin{pmatrix}x_1\\...\\x_n\end{pmatrix}\mapsto L_A(x):=AX=\begin{pmatrix} a_{11}x_1+a_{12}x_2+...+a_{1n}x_n\\...\\a_{m_1}x_1+a_{m_2}x_2+...+a_{mn}x_n\end{pmatrix}\in\mathbb{R}^n\]
+La trasformazione $L_A$ è la moltiplicazione (a destra) per $A$:
+\[L_A:X\mapsto AX\]
+ad ogni matrice $A$ corrisponde una trasformazione lineare $L_A$.
+
+\textit{Per esercizio: dimostrare che $L_A:\mathbb{R}^n\rightarrow\mathbb{R}^m$ è lineare.
+\begin{itemize}
+	\item $L_A(X+Y)=L_A(X)+L_A(Y)$? (dimostrazione su appunti)
+	\item $L_A(\lambda X)=\lambda L_A(X)?$
+\end{itemize}}
+
+\subsection{Definizione}
+Data una trasformazione lineare $T:V\rightarrow W$, restano determinati due sottoinsiemi:
+\begin{itemize}
+	\item Il nucleo di $T$: $KerT$
+	\[KerT=\{v\in V: T(v)=0_W\}\subseteq V\]
+	\item L'immagine di $T$: $ImT$
+	\[ImT=\{T(v):v\in V\}\subseteq W\]
+\end{itemize}
+
+\subsection{Proposizione (risolvere per esercizio)}
+\begin{enumerate}
+	\item $KerT\leq V$
+	\item $ImT\leq W$
+	\item $T$ suriettiva $\Leftrightarrow ImT=W$
+	\item $T$ iniettiva $\Leftrightarrow KerT=\{0\}$
+\end{enumerate}
+
+\subsection{Osservazione (!)}
+Calcolare il nucleo di un'applicazione lineare corrisponde a risolvere un sistema omogeneo.
+
+\subsection{Proposizione}
+Un'applicazione lineare $T:V\rightarrow W$ è definita univocamente (ovvero è determinata) quando si conoscono le immagini di $T$ sui vettori $\{v_1,...,v_n\}$ di una base di $V$, se $dimV=n$: ovvero basta conoscere
+\(T(v_1),...,T(v_n)\in W\) per conoscere tutta la trasformazione lineare $T$.
+\\
+\\\textbf{Dimostrazione}
+Se conosco $T$ su $v_1,...,v_n$ allora $v$ si scrive come $v=\alpha_1v_1+...+\alpha_nv_n$ (perchè $\mathcal{B}=\{v_1,...,v_n\}$ genera $v$).
+$T$ è lineare:
+\[T(v)=T(\alpha_1v_1+...+\alpha_nv_n)=\alpha_1T(v_1)+...+\alpha_nT(v_n)\]
+Questo determina univocamente $T$:
+\\\textit{Devo dimostrare che se esiste un'altra applicazione lineare $S\neq T$ ma che coincide con $T$ sulla base, allora ho una contraddizione.}
+Sia $S$ un'altra applicazione $S:V\rightarrow W$ con $T(v_i)=S(v_i)\;\forall i=1,...,n$ allora
+\[S(v)=\alpha_1S(v_1)+...+\alpha_nS(v_n)=\alpha_1T(v_1)+...+\alpha_nT(v_n)=T(v)\]
+\\
+\\$T$ è determinata completamente dai suoi valori su una base $B$ di $V$.
+
+\subsection{Corollario} 
+Due applicazioni lineari coincidono $\Leftrightarrow$ coincidono sui vettori di una base.
+
+\subsection{Corollario}
+Se $\mathcal{B}=(v_1,...,v_n)$ base ordinata di $V$ e se $T:V\rightarrow W$ lineare, allora $ImT=Span(\{T(v_1),...,T(v_n)1\})$: cioè i vettori immagine della base di $V$ generano l'immagine della trasformazione
+%TODO:COMPLETARE PG LEZ 32

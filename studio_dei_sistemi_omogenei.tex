@@ -4,9 +4,21 @@ Le matrici con una sola colonna sono scritte come righe con un pedice: $[valori]
 \subsection{Proposizione}
 Sia $AX=0$ un sistema lineare omogeneo (con $A\in M_{m\times n}(\mathbb{R}$). Allora 
 \[W=\{X=[x_1...x_n]_{colonna} \in\mathbb{R}:AX=0\}\]
-L'insieme delle soluzioni del s.l.o. è un sottospazio di $R^n$
+L'insieme delle soluzioni del S.L.O. è un sottospazio di $R^n$
 \\
 \\\textbf{Dimostrazione}
-\\TODO: capire la dimostrazione (!!)
+Se $X, X'$ sono in $W$ allora $\alpha X+\beta X'\in W$?
+$A(\alpha X+\beta X')=\alpha AX+\beta AX'=\alpha \underline{0}+\beta \underline{0}=\underline{0}$
+\subsection{Teorema: Struttura sulle soluzioni di un sistema}
+Sia $AX=b$ un sistema lineare ($b$ colonna dei termini noti). 
+Sia $v_0\in\mathbb{R}^n$ una soluzione del sistema $AX=b$.
+$v=\begin{pmatrix}v_1\\...\\v_n\end{pmatrix}$ (una soluzione "particolare")
+Allora ogni altra soluzione di $AX=b$ si scrive nella forma 
+\[v=v_0+w\;\;(soluzione\;generale)\]
+al variare di $w\in W=\{X:AX=\underline{0}\}$ cioè al variare di $w$ nelle soluzioni del sistema lineare omogeneo associato $AX=\underline{0}$.
 
-\subsection{Struttura sulle soluzioni di un sistema}
+\[(Av_0=b,\;Aw=\underline{0}\]
+\[\Leftrightarrow A(v_0+w)=b\Rightarrow Av_0+Aw=b+\underline{0}=b)\]
+
+\subsection{Nota importante}
+$A(X+Y)=AX+AY$: la moltiplicazione per una matrice è quindi lineare.
