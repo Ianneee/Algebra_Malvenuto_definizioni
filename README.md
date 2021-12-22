@@ -6,7 +6,7 @@ I testi potrebbero **SICURAMENTE** contenere errori ed imprecisioni: sono stati 
 Per eventuali errori contattare l'autore della repo (Ian... sapete dove trovarmi) o fare un pull; eventuali modifiche saranno aggiunte a mano per evitare la "distruzione(!)" del documento.
 \
 ## Documento che puoi leggere!
-Nella repo è disponibile il compilato del codice... ovvero il pdf.\
+Nella repo è disponibile il compilato del codice... ovvero il pdf (!!!).\
 Lo trovate come _main.pdf_.
 
 ## P.S. 
