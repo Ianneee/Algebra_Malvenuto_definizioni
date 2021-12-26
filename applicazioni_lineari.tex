@@ -15,8 +15,8 @@ $T$ manda combinazioni lineari in combinazioni lineari (con gli stessi scalari) 
 
 \subsection{Definizione}
 Fissata $A\in \mathcal{M}_{mn}(\mathbb{R}):$ 
-$A=\begin{pmatrix}a_{11}&...&a_{1_n}\\&...&\\a_{n1}&...&a_{mn}\end{pmatrix}$, sia $L_A:\mathbb{R}^n\rightarrow\mathbb{R}^m$ definita da:
-\[X\begin{pmatrix}x_1\\...\\x_n\end{pmatrix}\mapsto L_A(x):=AX=\begin{pmatrix} a_{11}x_1+a_{12}x_2+...+a_{1n}x_n\\...\\a_{m_1}x_1+a_{m_2}x_2+...+a_{mn}x_n\end{pmatrix}\in\mathbb{R}^n\]
+$A=\begin{bmatrix}a_{11}&...&a_{1_n}\\&...&\\a_{m1}&...&a_{mn}\end{bmatrix}$, sia $L_A:\mathbb{R}^n\rightarrow\mathbb{R}^m$ definita da:
+\[X\begin{bmatrix}x_1\\...\\x_n\end{bmatrix}\mapsto L_A(x):=AX=\begin{bmatrix} a_{11}x_1+a_{12}x_2+...+a_{1n}x_n\\...\\a_{m_1}x_1+a_{m_2}x_2+...+a_{mn}x_n\end{bmatrix}\in\mathbb{R}^n\]
 La trasformazione $L_A$ è la moltiplicazione (a destra) per $A$:
 \[L_A:X\mapsto AX\]
 ad ogni matrice $A$ corrisponde una trasformazione lineare $L_A$.
@@ -66,5 +66,179 @@ Sia $S$ un'altra applicazione $S:V\rightarrow W$ con $T(v_i)=S(v_i)\;\forall i=1
 Due applicazioni lineari coincidono $\Leftrightarrow$ coincidono sui vettori di una base.
 
 \subsection{Corollario}
-Se $\mathcal{B}=(v_1,...,v_n)$ base ordinata di $V$ e se $T:V\rightarrow W$ lineare, allora $ImT=Span(\{T(v_1),...,T(v_n)1\})$: cioè i vettori immagine della base di $V$ generano l'immagine della trasformazione
-%TODO:COMPLETARE PG LEZ 32
+Se $\mathcal{B}=(v_1,...,v_n)$ base ordinata di $V$ e se $T:V\rightarrow W$ lineare, allora $ImT=Span(\{T(v_1),...,T(v_n)\})$: cioè i vettori immagine della base di $V$ generano l'immagine della trasformazione.
+
+In particolare, se $T=L_A$, trasformazione lineare associata ad $A=\begin{bmatrix}a_{11}&..&\\&...&\\&..&a_{mn}\end{bmatrix}$ 
+\[T:\mathbb{R}^n\rightarrow\mathbb{R}^m\]
+\[X\rightarrow AX=T(x)\]
+allora
+\[ImT=Im(L_A)=Span(T(e_1),...,T(e_n))\]
+\[=Span(A\cdot e_1,A\cdot e_2,...,A\cdot e_n)\]
+dove
+\[A\cdot e_i=A\cdot\begin{bmatrix}0\\\vdots\\i\\\vdots\\0\end{bmatrix}=A^{(i)}\]
+(Quindi questo punto del corollario ci dice che $Im(L_A)=Span(Colonne\;di\;A)$
+
+\begin{center}
+$dimIm(L_A)=$ dimensione spazio generato dalle colonne
+\\=numero dei pivot di una ridotta scala equivalente ad $A$)
+\end{center}
+
+\subsection{Definizione: rango trasformazione lineare}
+\begin{enumerate}
+	\item Il rango di una trasformazione lineare $T:V\rightarrow W$ è $rg(T)=dim_KIm(T)$.
+	\item Il rango di $L_A$ è la dimensione dell'immagine di $L_A$, che è il rango della matrice $A$, $ImL_A=\{AX:X\in\mathbb{R}^n\}$.
+\end{enumerate}
+
+\subsection{Teorema della dimensione}
+Sia $T:V\rightarrow W$ trasformazione lineare. Allora:
+\[dimV=dim_KKerT+dim_KImT\]
+Sia $\{u_1,...,u_s\}\subseteq V$ una base di $KerT$
+\begin{itemize}
+	\item Generano $KerT$
+	\item Sono indipendenti
+	\item $T(u_1)=...=T(u_s)=0$
+\end{itemize}
+
+Per il teorema del completamento: completo $\{u_1,...,u_s\}$ ad una base di $V$, quindi sia $\{u_1,...,u_s,w_1,...,w_{n-s}\}$ base di $V$. Si candidano a base di $W$ i vettori $\{w_1,...,w_{n-s}\}$.
+\\Dobbiamo mostrare che $t=\{T(w_1),...,T(w_{n-s})\}$ è una base di $ImT$, cioè che $rgT=n-s=dimV-dimKerT$
+
+\begin{enumerate}
+	\item $t$ genera $Im(T)$: sappieamo (dal corollario) che l'immagine $ImT$ è lo span di $(T(u_1),T(u_2),...,T(u_s),T(w_1),...,T(w_{n-s}))=Span(0_w,T(w_1),...,T(w_{n-s}))$
+	\item Vediamo che $T(w_1),...,T(w_{n-s})$ sono indipendenti.
+	\\Supponiamo $\alpha_1,...,\alpha_{n-s}\in\mathbb{R}$ tali che: 
+	\[\alpha_1T(w_1)+...+\alpha_{n-s}T(w_{n-s})=0\]
+	\[\Leftrightarrow T(\alpha_1w_1+...+\alpha_{n-s}w_{n-s})=0\;\;(T\;e'\;lineare)\]
+	\[\Leftrightarrow \alpha_1w_1+...+\alpha_{n-s}w_{n-s}\in KerT\]
+	\[\Rightarrow \beta_1,...,\beta_s:\;\alpha_1w_1+...+\alpha_{n-s}w_{n-s}=\beta_1u_1+...+\beta_su_s\]
+	\[\alpha_1w_1+...+\alpha_{n-s}w_{n-s}-\beta_1u_1-...-\beta_su_s=0\]
+	ed è una combinazione lineare dei vettori di una base di $V$ che dà $0$
+	\[\Rightarrow\alpha_1=\alpha_2=...=\alpha_{n-s}=-\beta_1=...=-\beta_s=0\]
+\end{enumerate}
+
+\subsection{Osservazione}
+Se $v_1,...,v_n$ sono i vettori colonna di $\mathbb{R}^n$; sia $A=\begin{bmatrix}v_1&v_2&\dots&v_n\end{bmatrix}$ la matrice $m\times n$ formata dai vettori.
+\\Allora una combinazione lineare delle colonne $v_1,...,v_n$ con gli scalari $\alpha_1,...,\alpha_n$ ($\alpha_1v_1+...+\alpha_nv_n$) è la stessa cosa di:
+\[A_{(m\times n)}\cdot\begin{bmatrix}\alpha_1\\\cdots\\\alpha_n\end{bmatrix}\in\mathbb{R}^m\]
+
+\subsection{Proposizione}
+\begin{enumerate}[label=\alph*)]
+	\item $S,T:V\rightarrow W$, $S,T$ lineari, $V,W$ spazi vettoriali allora:
+	$S+T,\;\lambda\cdot S$ sono lineari.
+	\\Dove $(S+T)(v):=S(v)+T(v):\forall v\in V\;\;(S+T:V\rightarrow W)$
+	\\e dove $(\lambda S)(v):=\lambda S(v)\;\;(\lambda S:V\rightarrow W)$
+
+	\item Siano $S:U\rightarrow V,\;T:V\rightarrow W$ allora è possibile definire la composta $T\circ S:U\rightarrow W$, e $T\circ S$ è lineare.
+\end{enumerate}
+\textbf{Dimostrazione punto b) (la a) per esercizio)}
+\\Da dimostrare: $T\circ S$ è lineare $\Leftrightarrow T\circ S(\alpha v_1+\beta v_2)=\alpha(T\circ S)(v_1)+\beta(T\circ S)(v_2)$
+\[(T\circ S)(\alpha v_1+\beta v_2)=T(S(\alpha v_1+\beta v_2))=\]
+\[T(\alpha S(v_1)+\beta S(v_2))=\;\;\text{(S è lineare)}\]
+\[\alpha T(S(v_1))+\beta T(S(v_2))=\;\;\text{(T è lineare)}\]
+\[\alpha (T\circ S)(v_1)+\beta(T\circ S)(v_2)\]
+\[\Rightarrow T\circ S\text{ è lineare}\]
+
+\subsection{Conseguenze della proposizione}
+\begin{enumerate}[label=\alph*)]
+	\item L'insieme $\mathcal{L}(V,W)=\{T:V\rightarrow W, T \text{ lineare}\}$ è uno spazio vettoriale
+	\item $\mathcal{L}(V,V)$ l'insieme delle trasformazioni lineari da $V$ in se
+	\[T:V\rightarrow V\;\;\;\;\;T\circ S\]
+	\[S:V\rightarrow V\;\;\;\;\;S\circ T\]
+	$(\mathcal{L}(V,V),+,\cdot)$
+	\begin{itemize}
+		\item è un anello non commutativo
+		\item unitario $id:V\rightarrow V$, $T\cdot id=id\cdot T=T$ (elemento neutro è l'unità del prodotto)
+		\item $0_V:V\rightarrow V\;(v\mapsto 0_V)$ trasformazione lineare nulla (elemeno neutro della somma)
+	\end{itemize}
+	\item Se in $\mathcal{L}(V,V)$ ci restringiamo a guardare le trasformazioni invertibili:
+	\\$(\{T:V\rightarrow V:T\text{ lineare e invertibile}\},\cdot)$ è un gruppo commutativo.
+\end{enumerate}
+
+\subsection{Osservazione: iniettività, suriettività}
+Sia $T:V\rightarrow W$ lineare e $dimV=dimW$, allora:
+\begin{itemize}
+	\item $T\text{ invertibile}\Leftrightarrow T\text{ iniettiva}$
+	\item $T\text{ invertibile}\Leftrightarrow T\text{ suriettiva}$
+\end{itemize}
+
+\subsection{Osservazione: isomorfismo}
+$V$ e $W$ sono isomorfi (\textbf{notazione}: $V\cong W)\Leftrightarrow\exists\;T:V\rightarrow W$ con $T$ biunivoca. 
+
+\subsection{Esempio isomorfismo}
+$V$ dimensione finita $n$; $B=(v_1,...,v_n)$ base ordinata.
+\[f_B:V\rightarrow\mathbb{R}^n\]
+\[v\mapsto f_B(v)=\begin{bmatrix}x_1\\\vdots\\x_n\end{bmatrix}\text{ dove }v=x_1v_1+...+x_nv_n\]
+$f_B(v)$ sono le coordinate di $v$ in base $B$. Si ha che $f_B$ è un isomorfismo di $V$ in $\mathbb{R}^n$.
+
+L'isomorfismo $V\xrightarrow{f_B}\mathbb{R}^n$ non è canonico, cioè dipende dalla scelta di una base.
+
+\textbf{Conseguenza importante:} tutti gli spazi vettoriali di dimensione $n$ su $K$ sono tutti isomorfi a $K^n$.
+
+\subsection{Teorema}
+\[\mathcal{L}(\mathbb{R}^n,\mathbb{R}^m)\cong\mathcal{M}_{m,n}(\mathbb{R})^{\rightarrow[m\cdot n]}\]
+\textbf{Dimostrazione:} abbiamo visto già come associare ad una matrice $A_{m\times n}$ un'applicazione lineare di $\mathbb{R}^n$ in $\mathbb{R}^m$.
+\\$A\mapsto L_A$ la trasformazione lineare da $\mathbb{R}^n$ in $\mathbb{R}^m$ che agisce per moltiplicazione.
+\[L_A:\mathbb{R}^n\rightarrow\mathbb{R}^m\]
+\[X\mapsto AX\]
+
+\[L:Matrici\;m\times n\rightarrow \mathcal{L}(\mathbb{R}^n,\mathbb{R}^m)\]
+\[A\mapsto L(A)=L_A\]
+\begin{itemize}
+	\item $L$ è biunivoca? C'è l'inversa?
+	\item $L$ è lineare? \textit{Fare da soli}
+\end{itemize}
+\textit{Inizio dimostrazione primo punto}:
+\[L:\mathcal{M}_{m,n}(\mathbb{R})\rightarrow\mathcal{L}(\mathbb{R}^n,\mathbb{R}^m)\]
+\[A\leftarrow T\]
+Ora
+\[T:\mathbb{R}^n\rightarrow\mathbb{R}^m\]
+\[e_1\mapsto T(e_1)\in\mathbb{R}^m\]
+\[\vdots\]
+\[e_n\mapsto T(e_n)\in\mathbb{R}^m\]
+Sia $A:=\begin{bmatrix}T(e_1) & T(e_2) & \dots & T(e_n)\end{bmatrix}$ è una matrice $m\times n$.
+\\Devo mostrare che $L_A=T (\textit{completare da soli!})$
+
+\subsection{Osservazione}
+Si può dimostrare che $L_A\cdot L_B=L_{A\cdot B}$
+
+\subsection{Proposizione: ricapitolazione sulle matrici invertibili}
+Le seguenti sono equivalenti:
+\begin{enumerate}
+	\item $A\in\mathcal{M}_{m,n}(\mathbb{R})$ è invertibile (rispetto al prodotto di matrici)
+	\item $L_A:\mathbb{R}^n\rightarrow\mathbb{R}^n$ è invertibile
+	\item $L_A$ è iniettiva
+	\item $L_A$ è suriettiva
+	\item $KerA=\{0\}$
+	\item $ImL_A=\mathbb{R}^n$ $(=ImA)$
+	\item $rgA=n$
+	\item Le colonne di $A$ sono indipendenti
+	\item Le righe di $A$ sono indipendenti
+	\item $AX=\underline{0}$ ha l'unica soluzione $X=\underline{0}$
+	\item $\forall\underline{b}\in\mathbb{R}^n$ il sistema $AX=\underline{b}$ ammette unica soluzione (è $X=A^{-1}\cdot\underline{b}$)
+	\item I pivot di una ridotta scala sono tutti non nulli
+	\item $\exists\;B\in\mathcal{M}_n(\mathbb{R}):BA=I_n=\begin{bmatrix}1&\dots&0 \\&\dots&\\0&\dots&1\end{bmatrix}$ (\textit{tutti 1 sulla diagonale, resto 0}) [inversa a sinistra]
+	\item $\exists\;C\in\mathcal{M}_n(\mathbb{R}):AC=I_n=\begin{bmatrix}1&\dots&0 \\&\dots&\\0&\dots&1\end{bmatrix}$ (\textit{tutti 1 sulla diagonale, resto 0})
+	\item $[A|I]\sim[I|C]$ ($C^{-1}$ sarà l'inversa)
+	\item $det(A)\neq 0$
+\end{enumerate}
+
+\subsection{Determinante di una matrice quadrata}
+\[det: \mathcal{M}_n(\mathbb{R})\rightarrow\mathbb{R}\]
+\[A\mapsto det(A)\;\text{ (è un numero)}\]
+
+\subsubsection{Sistemi $AX=\underline{0}$}
+$A$ è invertibile $\Leftrightarrow AX=\underline{0}$ ha unica soluzione.
+
+\subsubsection{$n=1$}
+$A=[a]\;a\in\mathbb{R};\;X=x;\;\underline{0}=0$.
+\\$ax=0$ ha unica soluzione $\Leftrightarrow a\neq 0\Leftrightarrow a^{-1}ax=a^{-1}0$ ($x=0$)
+\\(se $a=0: 0\cdot x=0$ ha infinite soluzioni).
+Qui se pongo $det(a)=a$ ottengo:
+\[[a]=A \text{ invertibile}\Leftrightarrow det(A)=a\neq 0\]
+TODO: CONTROLLARE SUL LIBRO
+
+\subsubsection{$n=2$}
+$A$ invertibile $\Leftrightarrow AX=\underline{0}$ ha unica soluzione $\Leftrightarrow a_{11}a_{22}-a_{12}a_{22}\neq 0$.
+\textit{Dimostrazione su appunti lezione 33.}
+
+\textbf{Definisco:}
+\[detA=det\begin{bmatrix}a_{11} & a_{22} \\ a_{21} & a_{22}=\end{bmatrix}=a_{11}a_{22}-a_{21}a_{22}\]

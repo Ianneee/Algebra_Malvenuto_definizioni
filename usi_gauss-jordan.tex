@@ -1,0 +1,38 @@
+\section{Usi di Gauss-Jordan in vari ambiti}
+\subsection{Risolvere $AX=b$}
+Si applica GJ alla matrice aumentata $[A|b]\rightarrow[R|b']$ con $A\sim R$ e $[A|b]\sim[R|b']$.
+
+$AX=b$ ha le stesse soluzioni di $RX=b'$. Si risolve a questo punto il sistema ridotto $RX=b'$
+
+\subsection{Rango e base $ImL_A$}
+Si applica $A\rightarrow R$.
+
+\textit{Rivedere Corollario $ImL_A$}
+
+Le colonne sono generatori:
+\[[A^{(1)},...,A^{(n)}]=A\sim R\]
+allora le colonne di $A$ corrispondenti ai pivot sono indipendenti: $A^{(j_1)}...A^{(j_r)}$:
+\[rg(A)=dimImL_A=r\]
+e $A^{(j_1)}...A^{(j_r)}$ è una base per l'immagine.
+
+\subsection{Trovare $Ker(L_A)=KerA$}
+\[KerT=\{v\in V:T(v)=0\}\]
+\[KerL_A=\{X\in\mathbb{R}^n:L_A(X)=\underline{0}\}=\]
+\[\{X\in\mathbb{R}^n:AX=\underline{0}\}=\]
+\[=\text{spazio delle soluzioni del sistema lineare omogeneo associato ad } A\]
+$KerA=$Soluzioni di $AX=0$: applicando GJ ad $A$: $A\sim R$ e risolvo ora $RX=0$.
+
+\subsection{Estrazione insieme di vettori indipendenti}
+Per il problema di estrarre un insieme indipendente più grande possibile da un insieme di vettori di $\mathbb{R}^n$: ci si chiede dato $\{v_1,...v_k\}\subseteq\mathbb{R}^n$, qual è una base per $Span(v_1,...,v_n)$ da estrarre da $\{v_1,...v_k\}$.
+\\Costruisco la matrice $A=\begin{bmatrix}v_1&\dots&v_k\end{bmatrix}_{nxk}$:
+\\$A\sim^{GJ}R$: le colonne di $A$ corrispondenti alle colonne di $R$ dove si trovano i pivot sono indipendenti.
+
+\subsection{Completamento a un base di $\mathbb{R}$}
+Dati $v_1,...,v_k\in\mathbb{R}^n$ indipendenti, voglio completare $\{v_1,...,v_k\}$ a una base di $\mathbb{R}^n$ (se $k<n$).
+
+In questo caso formo un insieme $\{v_1,...,v_k,e_1,...,e_n\}$. Costruisco 
+\[A=\begin{bmatrix}v_1 & \dots & v_k & e_1 & \dots & e_n\end{bmatrix}\]
+Applico GJ: $A\sim R$ e scelgo le colonne di $A$ corrispondenti ai pivot.
+
+\subsection{Trovare base di $U+W\text{ e } U\cap W$}
+Per trovare una base di $U+W\text{ e } U\cap W$ date una base di $U$ e una di $W$.
