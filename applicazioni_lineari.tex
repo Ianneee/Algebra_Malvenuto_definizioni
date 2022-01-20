@@ -239,6 +239,23 @@ TODO: CONTROLLARE SUL LIBRO
 \subsubsection{$n=2$}
 $A$ invertibile $\Leftrightarrow AX=\underline{0}$ ha unica soluzione $\Leftrightarrow a_{11}a_{22}-a_{12}a_{22}\neq 0$.
 \textit{Dimostrazione su appunti lezione 33.}
-
-\textbf{Definisco:}
+\\\textbf{Definisco:}
 \[detA=det\begin{bmatrix}a_{11} & a_{22} \\ a_{21} & a_{22}=\end{bmatrix}=a_{11}a_{22}-a_{21}a_{22}\]
+
+\subsubsection{$n=3$}
+\[A=\begin{bmatrix}a_{11}& a_{12} & a_{13} \\ a_{21} & a_{22} & a_{23} \\ a_{31} & a_{32} & a_{33}\end{bmatrix}\]
+\begin{center}
+\begin{tabular}{c c | l| c}
+  & $a_{11}\;a_{22}\;a_{33}+$ & $\begin{psmallmatrix}1&2&3\\1&2&3\end{psmallmatrix} = (1)(2)(3)$&segno pari\\
+  &&&\\
+  & $a_{12}\;a_{23}\;a_{31}+$ & $\begin{psmallmatrix}1&2&3\\2&3&1\end{psmallmatrix} = (123)$&$\varepsilon(\sigma)=1$\\
+  &&&\\
+  & $a_{13}\;a_{21}\;a_{32}+$ & $\begin{psmallmatrix}1&2&3\\3&1&2\end{psmallmatrix} = (132)$&\\\cline{3-4}
+  det(A)= &&\\
+  & $-a_{13}\;a_{22}\;a_{31}$ & $\begin{psmallmatrix}1&2&3\\3&2&1\end{psmallmatrix} = (13)$&segno dispari\\
+  &&&\\
+  & $-a_{11}\;a_{23}\;a_{32}$ & $\begin{psmallmatrix}1&2&3\\1&3&2\end{psmallmatrix} = (23)$&$\varepsilon(\sigma)=-1$\\
+  &&&\\
+  & $-a_{12}\;a_{21}\;a_{33}$ & $\begin{psmallmatrix}1&2&3\\2&1&3\end{psmallmatrix} = (12)$&\\
+\end{tabular}
+\end{center}
