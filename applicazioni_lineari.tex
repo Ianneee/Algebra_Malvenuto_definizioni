@@ -263,7 +263,7 @@ $A$ invertibile $\Leftrightarrow AX=\underline{0}$ ha unica soluzione $\Leftrigh
 \subsubsection{Definizione determinante}
 Data $A\in M_n(\mathbb{R})$, si definisce il determinante di $A$ come:
 \[detA=\sum_{\sigma\in S_n}\varepsilon(\sigma)a_{1(\sigma 1)}a_{2(\sigma 2)}...a_{n(\sigma n)}\]
-NOTA: Esempio di rappresentazione su matrice su slides 34
+NOTA: Esempio di matrice di permutazionee su slides lezione 34.
 
 \subsubsection{Proprietà del determinante}
 \begin{itemize}
@@ -350,9 +350,73 @@ dove $\alpha_{ij}$ si chiama cofattore della matrice $A$, ed è definito come:
 $A_{ij}$: sottomatrice di $A$ che si ottiene cancellando la riga $i$ e la colonna $j$
 \begin{enumerate}
   \item ovvero: (formula per la colonna $j$)
-  \[det(A)=\sum_{i=1}^n(-1)^{i+j}a_{ij}detA_{ij}\]
+  \[det(A)=\sum_{i=1}^n(-1)^{i+j}a_{ij}det(A_{ij})\]
   $i$: varia l'indice di riga; $j$ è fisso.
 \item formula (sviluppo) lungo la riga $i$
-  %% lezione 34 pag 3
+  \[det(A)=\sum_{j=1}^n(-1)^{i+j}a_{ij}det(A_{ij})\]
+  $j$: varia l'indice di colonna; $i$ è fisso.
+
 \end{enumerate}
-  
+NOTA: vedere appunti lezione 14 per esempio.
+
+\subsubsection{Metodo alternativo calcolo determinante}
+$A\sim B$ usando solo $L_{ik},L_{ij}(C)$
+\\$A\xrightarrow[]{L_{ij}}A'$: $detA=-detA'$ ($(-1)\cdot$ numero di scambi di riga)
+\\$A\xrightarrow[]{L_{ij}(C)}A'$: $detA=detA'$
+\\Non usare $L_i(C)$ perche modifica il determinante.
+\[
+  A=
+\begin{bmatrix}
+  &&&\\
+  &&&\\
+  &&&\\
+  &&&
+\end{bmatrix}
+\sim B=
+\begin{bmatrix}
+  b_{11}&&&\\
+  &b_{22}&&\\
+  &&b_{33}&\\
+  &&&b_{44}
+\end{bmatrix}
+\]
+\\Il $detB=$ prodotto degli elementi sulla diagonale.
+
+\textbf{Proprietà}: Se una matrice $B$ quadrata è triangolare superiore (cioè $b_{ij}=0$ se $i>j$)
+\[
+  \begin{bmatrix}
+    b_{11} & b_{12} & \dots& b_{1n}\\
+    0 & b_{22} & \dots & b_{2n}\\
+    0 &0 & \dots \\
+    0 & \dots & 0 & b_{nn}
+    
+  \end{bmatrix}
+\]
+allora $detB=b_{11}b_{22}...b_{nn}$ (prodotto degli elementi sulla diagonale.
+\begin{itemize}
+\item In particolare se $b$ è una matrice diagonale, ovvero $b_{ij}=0$ se $i\neq j$, allora $detA=b_{11}b_{22}...b_{nn}$
+    \item In particolare se
+  \[
+    B=
+    \begin{bmatrix}
+      \lambda&&\text{\Huge0}\\
+      &\lambda&&\\
+      &\dots&&\\
+      \text{\Huge0}&&\lambda
+    \end{bmatrix}
+    \text{ per }\lambda\in\mathbb{R}
+    \]
+    Allora $detB=\lambda^n$.
+
+  \item $detI_n=
+    \begin{bmatrix}
+      1 &&\text{\Huge0}\\
+      &\dots&\\
+      \text{\Huge0}&&1
+    \end{bmatrix}
+=1$
+(Se a matrice ha tutti $1$ sulla diagonale).
+
+  \item Se $P$ è una matrice di permutazione, allora $detP=\varepsilon(\sigma)$ se $P=P_\sigma$: $P_\sigma$ è la matrice che ha $1$ in posizione $a_{ij}$ se $ j=\sigma(i)$
+NOTA: Esempio appunti lezione 34.
+\end{itemize}
