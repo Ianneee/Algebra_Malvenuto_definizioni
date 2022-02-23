@@ -3,25 +3,25 @@
 \subsection{Gruppo} 
 Un insieme S non vuoto, munito di una operazione \[m:S\times S\rightarrow S\]
 \[(a,b)\mapsto m(a,b)=a\ast b\;\; (notazione\; infissa)\]
-che verifica i punti 1, 3, 4 si chiama \(gruppo(S,\ast)\).
+che verifica i punti 1, 3, 4 (vedere proposizioni operazioni su $\mathbb{Z}$) si chiama \(gruppo(S,\ast)\).
 \\L'operazione su S è dunque:
-\begin{itemize}
+\begin{enumerate}
     \item associativa
     \item con elemento neutro \textit{e}: \(\forall x, x\ast e=e\ast x=x\)
     \item per ogni elemento \textit{x} esiste un inverso rispetto al prodotto \(\ast\) cioè un elemento \textit{y} tale che \(x\ast y=y\ast x=e\), che si denota \(x^{-1}\)
-\end{itemize}
+\end{enumerate}
 
 \subsection{Gruppo commutativo (abeliano)} 
 Se il gruppo \((S, \ast)\) soddisfa anche la proprietà 2 (quindi associatività,  elemento neutro, opposto, +commutatività).
 
 \subsection{Anello} 
 Un anello è una terna \((A,+,\cdot)\) con:
-\begin{itemize}
+\begin{enumerate}
     \item A insieme non vuoto
     \item \(+ \; \cdot\) due operazioni binarie, associative
     \item \((A,+)\) è un gruppo abeliano
     \item Distributività: \(\forall a, b, c \in A, \; a\cdot (b+c)=a\cdot b+a\cdot c\)
-\end{itemize}
+\end{enumerate}
 
 \subsubsection{Anello commutativo} 
 Se un anello \((A,+,\cdot)\) il prodotto è commutativo, cioè se \(\forall a,b\in A,\;a\cdot b=b\cdot a\).
@@ -42,7 +42,7 @@ Se in un dominio di integrità \(a\cdot b=0_A\) allora \(a=0_A\) oppure \(b=0_A\
 Un campo è una terna \((K,+,\cdot)\) con \textit{K} insieme non vuoto e 2 operazioni.
 \begin{itemize}
     \item \((K,+,\cdot)\) anello commutativo unitario
-    \item Detto \(0_k\) l'elemento neutro della somma e denotato con \(K^*=K\setminus\{0_k\}\), deve valere che \(\forall x\in K^*:x\cdot x^{-1}=1_k\)
+    \item Detto \(0_k\) l'elemento neutro della somma e denotato con \(K^*=K\setminus\{0_k\}\), deve valere che \(\forall x\in K^*:x\cdot x^{-1}=1_k\) \textit{(è un gruppo)}
 \end{itemize}
 Quindi campo \(\Leftrightarrow\) anello commutativo unitario con in più \(K\setminus\{0_k\}=(K^*,\cdot)\) gruppo.
 
@@ -112,7 +112,7 @@ Si osservi che \(\sigma\in S_n\), allora la potenza \textit{i-esima} di \(\sigma
 Se \(\tau _1\) e \(\tau _2\) hanno cicli disgiunti \(\tau _1\circ\tau _2 = \tau _2\circ\tau _1\)
 
 \subsubsection{Permutazione ciclica}
-Chiamo ciclica una permutazione di \(S_n)\) in cui nella rappresentazione in cicli disgiunti ha al più un solo ciclo di lunghezza\(>1\)
+Chiamo ciclica una permutazione di $S_n$ in cui nella rappresentazione in cicli disgiunti ha al più un solo ciclo di lunghezza\(>1\)
 
 \subsubsection{Teorema prodotto di scambi}
 Ogni permutazione si può scrivere come prodotto di scambi
@@ -302,7 +302,7 @@ TODO:CONTROLLARE APPUNTI
 Da dimostrare in proprio, lo ha dato come esercizio
 
 \subsection{Defizione: ordine (periodo)}
-Se un elemento di \(G\) ha periodo finito, allora si chiama \textit{ordine} (o periodo) di \(g\) il più piuccolo positivo tale che \(g^m=1_G\)
+Se un elemento di \(G\) ha periodo finito, allora si chiama \textit{ordine} (o periodo) di \(g\) il più piccolo positivo tale che \(g^m=1_G\)
 
 \subsection{Definizione: gruppo ciclico}
 Un gruppo \(G\) si dice ciclico se esiste \(g_0\in G\) tale che \(G=\langle g_0\rangle\) \textit{(gruppo che viene generato da un solo elemento)}.
@@ -427,7 +427,7 @@ Definiamo congruenza destra modulo \(H\) la relazione così definita:
 	\[ab^{-1}\in H\]
 	\(H\) sottogruppo:
 	\[(ab^{-1})^{-1}\;\in H\]
-	\[\Rightarrow (b^{-1})^{-1}\cdot a^{-1}=b^{-1}\cdot a\Rightarrow b\sim _d a\]
+	\[\Rightarrow (b^{-1})^{-1}\cdot a^{-1}=b\cdot a^{-1}\Rightarrow b\sim _d a\]
 
 	\item (T) \(a\sim _d b\) e \(b\sim _d c\Rightarrow a\sim _d c\;?\)
 	\[ab^{-1}\in H\;e\;bc^{-1}\in H\] 

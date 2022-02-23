@@ -420,3 +420,45 @@ allora $detB=b_{11}b_{22}...b_{nn}$ (prodotto degli elementi sulla diagonale.
   \item Se $P$ è una matrice di permutazione, allora $detP=\varepsilon(\sigma)$ se $P=P_\sigma$: $P_\sigma$ è la matrice che ha $1$ in posizione $a_{ij}$ se $ j=\sigma(i)$
 NOTA: Esempio appunti lezione 34.
 \end{itemize}
+
+\subsection{Cambiamento di base}
+\begin{itemize}
+    \item Come mutano le coordinate dei vettori nelle due basi diverse.
+    \item Come mutano le trasformazioni lineari.
+    \item Come cambiano le matrici associate alle trasformazioni quando cambiano le basi.
+\end{itemize}
+
+
+Siano $\mathcal{B}=(v_1,...,v_n)$ e $\mathcal{B}'=(v'_1,...,v'_n)$ due basi ordinate di uno spazio vettoriale $V$ (su $\mathbb{R}$ o su $K$ fissato) di dimensione $n$ su $\mathbb{R}$ (su $K$...).
+Siano $f_{\mathcal{B}}$ ed $f_{\mathcal{B}'}$ gli isomorfismi che mandano i vettori di $V$ nelle coordinate (colonne di $\mathbb{R}^n$) rispettivamente nella base $\mathcal{B}$ e $\mathcal{B}'$.
+
+\begin{center}
+  \includegraphics[scale=0.5]{cambiamento_di_base}
+\end{center}
+\[id_V: V\rightarrow V\]
+\[v\mapsto v=id_V(v)\]
+($id_V$ è una trasformazione lineare biunivoca) è l'elemento neutro nella composizione delle trasf.lineari da $V$ in se.
+
+\textbf{Richiamo} Se $\mathcal{B}$ è una base, allora l'applicazione
+\[f_{\mathcal{B}}: V\rightarrow \mathbb{R}\]
+\[v\rightarrow \begin{bmatrix}x_1\\\vdots\\x_n\end{bmatrix}\]
+Se $v=x_1v_1+...+x_nv_n$, $\begin{bmatrix}x_1\\\vdots\\x_n\end{bmatrix}=f_{\mathcal{B}}(v)$ è:
+\begin{itemize}
+  \item Lineare
+  \item Biunivoca
+\end{itemize}
+
+\begin{center}
+  \includegraphics[scale=0.5]{cambiamento_base_2}
+\end{center}
+\[v=x'_1v'_1+x'_2v'_2+x'_3v'_3=f_{\mathcal{B}'}^{-1}\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}\]
+\[f_{\mathcal{B}}\circ id_V\circ f_{\mathcal{B}'}^{-1}\]
+Siano:
+
+$f_{\mathcal{B}}(v)=\begin{bmatrix}x_1\\\vdots\\x_n\end{bmatrix}$ le coordinate di $v$ in base $\mathcal{B}$
+
+$f_{\mathcal{B}'}(v)=\begin{bmatrix}x'_1\\\vdots\\x'_n\end{bmatrix}$ le coordinate di $v$ in base $\mathcal{B}'$
+
+Allora esiste un'unica applicazione $\Psi$ che rende il diagramma commutativo:
+
+

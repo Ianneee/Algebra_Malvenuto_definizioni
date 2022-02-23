@@ -98,7 +98,7 @@ Un elemento \(a\in\mathbb{Z}, \; a\neq 0\) è irriducibile se \(a=b\cdot c\Right
 
 \subsection{Primo}
 Un elemento \(a\in\mathbb{Z}\) si dice primo se:
-\[a|b\cdot c\Rightarrow a|b \;oppure\; b|c\]
+\[a|b\cdot c\Rightarrow a|b \;oppure\; a|c\]
 
 \subsubsection{Proposizione: in \(\mathbb{Z},\; a\) è primo \(\Rightarrow\;a\) irriducibile}
 Sia \(a=b\cdot c\): usando l'ipotesi che a è primo allora \(a|b\) oppure \(a|c\).
@@ -136,7 +136,7 @@ Chiamiamo massimo comune divisore l'unico positivo che soddisfa le due propriet�
 \\
 Il massimo comune divisore si esprime come una combinazione lineare tra \textit{a} e \textit{b}, ovvero esistono \(s, t\in\mathbb{Z}\) tali che \(d=s\cdot a+t\cdot b\) (\textit{identità di Bézout}).
 
-Dimostrazione:
+\textbf{Dimostrazione}:
 \\
 Sia \(S=\{xa+yb:x,y\in\mathbb{Z}, xa+yb>0\}\)
 \begin{enumerate}
@@ -147,11 +147,11 @@ a e b sono non entrambi nulli, quindi almeno uno dei due è \(\neq 0\).
 Sia esso a.
 \\
 Se \(a>0\) allora \(1\cdot a+0\cdot b=a>0\)
-Se \(a<0\) allora \((-1)\cdot a+0\cdot b=a>0\)
-% Completare parte di dimostrazione dopo spiegazione
-\\TODO: completare dimostrazione
+\\Se \(a<0\) allora \((-1)\cdot a+0\cdot b=a>0\)
 
-Dimostrazione che \(d|a\) e \(d|b\):
+Per il principio del buon ordinamento, $S$ ammette un elemento minimo: sia esso $d$.
+Quindi ogni altra combinazione lineare che sia $<d$ non appartiene ad $S$.
+\\\textbf{Dimostrazione che \(d|a\) e \(d|b\):}
 \\
 Dividiamo \textit{a} per \textit{d} (divisione col resto):
 \(\exists\; q,r\) con \(a=dq+r,\; 0\leq r<d\)
@@ -195,8 +195,16 @@ Potendo scrivere \textit{1} come combinazione lineare di \textit{m} e \textit{m+
 La successione dei resti è un numero \(0\leq ... <r_2<r_1<b\).
 
 \subsubsection{Lemma2: Se \(a=bq+r\) \(MCD(a,b)=MCD(b,r)\)}
-% Dimostrazione da completare dopo chiarimento
-TODO: scrivere dimostrazione
+Ogni divisore comune di $a$ e $b$ è anche divisore comune di $b$ ed $r$: questo dimostra che il $MCD(a,b)|MCD(b,r)$:
+\\Sia $d\in\mathbb{N}$: $d|a\land d|b$ e ricavando $r$ da $a=bq+r$, si ha:
+\[a=dh\;\;\;b=dk\]b
+\[r=a+b(-q)=dh+dk(-q)=d(h+k(-q))\]
+$d|r$ perchè $r$ è combinazione lineare di $a$ e $b$.
+\\In particolare il
+\[MCD(a,b)|a\]
+\[MCD(a,b)|b\]
+si ha che il $MCD(a,b)|r$ e $MCD(a,b)|b$.
+\\$\Rightarrow MCD(a,b)|MCD(r,b)$
 
 \subsubsection{Corollario: \(MCD(a,b)=MCD(r_n,0)=r_n1\)}
 Per il lemma 2 \(MCD(a,b)=MCD(b,r_1)=MCD(r_1,r_2)=...=MCD(r_{n-1},r_n)=MCD(r_n,0)\)
@@ -259,7 +267,7 @@ Con principio di induzione in forma forte.
 \\
 Per \textbf{oss1} \(2=2^1\) è la fattorizzazione in primi in irriducibili di 2
 \\
-\textbf{Ipotesi induttiva}: ogni \(2\leq a<n\;\;(2\leq a\leq n-1)\) è fattorizzabile in irriducibili: \(\exists\; \alpha _1...\alpha _t \alpha _i\leq 1\) e \(q_1,...q_t\) irriducibili con \(a=q^{\alpha _1}_1...q_t^{\alpha _t}\)
+\textbf{Ipotesi induttiva}: ogni \(2\leq a<n\;\;(2\leq a\leq n-1)\) è fattorizzabile in irriducibili: \(\exists\; \alpha _1...\alpha _t \alpha _i\geq 1\) e \(q_1,...q_t\) irriducibili con \(a=q^{\alpha _1}_1...q_t^{\alpha _t}\)
 \\
 \textbf{Passo induttivo}: provare che \textit{n} sia prodotto di irriducibili
 \\\\
