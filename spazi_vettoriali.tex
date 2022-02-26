@@ -43,7 +43,7 @@ Uno spazio vettoriale \(V\) su un campo \(K\) è
 E' un elemento del campo.
 
 \subsection{Sottospazio vettoriale}
-Un sottospazio vettoriale di uno spazio vettorialo \(V\) su \(R\) è un sottoinsieme \(W\subseteq V\) non vuoto tale che: \(W\) rispetto le stesse operazioni di \(V\) sia esso stesso uno spazio vettoriale.
+Un sottospazio vettoriale di uno spazio vettoriale \(V\) su \(R\) è un sottoinsieme \(W\subseteq V\) non vuoto tale che: \(W\) rispetto le stesse operazioni di \(V\) sia esso stesso uno spazio vettoriale.
 \\
 \begin{itemize}
 
@@ -145,7 +145,7 @@ Se almeno uno dei coefficienti \(\{c_1,...,c_n\}\) è non nullo (sia \(C_j\neq 0
 e \(C_j\neq 0\Rightarrow \exists c_j^{-1}\) allora:
 \[v_j=-\frac{c_1v_1}{c_j}-\frac{c_2v_2}{c_j}-...-\frac{c_nv_n}{c_j}\]
 
-\subsection{Osservazione}
+\subsection{Osservazione: linearmente indipendente}
 \(\{v_1,...v_n\}\) è un insieme linearmente \textbf{indipendente} \(\Leftrightarrow\) \(\underline{0}=c_1v_1+...+c_nv_n\Leftrightarrow c_1=c_2=...=c_n=0\).
 
 Ovvero: \(\{v_1,...,v_n\}\) sono vettori linearmente indipendenti \(\Leftrightarrow\) l'unica combinazione lineare di \(v_1,...,v_n\) è la combinazione lineare banale.
@@ -205,7 +205,8 @@ $B=\{v_1,...,v_n\}$ é una base di $V\Leftrightarrow \forall v\in V\exists !\;(c
 	\item Ipotesi: $B=\{v_1,...,v_n\}$ é una base di $V$
 	\item Tesi: $v=c_1v_1+c_2v_2+...+c_nv_n$
 \end{enumerate}
- Sia $v\in V$. Siccome $B$ è una base, allora è un insieme di generatori di $V\Rightarrow v\in Span(v_1,...,v_n)\Rightarrow \exists c_1,...,c_n$ con $v=c_1v_1+...+c_nv_n$
+Sia $v\in V$. Siccome $B$ è una base, allora è un insieme di generatori di $V$
+\[\Rightarrow v\in Span(v_1,...,v_n)\Rightarrow \exists c_1,...,c_n \text{ con } v=c_1v_1+...+c_nv_n\]
  \\Perchè sono unici? Siano $(d_1,...,d_n)$ con 
  \[v=d_1v_1+...+d_nv_n\]
  \[v=c_1v_1+...+c_nv_n\]
@@ -216,10 +217,10 @@ $B=\{v_1,...,v_n\}$ é una base di $V\Leftrightarrow \forall v\in V\exists !\;(c
  \\\textit{Dimostrazione $\Leftarrow$ fare per esercizio}
 
  \subsection{N-upla delle coordinate di $v$ in base $B$}
- Data $B=\{v_1,...,v_n\}$ una base ordinata di V, se $v=c_1v_1+...+c_nv_n$ allora il vettore colonna $[c_1\;...\;c_n]\in\mathbb{R}^n$ si chiama vettore delle coordinate di $v$ in base $B$.
+ Data $B=\{v_1,...,v_n\}$ una base ordinata di V, se $v=c_1v_1+...+c_nv_n$ allora il vettore colonna $\begin{bmatrix}c_1\\\vdots\\c_n\end{bmatrix}\in\mathbb{R}^n$ si chiama vettore delle coordinate di $v$ in base $B$.
 
  \subsection{Corollario}
- Fissata una base $B=\{v_1,...,v_n\}$ di $V$ l'applicazione $\varphi : V\rightarrow K^n$ ($K$ è il campo di $V$) che manda $v$ in $\varphi (v)=[c_1\;...\;c_n]$ (cioè il vettore nelle sue coordinate in base $B$) è una biiezione.
+ Fissata una base $B=\{v_1,...,v_n\}$ di $V$ l'applicazione $\varphi : V\rightarrow K^n$ ($K$ è il campo di $V$) che manda $v$ in $\varphi (v)=\begin{bmatrix}c_1\\\vdots\\c_n\end{bmatrix}$ (cioè il vettore nelle sue coordinate in base $B$) è una biiezione.
 
  \subsection{Teorema: esistenza di una base}
  Se $V$ è uno spazio vettoriale finitamente generato (cioè se $V=Span(v_1,...,v_h)$) allora esiste una base $\{w_1,...,w_n\}$ di $V$.
@@ -232,11 +233,11 @@ $B=\{v_1,...,v_n\}$ é una base di $V\Leftrightarrow \forall v\in V\exists !\;(c
  Se $V$ è finitamente generato, allora si chiama dimensione di $V$ la cardinalità di una qualunque base di $V$.
 
  \subsection{Osservazione (notazione)}
- Se la dimensione di $V$ è $n$, allora $\varphi :V\rightarrow K^n$ si scrive $dim_kV=n$ se $|B|=n$.
+ Se la dimensione di $V$ è $n$, allora $\varphi :V\rightarrow K^n$ si scrive $dim_KV=n$ se $|B|=n$.
 
  \subsection{Teorema del completamento di una base}
  Sia $B=\{v_1,...,v_n\}$ una base di $V$, e sia $\{w_1,...,w_p\}$ con $\{p\leq n\}$ un insieme di vettori indipendenti. Allora posso completare $\{w_1,...,w_p\}$ con $(n-p)$ vettori di $B$ a formare una base (ovvero posso sostituire $p$ vettori di $B$ un altro insieme di $p$ vettori indipendenti).
- \\\textit{Dimostrazione fatta parzialmente da vedere per lode.}
+ \\\textit{Dimostrazione fatta parzialmente da vedere sul libro se si vuole la lode.}
 
  \subsection{Teorema}
  Le seguenti condizioni sono equivalenti tra loro per un insieme $B=\{v_1,...,v_n\}\subseteq V$ di $n$ vettori:
@@ -249,7 +250,7 @@ $B=\{v_1,...,v_n\}$ é una base di $V\Leftrightarrow \forall v\in V\exists !\;(c
  \subsection{Corollario}
  Se $V$ è finitamente generato e $B=\{v_1,...,v_n\}\;\;B'=\{v'_1,...,v_m\}$ sono basi di $V$ allora $|B|=|B'|$ $(n=m)$.
  \\
- \\\textbf{Dimostrazione:} per assurdo $m<n$, allora con il teorema del completamento costruisco $B''=B'\cup\{n-m\;vettori\}$. $B'$ è una base ma per il pt.3 (teorema precedente) $B'$ è un insieme massimale $\Rightarrow$ contraddizione.
+ \\\textbf{Dimostrazione:} per assurdo $m<n$, allora con il teorema del completamento costruisco $B''=B'\cup\{n-m\;vettori\}$. $B'$ è una base, ma per il pt.3 del teorema precedente, $B'$ è un insieme massimale $\Rightarrow$ contraddizione.
 
 \subsection{Osservazioni}
 \begin{itemize}
