@@ -318,7 +318,7 @@ Il sottogruppo generato da un elemento (in un gruppo ciclico) è commutativo.
 Sia \(G\) gruppo:
 \begin{enumerate}
 
-	\item Se \(g\in G\) ha periodo infinito \((\nexists \;h>0:g^h=e)\) allora \(\exists\; h,k\in\mathbb{Z}, h\neq k,\;g^h\neq g^k\): il gruppo ciclico generato da \(G\), \(\langle g\rangle \cong\mathbb{Z}\).
+	\item Se \(g\in G\) ha periodo infinito \((\nexists \;h>0:g^h=e)\) allora \(\forall\; h,k\in\mathbb{Z}, h\neq k,\;g^h\neq g^k\): il gruppo ciclico generato da \(G\), \(\langle g\rangle \cong\mathbb{Z}\) (è isomorfo a $\mathbb{Z}$).
 
 	\item \(g\) ha periodo finito.
 	\\Se \(n\)=periodo di \(g=o(g)=ord_G(g)\) %non ho la o piccola in corsivo!%
@@ -346,7 +346,7 @@ ed \(r\) è un numero \(0\leq r<n\) e quindi è una potenza dell'insieme.
 
 	\item I sottogruppi di \(\langle g\rangle\) con \(g\in (G,\cdot)\), \(g\) aperiodico, sono tutti e soli della forma:
 	\[H=\langle g^m\rangle\]
-	per qualche \(m\in\mathbb{Z}\).
+	per qualche \(m\in\mathbb{Z}\)
 	\\\textit{Non dimostrato.}
 
 	\item I sottogruppi di un gruppo ciclico generato da un elemento di ordine \(n\) (\(g^n=e\), \(n\) più piccolo positivo con \(g^n=e\)) sono anch'essi ciclici e generati da \(\langle g^h\rangle,\; h|n\).
@@ -362,7 +362,7 @@ L'ordine di un sottogruppo \(H\leq\langle g\rangle\) divide l'ordine dell'elemen
 In \(S_n\), sia \(\sigma (C_1)(C_2)...(C_k)\) la fattorizzazione di \(\sigma\) come prodotto dei suoi cicli disgiunti. Allora se \(m_i=\)lunghezza di \(C_i\)
 \[ordine(\sigma)=mcm(m_1,m_2,...,m_k)\]
 
-\subsection{Proposizione}
+\subsection{Proposizione - Generatori gruppo cicliclo}
 \(G=C_n=\langle g\rangle\) gruppo ciclico generato da un elemento di ordine \(n=\{id,g,g^2,...,g^n\}\). 
 \\Tutti e soli i generatori di \(C_n\) sono le potenze di \(g\) con esponente coprimo con \(n\).
 \\Generatori: \(g^t,\;(t,n)=1\)
@@ -373,7 +373,7 @@ Se \(G\) è un gruppo finito, allora l'ordine di un sottogruppo divide l'ordine 
 \\\textit{Oss: non vale sempre il viceversa.}
 
 Se \(d|o(G)\Rightarrow\exists H\leq G,\; o(H)=d\)
-\\\\\textbf{Dimostrazione:} Siano \(n=o(G)\) e \(m=o(H)\), \(i\) il numero di calssi laterali destre modulo \(H\).
+\\\\\textbf{Dimostrazione:} Siano \(n=o(G)\) e \(m=o(H)\), \(i\) il numero di classi laterali destre modulo \(H\).
 \\\(Ci_d=\) indice del sottogruppo \(H\) nel gruppo \(G\).
 \\\(i=|G_{/_\sim d}|=\) numero di classi laterali.
 Esistono \(a_1,a_2,...,a_i\) rappresentanti distinti delle classi laterali.

@@ -232,7 +232,7 @@ Equazione con una o più incognite sugli interi di cui si cercano le soluzioni i
 \[ax+by=c\]
 
 \subsubsection{Teor: Soluzione equazione diofantea}
-L'equazione diofante lineare in \textit{x} e \textit{y} \(ax+by=c\;\; a,b,c\in\mathbb{Z}\) possiede soluzioni intere \((x,y)\in\mathbb{Z}^2\Leftrightarrow d=MCD(a,b)|c\)
+L'equazione diofantea lineare in \textit{x} e \textit{y} \(ax+by=c\;\; a,b,c\in\mathbb{Z}\) possiede soluzioni intere \((x,y)\in\mathbb{Z}^2\Leftrightarrow d=MCD(a,b)|c\)
 \\
 (Dim\(\Rightarrow\)) La condizione \(MCD(a,b)|c\) è necessaria.
 \\
@@ -280,7 +280,8 @@ Allora per \textit{b} e \textit{c} vale l'ipotesi induttiva e quindi
 \[n=bc=q_1^{\alpha _1}...q_t^{\alpha _t} x_1^{\beta _1}...x_s^{\beta _s}\]
 
 \subsection{Dimostrazione unicità}
-Per induzione su \textit{m}, con \textit{m} è la lunghezza minima di una fattorizzazione per \textit{n}.
+\textbf{Nota: le fattorizzazioni hanno gli esponenti}
+\\Per induzione su \textit{m}, con \textit{m} è la lunghezza minima di una fattorizzazione per \textit{n}.
 \\
 \textit{m}: minimo numero di irriducibili di una fattorizzazione di \textit{n}
 \\
@@ -294,7 +295,10 @@ Quindi \(n=q_1\) ed è l'unica fattorizzazione.
 \\\\
 \textbf{Ipotesi induttiva}: se il minimo numero di primi in una fattorizzazione di \textit{n} è \(m-1\), allora la fattorizzazione è unica a meno dell'ordine.
 \\\\
-\textbf{Passo induttivo}: \textit{m} è il minimo di una fattorizzazione di \textit{n}.
+\textbf{Passo induttivo}: Prendo $n$ con una fattorizzazione lunga $m$ irriducibili ed un altra fattorizzazione di $n$:
+\[n=p_1p_2...p_m=q_1q_2....q_k\]
+Prendo un $p_i$ che essendo primo dividerà uno dei $q_i$ e quindi usando la cancellatività a destra e sinistra, la fattorizzazione $p_1...p_{i-1}p_{i+1}...p_{m}$ sarà lunga $m-1$ irriducibili, allora per l'ipotesi induttiva la fattorizzazione lunga $m-1$ è unica $\Rightarrow$ anche la fattorizzazione di $n$ è unica.
+
 
 \subsection{Teor. Euclide - Esistenza infiniti primi}
 L'insieme \(P=\{p\in\mathbb{N} :\) p è primo\(\}\) è infinito.
