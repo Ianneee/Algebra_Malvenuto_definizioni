@@ -1,0 +1,39 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{mathalfa}
+\usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\graphicspath{ {./images/} }
+
+\title{Definizioni e Teoremi di Algebra (senza esempi)}
+\author{Per comunicare errori o versioni aggiornate etc.:\\
+  \href{https://github.com/Ianneee/Algebra\_Malvenuto\_definizioni}{https://github.com/Ianneee/Algebra\_Malvenuto\_definizioni}}
+\date{Anno accademico 2021/2022}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\include{1_cap1}
+\include{2_i_numeri}
+\include{3_congruenze}
+% \include{pt4_semigruppi}
+% \include{pt5_gruppo_simmetrico}
+% \include{pt6_gruppi_finiti}
+\include{4_polinomi}
+\include{5_strutture_algebriche}
+\include{6_omomorfismi}
+\include{7_spazi_vettoriali}
+\include{8_sistemi_di_equazioni_lineari}
+\include{9_studio_dei_sistemi_omogenei}
+\include{10_applicazioni_lineari}
+\include{11_usi_gauss-jordan}
+
+
+\end{document}
