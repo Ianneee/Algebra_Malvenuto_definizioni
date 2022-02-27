@@ -460,6 +460,216 @@ $f_{\mathcal{B}}(v)=\begin{bmatrix}x_1\\\vdots\\x_n\end{bmatrix}$ le coordinate 
 $f_{\mathcal{B}'}(v)=\begin{bmatrix}x'_1\\\vdots\\x'_n\end{bmatrix}$ le coordinate di $v$ in base $\mathcal{B}'$
 
 Allora esiste un'unica applicazione $\Psi$ che rende il diagramma commutativo:
+\[\Psi=f_{\mathcal{B}}\circ id_V \circ f_{\mathcal{B}'}^{-1}\]
+ed esiste un'unica matrice $B$ tale che:
+\begin{itemize}
+\item \[f_{\mathcal{B}}=L_B \circ f_{\mathcal{B}'}\]
+  \[=L_B\circ f_{\mathcal{B}'}(v) (\in\mathbb{R})\]
+  \[L_B(f_{\mathcal{B}'}(v))=B\begin{bmatrix}x_1\\\vdots\\x_n\end{bmatrix}\]
+  (con $L_B$ la trasformazione lineare associata alla moltiplicazione per $B$:
+  \[L_B: \mathbb{R}^n\rightarrow\mathbb{R}^n\]
+  \[Y\mapsto L_B(Y)=BY\]
+  \[Y\mapsto Y)\]
 
+\item Se $X=f_{\mathcal{B}}(v)\;\;\;\;\;X'=f_{\mathcal{B}'}(v)$ allora:
+  \[X=BX'\]\[\text{ \textbf{Trasformazione delle coordinate}}\]
+  Se $\mathcal{B}$ è la base vecchia e $\mathcal{B}'$ è la base nuova, allora le coordinate di un vettor $v$ nella base nuova si esprimono come:
+  \[X'=B^{-1}X\]
+  \\(\textit{Oss.}: $\Psi(X')=X, \Psi=L_B$ per un'opportuna matrice $B$.)
 
-\textbf{Incompleto: mancano gli ultimi tre pdf delle lezioni presenti sul drive del corso.}
+\item $B$ si chiama la matrice del cambiamento di base e si ottiene come:
+  $B_{n\times n}[y_1\dots y_n]$, dove $y_i=\begin{bmatrix}\\ \\ \\\end{bmatrix}$ sono le coordinate di $v_i$ nella base $B$.
+  \\Cioè $B=[f_{\mathcal{B}}(v'_1),...,f_{\mathcal{B}}(v'_n)]$, cioè è la matriche che contiene come colonne consecugive le coordinate dei vettori della base nuova espressi nella base vecchia, ovvero:
+  \[\mathcal{B}=\mathcal{B}'\cdot B\]
+
+\subsection{Def: Matrice associata a una trasformazione lineare $T$}
+(opp. matrice che rappresenta $T$ rispetto alle basi degli spazi vettoriali)
+\\L'unica matriche che rende il diagramma commutativo (cioè tal eche $f_C\circ T\circ f_{\mathcal{B}}^{-1}=L_A$) si chiama matrice associata a $T$ nelle basi $\mathcal{B}$ e $\mathcal{C}$.
+\\In altre parole $f_{\mathcal{C}}\circ T= L_Af_{\mathcal{B}}$, ovvero $f_{\mathcal{C}}(T(v))= Af_{\mathcal{B}}(v)A$.
+\\In altre parole:
+\[\underline{x}=f_{\mathcal{B}}(v)\]
+\[\underline{y}=f_{\mathcal{C}}T((v))\]
+\[\Rightarrow \underline{y}=A\underline{x}\]
+
+\subsection{Proposizione}
+\begin{itemize}
+\item $V$ ha due basi $\mathcal{B}$ e $\mathcal{B}'$, sia $B$ la matrice del cambio di base da $\mathcal{B}$ a $\mathcal{B}'$:
+  \[\mathcal{B}'=\mathcal{B}B\]
+
+\item $W$ ha due basi $\mathcal{C}$ e $\mathcal{C}'$, sia $C$ la matrice del cambio di base da $\mathcal{C}$ a $\mathcal{C}'$:
+  \[\mathcal{C}'=\mathcal{C}C\]
+
+\item Se $T:V\rightarrow W$ una trasformazione lineare, con
+  \begin{itemize}
+  \item $A$ è la matrice che rappresenta $T$ nelle basi $\mathcal{B}$ e $\mathcal{C}$.
+  \item $A'$ è la matrice che rappresenta $T$ nelle basi $\mathcal{B}'$ e $\mathcal{C}'$.
+  \end {itemize}
+  
+\end{itemize}
+
+\begin{enumerate}
+
+\item Allora $A'=B'AC$ (cambiamento di matrice che rappresenta $T$)
+\item Nel caso in cui $W=V$, e se prendo la stessa base per $V$ (cioe $\mathcal{C}=\mathcal{B}$) e sia $\mathcal{B}'$ un'altra base di $V$, se $B$ è la matrice del cambiamento di base da $\mathcal{B}$ a $\mathcal{B}'$, la nuova mtrice che rappresenta $T$ nella base $\mathcal{B}'$ è data da:
+  \[A'=B^{-1}AB\]
+  cioè $A'$ è coniugata tramite la matrice $B$ del cambiamento di base.
+
+\end{enumerate}
+\end{itemize}
+
+\subsection{Definizione: matrice simile}
+Si dice che una matrice quadrata $A$ è simila ad una matrice $A'\Leftrightarrow\exists\; B$ invertibile tale che:
+\[A'=B^{-1}AB\]
+
+\subsection{Proposizione}
+Data $T:V\rightarrow V$ (endomorfismo) sia $\mathcal{B}$ una base di $V$ e sia $A$ la matrice (quadrata) associata a $T$ nella base $\mathcal{B}$.
+\begin{enumerate}
+\item Se $\mathcal{B}'$ è un'altra base di $V$, allora la matrice $A'$ associata a $T$ nella base $\mathcal{B}$ è data da:
+  \[A'=D^{-1}AD\]
+  Cioè esiste $D$ $n\times n$ invertibile tale che $A'$ è coniugata di $A$ tramite $D$.
+  \\Con $D$ invertibile e che rappresenta la matrice del cambiamento di base da $\mathcal{B}$ a $\mathcal{B}'$.
+
+\item Se $A'$ è una matrice simile ad $A$, allora esiste una base $\mathcal{B}'$ di $V$ tale che $A'$ è la matrice che rappresenta $T$ in base $\mathcal{B}'$!
+
+\end{enumerate}
+
+\subsection{Proposizione}
+La relazione tra matrici $n\times n$ definita da:
+\[A\sim B\Leftrightarrow\exists C\text{ invertibile con } B=C^{-1}AC\]
+è una relazione di equivalenza su $\mathcal{M}_n(\mathbb{R})$
+\\TODO:DIMOSTRAZIONE R-S-T
+
+\subsection{$\mathcal{M}_n(\mathbb{R})_{/\sim}$ quoziente modulo la similitudine)}
+La classe di similitudine di una matrice $A\in \mathcal{M}_n(\mathbb{R})$, denotata con $\mathcal{O}_A$:
+\[\mathcal{O}_A:=\{B\in\mathcal{M}_n(\mathbb{R}): A\sim B\}=\{B:\exists C, B=C^{-1}AC\}\]
+è l'insieme delle matrici simili ad $A$.
+
+A ogni endomorfismo di $T:V\rightarrow V$ si può associare in modo unico una classe di similitudine (che contiene tutte e sole le matrici che rappresentano $T$ nelle diverse basi).
+
+\subsection{Definizione}
+Sia $T:V\rightarrow V$ (endomorfismo) e sia $v\neq\underline{0}_V$:
+\begin{itemize}
+\item $v$ + un \textbf{autovettore} per $T$ se esiste $\lambda\in\mathbb{R}$ scalare tale che:
+  \[T(v)=\lambda v\]
+\item Tale $\lambda$ si chiama \textbf{autovalore} relativo all'autovettore $v$ (associato all'autovettore $v$)
+\item L'insieme di tutti gli autovalori (se esistono) di una trasformazione $T$ si chiama \textbf{spettro di $T$}
+  \[Spec(T)=\{\lambda\in K:\exists v\neq 0, v\in V\text{ con } T(v)=\lambda v\}\]
+
+\item Si chiama \textbf{autospazio} relativo a un autovalore di $\lambda$ di $T$ il sottospazio $V_\lambda \leq V$ definito da:
+  \[V_\lambda=\{v\in V:T(v)=\lambda v\}\]
+
+\end{itemize}
+
+\subsection{Osservazione}
+Vedremo che lo spettro di $T$ non dipende dalla matriche che rappresenta $T$ in una base, cioè è una nozione intrinseca: se $A,B$ sono due matrici che rappresentanto $T$ in due basi diverse (cioè sono simili), allora $Spec(A)=Spec(B)$ dove $Spec(A)=Spec(L_A)$.
+\begin{itemize}
+\item $Spec(T)$ (o di una matrice) può essere vuoto.
+\item Sia $\lambda_0$ un autovalore di $T$:
+  \[V_{\lambda_0}=\{v\in V: T(v)=\lambda_0 V\}\]
+  \[=\{v\in V: T(v)-\lambda_0id(v)=0\}\]
+  \[=\{v\in V:(T-\lambda_0I)(v)=0\}\]
+  \[=Ker(T-\lambda_0I)\neq\{0_V\}\]
+\end{itemize}
+
+\subsection{Proposizione}
+\begin{enumerate}
+\item $\lambda$ è un autovalore per $T\Leftrightarrow T-\lambda id_V$ è una trasformazione singolare (una trasformazione lineare è singolare se ha nucleo non vuoto).
+\item Se $v$ è autovettore relativo a $\lambda$, allora non può essere autovettore relativo a un altro scalare $\mu\neq\lambda $, infatti:
+  \[Av=\lambda V\text{ e anche } Av=\mu v\]
+  \[\Rightarrow \lambda v=\mu v \Leftrightarrow \lambda v-\mu v=0_V\]
+  \[(\lambda -\mu)v=0_V\]
+  che è una contraddizione perchè $v\neq 0$ perchè autovettore e $\lambda-\mu\neq 0$.
+
+  \item Autovettori relativi ad autovalori distinti sono linearmente indipendenti.
+
+\end{enumerate}
+
+\subsection{Diagonalizzazione di una matrice}
+\begin{itemize}
+\item Un endomorfismo $T:V\rightarrow V$ di $V$ è diagonalizabile $\Leftrightarrow$ esiste una base di $T$ fatta di autovettori.
+  \\$\Rightarrow$ in base $\mathcal{B}$ la matrice che rappresenta $T$ è diagonale.
+
+\item Ogni matrice che rappresenta $T$ in qualche base ha gli stessi autovalori di $T$, cioè:
+  \[Spec(L_A)=Spec(A)=Spec(T)\]
+
+\item L'autospazio relativo all'autovalore $lambda$,
+  \[V_\lambda=\{v\in V: T(v)=\lambda v\}=Ker(T-\lambda id)\]
+
+\item Autovettori relativi ad autovalori distinti sono indipendenti.
+
+\item $\lambda$ autovalore di $T\Leftrightarrow T-\lambda id_V$ è singolare ($Ker(T-\lambda id_V)\neq\{0_V\}$).
+
+\item Se $A$ è la matrice della trasformazione $L_A:\mathbb{R}^n\rightarrow\mathbb{R}^n$ (nella base canonica) $A$ ha un autovalore $\lambda\Leftrightarrow$ la matrice $(A-\lambda I_n)$ è singolare $\Leftrightarrow$ $Ker(A-\lambda I_n)$ è non banale $\Leftrightarrow det(A-\lambda I_n)=0$.
+  
+\end{itemize}
+
+\subsection{Polinomio caratteristico}
+Si chiama polinomio caratteristico di $T:V\rightarrow V$ il polinomio:
+\[p_T(\lambda)=det(T-\lambda id_V)\]
+
+\subsection{Proposizione}
+Se $A$ e $B$ sono simili, allora hanno lo stesso polinomio caratteristico: cioè se $A$ e $B$ rappresentano (in basi diverse) la stessa trasformazione $T$: allora
+\[det(A-\lambda I_n)=det(B-\lambda I_n)\]
+\textbf{Dimostrazione}: $A\sim B\Leftrightarrow \exists C$ invertibile con $B=C^{-1}AC$.
+\\Osserviamo che:
+\[C^{-1}(A-\lambda I_n)C=\]
+\[=(C^{-1}A-C^{-1}\lambda I_n)C\]
+\[=C^{-1}AC-C^{-1}\lambda I_nC\]
+\[=B-\lambda C^{-1}I_n C\]
+\[=B-\lambda I_n\]
+
+Infine:
+\[det(B-\lambda I_n)=det(C^{-1}(A-\lambda I_n)C=\]
+\[det(C^{-1})det(A-\lambda I_n)det(C)=\]
+\[det(C^{-1})det(C)det(A-\lambda I_n)=\]
+\[\frac{1}{det(C)}det(C)det(A-\lambda I_n)=\]
+\[det(A-\lambda I_n)\]
+Quindi possimao dire che $p_T(\lambda)=p_A(\lambda)$ per ogni matrice $A$ nella classe di similitudine.
+
+\subsection{Proprietà del polinomio caratteristico}
+\begin{itemize}
+
+\item $p_T(\lambda)=det(A-\lambda I)$ ($A$ che rappresenta $T$ in una base)
+
+\item $p_T(\lambda)$, $(p_A(\lambda))$ è un polinomio:
+  \begin{itemize}
+  \item di grado $n$ in $\lambda $
+  \item Il coefficiente di $\lambda ^n$ è $(-1)^n$
+  \item Il coefficiente di $\lambda^{n-1}$ è $(-1)^ntr(A)$ ($traccia(A)=$somma degli el. sulla diagonale)
+  \item il coefficiente di $\lambda ^0=1$ (del termine noto) è $(-1)^0detA=detA$
+  \end{itemize}
+
+\item $v\neq 0$ e $Av=\lambda v \Leftrightarrow$
+  \[(A-\lambda I)v=0\;\;(v\neq 0)\]
+  \[\Leftrightarrow (A-\lambda I)singolare\]
+  \[\Leftrightarrow det(A-\lambda I)=0\;\;(p_T(\lambda))\]
+  \[\Leftrightarrow\lambda\text{ è radice del polinomio caratteristico}\]
+
+\end{itemize}
+
+\subsection{Corollario}
+Se $p_T(\lambda)$ ha $n$ soluzioni distinte, allora $T$ è diagonalizzabile.
+
+\subsection{Definizioni}
+\begin{itemize}
+\item Si chiama \textbf{molteplicità algebrica} di una radice $x_0$ (soluzione) di un polinomio $p(x)$ un numero $k$ tale che $(x-x_0)^k|p(x)$ ma $(x-x_0)^{k+1}\nmid p(x)$
+  \[p(x)=(x-x_0)^kq(x)\]
+
+\item Si chiama \textbf{molteplicità geometrica} di $\lambda_0$ (autovalore di $T$) e si denota con $m_a(\lambda_0)$ la molteplicità algebriga di $\lambda_0$ come radice di $p_T(\lambda)$, cioè:
+  \[p_T(\lambda)=(\lambda -\lambda_0)^{m_a(\lambda_0)}(\;\;\;)\]
+
+\item Si chiama molteplicità geometrica di $\lambda_0$ (autovalore di $T$) e si indica con $m_g(\lambda_0)$, la dimensione dell'autospazio di $V_{\lambda_0}$ relativo a $\lambda_0$, cioè la nullità di $T-\lambda_0 I$.
+  \\In genere $m_g(\lambda_0)\leq m_a(\lambda_0)$
+
+\end{itemize}
+
+\subsection{Teorema}
+Le seguenti sono equivalenti per $T:V\rightarrow V, \; dim_KV=n$:
+\begin{enumerate}
+\item $T$ è diagonalizzabile $\leftrightarrow $
+
+\item $T$ ha tutti i suoi autovalori in $K$ (cioè il polinomio caratteristico si spezza in fattori del tipo $(x-a)^*$ lineari di grado 1) e la molteplicità algebrica di ogni autovalore coincide con la molteplicità geometrica:
+  \[m_a(\lambda_0)=m_g(\lambda_0)\;\;\forall\lambda_0\in Spec(T)\]
+  quindi se con $Spec(T)=\{\lambda_1,...,\lambda_k\}$ allora $n=m_g(\lambda_1)+...+m_g(\lambda_k)$.
+
+\end{enumerate}
