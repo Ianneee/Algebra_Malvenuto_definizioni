@@ -6,7 +6,7 @@ I testi potrebbero **SICURAMENTE** contenere errori ed imprecisioni: sono stati 
 Per eventuali errori contattare l'autore della repo (Ian... sapete dove trovarmi) o fare un pull; eventuali modifiche saranno aggiunte a mano per evitare la "distruzione(!)" del documento.
 \
 ## File compilato scaricabile!
-Tra i files nella repo c'è il pdf con il compilato di tutti gli appunti, che puoi scaricare.
+Tra i files nella repo c'è il pdf con il compilato di tutti gli appunti, che puoi scaricare. Lo puoi trovare come 'Appunti_algebra.tex'.
 
 ## P.S. 
 Non proponete modifiche se **"pensate"** che qualche cosa non sia corretta ma perchè **SAPETE** che non è corretto!\
