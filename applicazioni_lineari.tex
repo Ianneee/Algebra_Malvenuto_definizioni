@@ -479,12 +479,12 @@ ed esiste un'unica matrice $B$ tale che:
 
 \item $B$ si chiama la matrice del cambiamento di base e si ottiene come:
   $B_{n\times n}[y_1\dots y_n]$, dove $y_i=\begin{bmatrix}\\ \\ \\\end{bmatrix}$ sono le coordinate di $v_i$ nella base $B$.
-  \\Cioè $B=[f_{\mathcal{B}}(v'_1),...,f_{\mathcal{B}}(v'_n)]$, cioè è la matriche che contiene come colonne consecugive le coordinate dei vettori della base nuova espressi nella base vecchia, ovvero:
+  \\Cioè $B=[f_{\mathcal{B}}(v'_1),...,f_{\mathcal{B}}(v'_n)]$, cioè è la matrice che contiene come colonne consecutive le coordinate dei vettori della base nuova espressi nella base vecchia, ovvero:
   \[\mathcal{B}=\mathcal{B}'\cdot B\]
 
 \subsection{Def: Matrice associata a una trasformazione lineare $T$}
 (opp. matrice che rappresenta $T$ rispetto alle basi degli spazi vettoriali)
-\\L'unica matriche che rende il diagramma commutativo (cioè tal eche $f_C\circ T\circ f_{\mathcal{B}}^{-1}=L_A$) si chiama matrice associata a $T$ nelle basi $\mathcal{B}$ e $\mathcal{C}$.
+\\L'unica matrice che rende il diagramma commutativo (cioè tale che $f_C\circ T\circ f_{\mathcal{B}}^{-1}=L_A$) si chiama matrice associata a $T$ nelle basi $\mathcal{B}$ e $\mathcal{C}$.
 \\In altre parole $f_{\mathcal{C}}\circ T= L_Af_{\mathcal{B}}$, ovvero $f_{\mathcal{C}}(T(v))= Af_{\mathcal{B}}(v)A$.
 \\In altre parole:
 \[\underline{x}=f_{\mathcal{B}}(v)\]
@@ -509,8 +509,9 @@ ed esiste un'unica matrice $B$ tale che:
 
 \begin{enumerate}
 
-\item Allora $A'=B'AC$ (cambiamento di matrice che rappresenta $T$)
-\item Nel caso in cui $W=V$, e se prendo la stessa base per $V$ (cioe $\mathcal{C}=\mathcal{B}$) e sia $\mathcal{B}'$ un'altra base di $V$, se $B$ è la matrice del cambiamento di base da $\mathcal{B}$ a $\mathcal{B}'$, la nuova mtrice che rappresenta $T$ nella base $\mathcal{B}'$ è data da:
+\item Allora $A'=B^{-1}AC$ (cambiamento di matrice che rappresenta $T$)
+\item Nel caso in cui $W=V$, e se prendo la stessa base per $V$ (cioe $\mathcal{C}=\mathcal{B}$) e sia $\mathcal{B}'$ un'altra base di $V$.
+\\Se $B$ è la matrice del cambiamento di base da $\mathcal{B}$ a $\mathcal{B}'$, la nuova mtrice che rappresenta $T$ nella base $\mathcal{B}'$ è data da:
   \[A'=B^{-1}AB\]
   cioè $A'$ è coniugata tramite la matrice $B$ del cambiamento di base.
 
@@ -539,17 +540,17 @@ La relazione tra matrici $n\times n$ definita da:
 è una relazione di equivalenza su $\mathcal{M}_n(\mathbb{R})$
 \\TODO:DIMOSTRAZIONE R-S-T
 
-\subsection{$\mathcal{M}_n(\mathbb{R})_{/\sim}$ quoziente modulo la similitudine)}
+\subsection{$\mathcal{M}_n(\mathbb{R})_{/\sim}$ Quoziente modulo la similitudine}
 La classe di similitudine di una matrice $A\in \mathcal{M}_n(\mathbb{R})$, denotata con $\mathcal{O}_A$:
 \[\mathcal{O}_A:=\{B\in\mathcal{M}_n(\mathbb{R}): A\sim B\}=\{B:\exists C, B=C^{-1}AC\}\]
 è l'insieme delle matrici simili ad $A$.
 
 A ogni endomorfismo di $T:V\rightarrow V$ si può associare in modo unico una classe di similitudine (che contiene tutte e sole le matrici che rappresentano $T$ nelle diverse basi).
 
-\subsection{Definizione}
+\subsection{Definizioni: autovettore, autovalore, spettro di $T$, autospazio}
 Sia $T:V\rightarrow V$ (endomorfismo) e sia $v\neq\underline{0}_V$:
 \begin{itemize}
-\item $v$ + un \textbf{autovettore} per $T$ se esiste $\lambda\in\mathbb{R}$ scalare tale che:
+\item $v$ è un \textbf{autovettore} per $T$ se esiste $\lambda\in\mathbb{R}$ scalare tale che:
   \[T(v)=\lambda v\]
 \item Tale $\lambda$ si chiama \textbf{autovalore} relativo all'autovettore $v$ (associato all'autovettore $v$)
 \item L'insieme di tutti gli autovalori (se esistono) di una trasformazione $T$ si chiama \textbf{spettro di $T$}
@@ -561,7 +562,7 @@ Sia $T:V\rightarrow V$ (endomorfismo) e sia $v\neq\underline{0}_V$:
 \end{itemize}
 
 \subsection{Osservazione}
-Vedremo che lo spettro di $T$ non dipende dalla matriche che rappresenta $T$ in una base, cioè è una nozione intrinseca: se $A,B$ sono due matrici che rappresentanto $T$ in due basi diverse (cioè sono simili), allora $Spec(A)=Spec(B)$ dove $Spec(A)=Spec(L_A)$.
+Vedremo che lo spettro di $T$ non dipende dalla matrice che rappresenta $T$ in una base, cioè è una nozione intrinseca: se $A,B$ sono due matrici che rappresentanto $T$ in due basi diverse (cioè sono simili), allora $Spec(A)=Spec(B)$ dove $Spec(A)=Spec(L_A)$.
 \begin{itemize}
 \item $Spec(T)$ (o di una matrice) può essere vuoto.
 \item Sia $\lambda_0$ un autovalore di $T$:
@@ -592,7 +593,7 @@ Vedremo che lo spettro di $T$ non dipende dalla matriche che rappresenta $T$ in 
 \item Ogni matrice che rappresenta $T$ in qualche base ha gli stessi autovalori di $T$, cioè:
   \[Spec(L_A)=Spec(A)=Spec(T)\]
 
-\item L'autospazio relativo all'autovalore $lambda$,
+\item L'autospazio relativo all'autovalore $lambda $,
   \[V_\lambda=\{v\in V: T(v)=\lambda v\}=Ker(T-\lambda id)\]
 
 \item Autovettori relativi ad autovalori distinti sono indipendenti.
@@ -636,7 +637,7 @@ Quindi possimao dire che $p_T(\lambda)=p_A(\lambda)$ per ogni matrice $A$ nella 
   \item di grado $n$ in $\lambda $
   \item Il coefficiente di $\lambda ^n$ è $(-1)^n$
   \item Il coefficiente di $\lambda^{n-1}$ è $(-1)^ntr(A)$ ($traccia(A)=$somma degli el. sulla diagonale)
-  \item il coefficiente di $\lambda ^0=1$ (del termine noto) è $(-1)^0detA=detA$
+  \item Il coefficiente di $\lambda ^0=1$ (del termine noto) è $(-1)^0detA=detA$
   \end{itemize}
 
 \item $v\neq 0$ e $Av=\lambda v \Leftrightarrow$
@@ -650,23 +651,22 @@ Quindi possimao dire che $p_T(\lambda)=p_A(\lambda)$ per ogni matrice $A$ nella 
 \subsection{Corollario}
 Se $p_T(\lambda)$ ha $n$ soluzioni distinte, allora $T$ è diagonalizzabile.
 
-\subsection{Definizioni}
-\begin{itemize}
-\item Si chiama \textbf{molteplicità algebrica} di una radice $x_0$ (soluzione) di un polinomio $p(x)$ un numero $k$ tale che $(x-x_0)^k|p(x)$ ma $(x-x_0)^{k+1}\nmid p(x)$
+\subsection{Def: molteplicità algebrica radice}
+Si chiama \textbf{molteplicità algebrica} di una radice $x_0$ (soluzione) di un polinomio $p(x)$ un numero $k$ tale che $(x-x_0)^k|p(x)$ ma $(x-x_0)^{k+1}\nmid p(x)$
   \[p(x)=(x-x_0)^kq(x)\]
 
-\item Si chiama \textbf{molteplicità geometrica} di $\lambda_0$ (autovalore di $T$) e si denota con $m_a(\lambda_0)$ la molteplicità algebriga di $\lambda_0$ come radice di $p_T(\lambda)$, cioè:
+\subsection{Def: molteplicità algebrica $\lambda_0$}  
+Si chiama \textbf{molteplicità algebrica} di $\lambda_0$ (autovalore di $T$) e si denota con $m_a(\lambda_0)$ la molteplicità algebrica di $\lambda_0$ come radice di $p_T(\lambda)$, cioè:
   \[p_T(\lambda)=(\lambda -\lambda_0)^{m_a(\lambda_0)}(\;\;\;)\]
 
-\item Si chiama molteplicità geometrica di $\lambda_0$ (autovalore di $T$) e si indica con $m_g(\lambda_0)$, la dimensione dell'autospazio di $V_{\lambda_0}$ relativo a $\lambda_0$, cioè la nullità di $T-\lambda_0 I$.
+\subsection{Def: molteplicità geometrica $\lambda_0$}
+Si chiama \textit{molteplicità geometrica} di $\lambda_0$ (autovalore di $T$) e si indica con $m_g(\lambda_0)$, la dimensione dell'autospazio di $V_{\lambda_0}$ relativo a $\lambda_0$, cioè la nullità di $T-\lambda_0 I$.
   \\In genere $m_g(\lambda_0)\leq m_a(\lambda_0)$
-
-\end{itemize}
 
 \subsection{Teorema}
 Le seguenti sono equivalenti per $T:V\rightarrow V, \; dim_KV=n$:
 \begin{enumerate}
-\item $T$ è diagonalizzabile $\leftrightarrow $
+\item $T$ è diagonalizzabile $\Leftrightarrow $
 
 \item $T$ ha tutti i suoi autovalori in $K$ (cioè il polinomio caratteristico si spezza in fattori del tipo $(x-a)^*$ lineari di grado 1) e la molteplicità algebrica di ogni autovalore coincide con la molteplicità geometrica:
   \[m_a(\lambda_0)=m_g(\lambda_0)\;\;\forall\lambda_0\in Spec(T)\]
