@@ -113,8 +113,26 @@ Siano \(a,b\in\mathbb{N}, b\neq 0\); allora esistono \(q, r\in\mathbb{N}\) tali 
     \item \(0\leq r<b\)
 \end{itemize}
 \(\forall a,b\in\mathbb{Z}, b\neq 0; \exists\) unici \(q, r\in\mathbb{Z}\) con \(a=bq+r \land 0\leq r<b\)
-%dimostrazione
-TODO: Dimostrazione
+\\\textbf{Dimostrazione} per induzione:
+\\\textit{Base:} $P(0),\; a=0$:
+\\\\$\exists !q,r$ con $0=qb+r$ e $0\leq r <b$?
+\\Prendo $q=0,\; r=0$ e si ha $0=0b+0,\;\;0\leq r=0<b$.
+\\\\\textit{Ipotesi induttiva:} $\forall\; 0\leq k<a$ esistono quoziente e resto.
+\\\\\textit{Passo induttivo:} due casi:
+\begin{enumerate}
+  
+\item $a<b$:
+  \[\Rightarrow a=b0+a,\; 0\leq a=r<b\]
+
+\item $a\geq b\;\;(b>0)$
+  \\Consideriamo $a-b=a'$:
+  \[0\leq a-b<a\]
+  \[0\leq a' <a\]
+  $a'$ è uno dei $k$: $\forall k: \; 0\leq k<a$ vale $P(k)\Rightarrow P(a')$ cioè esistono $q', r'$ tali che:
+  \[a'=bq'+r',\;\;0\leq r'<b\]
+  \[\Rightarrow a=a'+b\Rightarrow a=q'b+r'+b=\]
+  \[=(q'+1)b+r',\;\;0\leq r'<b\]
+\end{enumerate}
 
 \section{Calcolo combinatorio}
 

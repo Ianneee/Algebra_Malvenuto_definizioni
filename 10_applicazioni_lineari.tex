@@ -538,7 +538,26 @@ Data $T:V\rightarrow V$ (endomorfismo) sia $\mathcal{B}$ una base di $V$ e sia $
 La relazione tra matrici $n\times n$ definita da:
 \[A\sim B\Leftrightarrow\exists C\text{ invertibile con } B=C^{-1}AC\]
 è una relazione di equivalenza su $\mathcal{M}_n(\mathbb{R})$
-\\TODO:DIMOSTRAZIONE R-S-T
+\textbf{R)}: $\forall A\in\mathcal{M}_n(\mathbb{R}):\;A\sim A$?
+\\Cerco $C:\; A=C^{-1}AC$. Basta prendere $C=I_n$:
+\[A=I^{-1}_nAI_n\;\;\;(I_n^{-1}=I_n)\]
+\\\\\textbf{S)}: $\forall A,B\in\mathcal{M}_n(\mathbb{R}):\;\;A\sim B\Rightarrow B\sim A$?
+\\Se $A\sim B$ allora $\exists C$ (invertibile) con $B=C^{-1}AC$. Ora devo ricavare $A$ da qui moltiplicando a sinistra per $C$ e destra per $C^{-1}$:
+\[CBC^{-1}=CC^{-1}ACC^{-1}=A\]
+Cioè $B\sim A$ (tramite $C^{-1}$): $A=(C^{-1})^{-1}BC^{-1}$.
+\\\\\textbf{T)} $\forall A,B,C:\; A\sim B$ e $B\sim C\Rightarrow A\sim C$
+\begin{itemize}
+
+\item $\exists H:\;\; B=H^{-1}AH$
+
+\item $\exists K:\; C=K^{-1}BK$
+
+\end{itemize}
+
+\[\Rightarrow C=K^{-1}BH=K^{-1}(H^{-1}AH)K=\]
+\[=(K^{-1}H^{-1})A(HK)\]
+\[=(HK)^{-1}A(HK)\]
+\[=S^{-1}AS\;\;(HK=S)\]
 
 \subsection{$\mathcal{M}_n(\mathbb{R})_{/\sim}$ Quoziente modulo la similitudine}
 La classe di similitudine di una matrice $A\in \mathcal{M}_n(\mathbb{R})$, denotata con $\mathcal{O}_A$:
