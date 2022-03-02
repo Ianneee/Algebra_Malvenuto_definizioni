@@ -235,17 +235,29 @@ Equazione con una o più incognite sugli interi di cui si cercano le soluzioni i
 \subsubsection{Teor: Soluzione equazione diofantea}
 L'equazione diofantea lineare in \textit{x} e \textit{y} \(ax+by=c\;\; a,b,c\in\mathbb{Z}\) possiede soluzioni intere \((x,y)\in\mathbb{Z}^2\Leftrightarrow d=MCD(a,b)|c\)
 \\
-(Dim\(\Rightarrow\)) La condizione \(MCD(a,b)|c\) è necessaria.
+\textbf{(Dim\(\Rightarrow\))} La condizione \(MCD(a,b)|c\) è necessaria.
 \\
-Ipotesi: esiste una soluzione di \(x^2+y^2=z^2\)
+\textbf{Ipotesi}: esiste una soluzione di \(x^2+y^2=z^2\)
 \\
-Tesi: \(d|\)termine noto, \(d=MCD(a,b): d|a\) e \(d|b\Rightarrow d|\) ogni combinazione lineare di \textit{a,b}.
+\textbf{Tesi}: \(d|\)termine noto, \(d=MCD(a,b): d|a\) e \(d|b\Rightarrow d|\) ogni combinazione lineare di \textit{a,b}.
 \\
 Se \(x_0,y_0\) sono una soluzione, allora \(ax_0+by_0=c\Rightarrow d|c=ax_0+by_0\)
 \\\\
-(Dim\(\Leftarrow\)) La condizione è sufficiente.
+\textbf{(Dim\(\Leftarrow\))} La condizione è sufficiente.
 \\
-Ipotesi \(MCD(a,b)=ah+bk\), per opportuni \(h,k\in\mathbb{Z}\)
+\textbf{Ipotesi} \(MCD(a,b)=ah+bk\)
+\\
+\textbf{Tesi:} Trovare una soluzione
+\begin{enumerate}
+\item \(MCD(a,b)=ah+bk\), per opportuni \(h,k\in\mathbb{Z}\)
+
+\item $d|c$ quindi $d=dy$
+
+\item Moltiplicando $ah+bk$ per $y$ ottengo:
+  \[dy=ahy+bky\Rightarrow c=ahy+bky\;\; (dy=c)\]
+  allora $x_0=hy,\; y_0=ky$ saranno la coppia che risolvono l'equazione diofantea.
+
+\end{enumerate}
 
 \subsection{Teorema fondamentale dell'aritmetica}
 \(\forall n>1, n\in\mathbb{N},\exists\;p_1,...,p_j\in\mathbb{N}\) (irriducibili) \(\exists h_1,...,h_j\geq 1\) tali che:
